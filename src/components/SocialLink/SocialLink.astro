@@ -1,0 +1,14 @@
+---
+import { Sprite } from "astro-icon";
+
+interface Props extends astroHTML.JSX.AnchorHTMLAttributes {
+  icon: string;
+  className?: string;
+}
+
+const { className, icon, ...rest } = Astro.props;
+---
+
+<a {...rest} class:list={["social-link", className]}>
+  <Sprite name={icon} />
+</a>

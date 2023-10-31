@@ -1,0 +1,176 @@
+---
+import { Sprite } from "astro-icon";
+import DefaultBtn from "../../components/DefaultBtn/DefaultBtn.astro";
+import DefaultInput from "../../components/DefaultInput/DefaultInput.astro";
+import FileInput from "../../components/FileInput/FileInput.astro";
+---
+
+<div class="reviews">
+  <div class="reviews__container">
+    <h6 class="reviews__title">
+      Отзывы
+      <span class="gray">9</span>
+    </h6>
+
+    <form action="#" class="reviews-form">
+      <div class="reviews-form-rate">
+        <span class="reviews-form-rate__label">Ваша оценка</span>
+        <input type="text" class="reviews-form-rate__input" value="3" />
+        <div class="reviews-form-rate__list">
+          <button type="button" class="reviews-form-rate__btn">
+            <Sprite name="star" />
+          </button>
+          <button type="button" class="reviews-form-rate__btn">
+            <Sprite name="star" />
+          </button>
+          <button type="button" class="reviews-form-rate__btn">
+            <Sprite name="star" />
+          </button>
+          <button type="button" class="reviews-form-rate__btn">
+            <Sprite name="star" />
+          </button>
+          <button type="button" class="reviews-form-rate__btn">
+            <Sprite name="star" />
+          </button>
+        </div>
+      </div>
+
+      <div class="reviews-form__inner">
+        <DefaultInput label="Ваше имя" required />
+        <DefaultInput label="E-mail" required error />
+      </div>
+      <DefaultInput label="Комментарий" as="textarea" />
+      <FileInput />
+      <DefaultBtn type="submit" size="sm" className="reviews-form__btn">
+        Опубликовать отзыв
+      </DefaultBtn>
+    </form>
+
+    <div class="reviews__list">
+      <div class="reviews-item">
+        <div class="reviews-item-user">
+          <div class="reviews-item-user__photo">
+            <img src="./img/user.svg" alt="" />
+          </div>
+          <div class="reviews-item-user__container">
+            <div class="reviews-item-user__inner">
+              <span class="reviews-item-user__name">Елена</span>
+              <span class="reviews-item-user__date">21.09.2023</span>
+            </div>
+            <div class="rate reviews-item-user__rate">
+              <Sprite name="star" class="active" />
+              <Sprite name="star" class="active" />
+              <Sprite name="star" class="active" />
+              <Sprite name="star" class="active" />
+              <Sprite name="star" />
+            </div>
+          </div>
+        </div>
+        <div class="reviews-item-content">
+          <div class="reviews-item-content__container">
+            <div class="reviews-item-content__text">
+              <p>
+                Выбирал набор посуды для похода. Остновился на этом. Здесь есть
+                ложка, вилка, нож и открывалка. <br />
+                 В принципе все, что нужно для похода. Сделаны из стали,
+                прочные. Складываются компактно, место мало занимают. Как набор
+                для похода, так думаю подойдет данный вариант.
+              </p>
+            </div>
+            <div class="reviews-item-content__img">
+              <a href="./img/reviews-1.png" data-fancybox>
+                <img src="./img/reviews-1-min.jpg" alt="" />
+              </a>
+              <a href="./img/reviews-1.png" data-fancybox>
+                <img src="./img/reviews-1-min.jpg" alt="" />
+              </a>
+              <a href="./img/reviews-1.png" data-fancybox>
+                <img src="./img/reviews-1-min.jpg" alt="" />
+              </a>
+              <a href="./img/reviews-1.png" data-fancybox>
+                <img src="./img/reviews-1-min.jpg" alt="" />
+              </a>
+            </div>
+          </div>
+          <div class="reviews-item__comments">
+            <div class="reviews-item">
+              <div class="reviews-item-user">
+                <div class="reviews-item-user__container">
+                  <div class="reviews-item-user__inner">
+                    <span class="reviews-item-user__name">Елена</span>
+                    <span class="reviews-item-user__date">21.09.2023</span>
+                  </div>
+                </div>
+              </div>
+              <div class="reviews-item-content">
+                <div class="reviews-item-content__container">
+                  <div class="reviews-item-content__text">
+                    <p>
+                      Выбирал набор посуды для похода. Остновился на этом. Здесь
+                      есть ложка, вилка, нож и открывалка. <br />
+                       В принципе все, что нужно для похода. Сделаны из стали,
+                      прочные. Складываются компактно, место мало занимают. Как
+                      набор для похода, так думаю подойдет данный вариант.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reviews-item">
+        <div class="reviews-item-user">
+          <div class="reviews-item-user__photo">
+            <img src="./img/user.svg" alt="" />
+          </div>
+          <div class="reviews-item-user__container">
+            <div class="reviews-item-user__inner">
+              <span class="reviews-item-user__name">Елена</span>
+              <span class="reviews-item-user__date">21.09.2023</span>
+            </div>
+            <div class="rate reviews-item-user__rate">
+              <Sprite name="star" class="active" />
+              <Sprite name="star" class="active" />
+              <Sprite name="star" class="active" />
+              <Sprite name="star" class="active" />
+              <Sprite name="star" />
+            </div>
+          </div>
+        </div>
+        <div class="reviews-item-content">
+          <div class="reviews-item-content__container">
+            <div class="reviews-item-content__text">
+              <p>
+                Выбирал набор посуды для похода. Остновился на этом. Здесь есть
+                ложка, вилка, нож и открывалка. <br />
+                 В принципе все, что нужно для похода. Сделаны из стали,
+                прочные. Складываются компактно, место мало занимают. Как набор
+                для похода, так думаю подойдет данный вариант.
+              </p>
+            </div>
+            <div class="reviews-item-content__img">
+              <a href="./img/reviews-1.png" data-fancybox>
+                <img src="./img/reviews-1-min.jpg" alt="" />
+              </a>
+              <a href="./img/reviews-1.png" data-fancybox>
+                <img src="./img/reviews-1-min.jpg" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="reviews-rate">
+    <div class="reviews-rate__pin"></div>
+    <div class="reviews-rate__container">
+      <span class="reviews-rate__info">
+        <Sprite name="star" />
+         4.2
+      </span>
+      <DefaultBtn size="sm">Оставить отзыв</DefaultBtn>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,48 @@
+---
+interface Props {
+  as?: keyof astroHTML.JSX.IntrinsicElements;
+  className?: string;
+  label?: string;
+  error?: boolean;
+}
+
+const {
+  as: Wrapper = "input",
+  className,
+  label,
+  required,
+  error,
+  ...rest
+} = Astro.props;
+---
+
+<>
+  {
+    label ? (
+      <>
+        <label
+          class:list={[
+            "default-input-label",
+            { required: required },
+            { _error: error },
+            className,
+          ]}
+        >
+          <span class="default-input-label__text">{label}</span>
+          <Wrapper
+            type="text"
+            {...rest}
+            class:list={["default-input", { _error: error }, className]}
+          />
+          <span class="default-input-label__error">Неверный формат</span>
+        </label>
+      </>
+    ) : (
+      <Wrapper
+        type="text"
+        {...rest}
+        class:list={["default-input", { _error: error }, className]}
+      />
+    )
+  }
+</>

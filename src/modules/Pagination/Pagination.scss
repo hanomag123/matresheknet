@@ -1,0 +1,52 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 6.7rem;
+
+  @include breakpoint($xs-bp) {
+    margin-top: 2.4rem;
+  }
+
+  &__link {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    color: $gray-3;
+    transition: 0.3s;
+    @include hover {
+      color: $dark-2;
+    }
+
+    @include breakpoint($xs-bp) {
+      width: 3.2rem;
+      height: 3.2rem;
+    }
+
+    &.active {
+      background-color: $accent_hover;
+      color: $accent;
+    }
+
+    svg {
+      width: 2.4rem;
+      height: 2.4rem;
+
+      @include breakpoint($xs-bp) {
+        width: 1.76rem;
+        height: 1.76rem;
+      }
+    }
+  }
+
+  &__prev {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+}

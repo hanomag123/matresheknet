@@ -1,0 +1,38 @@
+---
+import { Sprite } from "astro-icon";
+import DefaultBtn from "../../components/DefaultBtn/DefaultBtn.astro";
+import DefaultInput from "../../components/DefaultInput/DefaultInput.astro";
+import Popup from "../Popup/Popup.astro";
+---
+
+<Popup data-call-popup>
+  <form action="#" class="popup__form" data-submit-handler>
+    <div class="popup__head">
+      <span class="popup__title">Обратный звонок</span>
+      <p class="popup__text">Представьтесь, мы вам перезвоним</p>
+    </div>
+
+    <div class="popup__inner">
+      <DefaultInput label="Имя" placeholder="Иван" required />
+      <DefaultInput label="Телефон" placeholder="+7 995 455 34 55" required />
+    </div>
+
+    <div class="popup__footer">
+      <DefaultBtn type="submit">Отправить</DefaultBtn>
+      <p class="popup__legal">
+        Продолжая, вы соглашаетесь с
+        <a href="#"> политикой конфиденциальности</a>
+      </p>
+    </div>
+  </form>
+  <div class="popup-send">
+    <div class="popup-send__icon">
+      <Sprite name="fi_check_2" />
+    </div>
+    <span class="popup__title">Спасибо!</span>
+    <span class="popup__text"
+      >Наш менеджер перезвонит вам в ближайшее время</span
+    >
+    <DefaultBtn type="button" data-close-btn>Закрыть</DefaultBtn>
+  </div>
+</Popup>

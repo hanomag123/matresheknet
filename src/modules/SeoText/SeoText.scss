@@ -1,0 +1,26 @@
+.seo-text {
+  margin-bottom: 6.4rem;
+
+  &__container {
+    padding: 3.2rem;
+    border-radius: 0.8rem;
+    border: 0.2rem solid $light-3;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.2rem;
+    line-height: 150%;
+    color: #343a44;
+
+    @include breakpoint($xs-bp) {
+      padding: 2.4rem;
+      font-size: 1.4rem;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+}

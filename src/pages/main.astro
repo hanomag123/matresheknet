@@ -1,0 +1,193 @@
+---
+import type { IProducItem } from "../assets/scripts/interfaces";
+import MultipleSelect from "../components/MultipleSelect/MultipleSelect.astro";
+import RangeSlider from "../components/RangeSlider/RangeSlider.astro";
+import Layout from "../layouts/Layout.astro";
+import Footer from "../modules/Footer/Footer.astro";
+import Header from "../modules/Header/Header.astro";
+import MainBanner from "../modules/MainBanner/MainBanner.astro";
+import MainInfo from "../modules/MainInfo/MainInfo.astro";
+import NavCatalog from "../modules/NavCatalog/NavCatalog.astro";
+import NavBar from "../modules/NavBar/NavBar.astro";
+import ProductSlider from "../modules/ProductSlider/ProductSlider.astro";
+
+const products_1: IProducItem[] = [
+  {
+    images: [
+      "./img/prod/prod-2.png",
+      "./img/prod/prod-2.png",
+      "./img/prod/prod-2.png",
+    ],
+    price: "1 350 ₽",
+    lastPrice: "1 350 ₽",
+    discount: "-50%",
+    name: "Походно-туристический набор столовых приборов",
+    stars: 3,
+    rating: "3,7",
+  },
+  {
+    images: [
+      "./img/prod/prod-3.png",
+      "./img/prod/prod-3.png",
+      "./img/prod/prod-3.png",
+    ],
+    price: "385 ₽",
+    lastPrice: "400 ₽",
+    discount: "-15%",
+    name: "Спящая собака ангел / Бижу брелок для ключей",
+    stars: 3,
+    rating: "3,7",
+  },
+  {
+    images: [
+      "./img/prod/prod-4.png",
+      "./img/prod/prod-4.png",
+      "./img/prod/prod-4.png",
+    ],
+    price: "385 ₽",
+    lastPrice: "420 ₽",
+    discount: "-15%",
+    name: "Спящая собака ангел / Бижу брелок для ключей",
+    stars: 4,
+    rating: "4,1",
+  },
+  {
+    images: [
+      "./img/prod/prod-5.png",
+      "./img/prod/prod-5.png",
+      "./img/prod/prod-5.png",
+    ],
+    price: "769 ₽",
+    lastPrice: "1 000 ₽",
+    discount: "-10%",
+    name: "Бижу брелок - Garten of banban Сад Банбана",
+    stars: 3,
+    rating: "3,7",
+  },
+  {
+    images: [
+      "./img/prod/prod-6.png",
+      "./img/prod/prod-6.png",
+      "./img/prod/prod-6.png",
+    ],
+    price: "49 700 ₽",
+    lastPrice: "99 400 ₽",
+    discount: "-50%",
+    name: "Георгий Победоносец: золотая монета 50 рублей / 7.78 гр золото ",
+    stars: 5,
+    rating: "5",
+  },
+];
+const products_2: IProducItem[] = [
+  {
+    images: [
+      "./img/prod/prod-7.png",
+      "./img/prod/prod-7.png",
+      "./img/prod/prod-7.png",
+    ],
+    price: "1 207 ₽",
+    name: "Пепельница для курения, коллекционная ",
+    stars: 3,
+    rating: "3,7",
+  },
+  {
+    images: [
+      "./img/prod/prod-8.png",
+      "./img/prod/prod-8.png",
+      "./img/prod/prod-8.png",
+    ],
+    price: "5 120 ₽",
+    name: "WS-1105 Статуэтка Гиппократ (Veronese)",
+    stars: 3,
+    rating: "3,7",
+  },
+  {
+    images: [
+      "./img/prod/prod-9.png",
+      "./img/prod/prod-9.png",
+      "./img/prod/prod-9.png",
+    ],
+    price: "5 350 ₽",
+    name: "Статуэтка Veronese 'Фемида-богиня правосудия'",
+    stars: 4,
+    rating: "4,7",
+  },
+  {
+    images: [
+      "./img/prod/prod-10.png",
+      "./img/prod/prod-10.png",
+      "./img/prod/prod-10.png",
+    ],
+    price: "550 ₽",
+    name: "Реалистичная подушка-антистресс Ежик",
+    stars: 5,
+    rating: "5",
+  },
+  {
+    images: [
+      "./img/prod/prod-11.png",
+      "./img/prod/prod-11.png",
+      "./img/prod/prod-11.png",
+    ],
+    price: "450 ₽ ",
+    name: "Игрушка антистресс электронный поп ит",
+    stars: 3,
+    rating: "3,7",
+  },
+];
+---
+
+<Layout title="Главная">
+  <Header />
+  <NavCatalog />
+  <NavBar />
+
+  <MainBanner />
+
+  <ProductSlider
+    title="Хиты со скидкой"
+    items={[...products_1, ...products_1]}
+  />
+
+  <ProductSlider title="Подбор подарка" items={[...products_2, ...products_2]}>
+    <form action="#" class="swiper filter" slot="filter">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <MultipleSelect
+            placeholder="Кому"
+            items={[
+              { name: "Молодому человеку", value: "1" },
+              { name: "Молодому человеку", value: "2" },
+              { name: "Молодому человеку", value: "3" },
+              { name: "Молодому человеку", value: "4" },
+              { name: "Молодому человеку", value: "5" },
+              { name: "Молодому человеку", value: "6" },
+              { name: "Молодому человеку", value: "7" },
+            ]}
+          />
+        </div>
+        <div class="swiper-slide">
+          <MultipleSelect
+            placeholder="Повод"
+            items={[
+              { name: "Молодому человеку", value: "1" },
+              { name: "Молодому человеку", value: "2" },
+              { name: "Молодому человеку", value: "3" },
+              { name: "Молодому человеку", value: "4" },
+              { name: "Молодому человеку", value: "5" },
+              { name: "Молодому человеку", value: "6" },
+              { name: "Молодому человеку", value: "7" },
+            ]}
+          />
+        </div>
+        <div class="swiper-slide">
+          <RangeSlider placeholder="Стоимость" />
+        </div>
+      </div>
+    </form>
+  </ProductSlider>
+
+  <MainInfo />
+
+  <Footer />
+</Layout>

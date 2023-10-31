@@ -1,0 +1,138 @@
+.menu {
+  position: fixed;
+  z-index: 5000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  display: none;
+  transition: 0.3s;
+  opacity: 0;
+  pointer-events: none;
+
+  &._active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  @include breakpoint($xs-bp) {
+    display: flex;
+  }
+
+  &__head {
+    padding: 1.8rem 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex: none;
+    border-bottom: 0.1rem solid $light-3;
+  }
+
+  &__title {
+    color: $gray-3;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  &__btn {
+    width: 2.4rem;
+    height: 2.4rem;
+    color: $gray-3;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__container {
+    flex: 1;
+    overflow: auto;
+    padding-bottom: 2.4rem;
+  }
+
+  &__login {
+    padding: 1.8rem 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.6rem;
+    border-bottom: 0.1rem solid $light-3;
+    color: $gray-3;
+    font-size: 1.6rem;
+
+    svg {
+      width: 2.4rem;
+      height: 2.4rem;
+      color: #343a44;
+    }
+  }
+
+  &-nav {
+    padding: 2.4rem 1.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.6rem;
+    border-bottom: 0.1rem solid $light-3;
+
+    &__link {
+      font-size: 1.6rem;
+    }
+  }
+
+  &-contacts {
+    padding: 2.4rem 1.6rem 3.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+
+    &-phone {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.2rem;
+
+      &__link {
+        color: #28313d;
+        font-size: 1.6rem;
+        font-weight: 600;
+      }
+    }
+
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.6rem;
+    }
+
+    &__mail {
+      color: $gray-3;
+      font-size: 1.6rem;
+    }
+
+    &__social {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+  }
+
+  &-region {
+    margin: 0rem 1.6rem;
+
+    .dropdown-btn {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+}

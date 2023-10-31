@@ -1,0 +1,356 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  border-radius: 0;
+  outline: none;
+  background-color: transparent;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: $dark-2;
+  background-color: $white;
+}
+
+.page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-left: 11rem;
+
+  @include breakpoint($sm-bp) {
+    padding-left: 0;
+  }
+
+  &.no-nav {
+    padding: 0;
+
+    .container {
+      max-width: 192rem;
+      padding: 0rem 3.2rem;
+
+      @include breakpoint($sm-bp) {
+        padding: 0rem 1.6rem;
+      }
+    }
+  }
+}
+
+h1 {
+  font-size: 3.4rem;
+  font-weight: 500;
+
+  @include breakpoint($xs-bp) {
+    font-size: 2.8rem;
+  }
+}
+h2 {
+  font-size: 3rem;
+  font-weight: 500;
+
+  @include breakpoint($xs-bp) {
+    font-size: 2.6rem;
+  }
+}
+h3 {
+  font-size: 2.4rem;
+  font-weight: 500;
+
+  @include breakpoint($xs-bp) {
+    font-size: 2rem;
+  }
+}
+h4 {
+  font-size: 2.2rem;
+  font-weight: 500;
+
+  @include breakpoint($xs-bp) {
+    font-size: 2rem;
+  }
+}
+h5 {
+  font-size: 2rem;
+  font-weight: 500;
+
+  @include breakpoint($xs-bp) {
+    font-size: 1.8rem;
+  }
+}
+h6 {
+  font-size: 1.8rem;
+  font-weight: 500;
+
+  @include breakpoint($xs-bp) {
+    font-size: 1.6rem;
+  }
+}
+
+svg[astro-icon="fi_heart"] {
+  fill: transparent;
+}
+
+.container {
+  padding: 0rem 3.2rem;
+  width: 100%;
+  max-width: calc(181rem);
+  margin: 0 auto 0;
+
+  @include breakpoint($sm-bp) {
+    padding: 0rem 1.6rem;
+  }
+}
+
+._hidden {
+  overflow: hidden;
+}
+
+.gray {
+  color: $gray-1;
+}
+
+.dark {
+  color: $dark-2;
+}
+
+.accent {
+  color: $accent;
+}
+
+.swiper {
+  &-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 3.2rem;
+
+    @include breakpoint($xs-bp) {
+      margin-bottom: 2.4rem;
+    }
+
+    &__title {
+      font-size: 3.4rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+
+      @include breakpoint($xs-bp) {
+        font-size: 2.8rem;
+      }
+    }
+  }
+
+  &-pagination {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    @include breakpoint($xs-bp) {
+      gap: 0.6rem;
+    }
+
+    &__bullet {
+      width: 0.6rem;
+      height: 0.6rem;
+      border-radius: 50%;
+      transition: 0.3s;
+      background-color: $gray-1;
+
+      @include breakpoint($xs-bp) {
+        width: 0.4rem;
+        height: 0.4rem;
+      }
+
+      &._active {
+        background-color: $gray-3;
+      }
+    }
+  }
+
+  &-preloader {
+    background-color: $light-3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &-btns {
+    flex: none;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+
+    &__btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 4rem;
+      height: 4rem;
+      padding: 0.7rem;
+      color: $gray-1;
+      background-color: $white;
+      border-radius: 0.6rem;
+      transition: 0.3s;
+      @include hover {
+        background-color: $accent_hover;
+        color: $accent;
+      }
+
+      &_prev {
+        svg {
+          transform: rotate(180deg);
+        }
+      }
+
+      &.swiper-button-disabled {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 50;
+
+  &.swiper {
+    gap: 0;
+    width: calc(100% + 6.4rem);
+    overflow: visible;
+    margin: 0 -3.2rem;
+    padding: 0rem 3.2rem;
+
+    @include breakpoint($xs-bp) {
+      width: calc(100% + 3.2rem);
+      margin: 0rem -1.6rem;
+      padding: 0rem 1.6rem;
+    }
+
+    .swiper-slide {
+      width: fit-content;
+
+      &:not(:last-child) {
+        padding-right: 0.8rem;
+      }
+    }
+  }
+}
+
+.dropdown {
+  position: relative;
+
+  &._dropped {
+    .dropdown-btn {
+      border-color: $light-6;
+
+      svg {
+        transform: scaleY(-1);
+      }
+    }
+
+    .dropdown__container {
+      opacity: 1;
+      pointer-events: all;
+      grid-template-rows: 1fr;
+    }
+  }
+
+  &-btn {
+    height: 4.2rem;
+    padding: 0rem 1.8rem;
+    border: 0.2rem solid $light-3;
+    border-radius: 0.6rem;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: $gray-3;
+    transition: 0.3s;
+    @include hover {
+      border-color: $light-6;
+    }
+
+    svg {
+      width: 1.8rem;
+      height: 1.8rem;
+      transition: transform 0.3s;
+    }
+  }
+
+  &__container {
+    position: absolute;
+    z-index: 100;
+    top: calc(100% + 0.8rem);
+    left: 0;
+    max-height: 30rem;
+    width: 26rem;
+    background-color: $white;
+    border-radius: 0.6rem;
+    overflow: hidden auto;
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+    box-shadow: 0 0.4rem 5rem 0 rgba(0, 0, 0, 0.06);
+
+    &::-webkit-scrollbar {
+      width: 0.4rem;
+    }
+    &::-webkit-scrollbar-track {
+      background: $white;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $light-3;
+      border-radius: 0.4rem;
+    }
+  }
+
+  &__inner {
+    min-height: 0;
+    width: 100%;
+  }
+}
+
+.rate {
+  display: flex;
+  align-items: center;
+
+  svg {
+    width: 2.4rem;
+    height: 2.4rem;
+    color: $light-4;
+
+    &.active {
+      color: $accent;
+    }
+  }
+}

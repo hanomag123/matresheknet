@@ -1,0 +1,181 @@
+---
+import { Sprite } from "astro-icon";
+import DefaultBtn from "../components/DefaultBtn/DefaultBtn.astro";
+import DefaultInput from "../components/DefaultInput/DefaultInput.astro";
+import Radio from "../components/Radio/Radio.astro";
+import Layout from "../layouts/Layout.astro";
+import Footer from "../modules/Footer/Footer.astro";
+import Header from "../modules/Header/Header.astro";
+---
+
+<Layout nav={false} title="Оформление заказа">
+  <Header min />
+
+  <section class="order">
+    <div class="container">
+      <form action="#" class="order__wrapper" data-submit-handler>
+        <div class="order__container">
+          <h1 class="order__title">Оформление заказа</h1>
+
+          <div class="swiper order-products">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="order-products__item">
+                  <img src="./img/prod/prod-7.png" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="order-products__item">
+                  <img src="./img/prod/prod-11.png" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="order-products__item">
+                  <img src="./img/prod/prod-2.png" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="order-products__item">
+                  <img src="./img/prod/prod-6.png" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="order-products__item">
+                  <img src="./img/prod/prod-11.png" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="order-products__item">
+                  <img src="./img/prod/prod-2.png" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="order-products__item">
+                  <img src="./img/prod/prod-6.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-contacts">
+            <h3 class="order-contacts__title">Контактная информация</h3>
+            <div class="order-contacts__inner">
+              <DefaultInput placeholder="Иван" label="Имя" />
+              <DefaultInput placeholder="Иванов" label="Фамилия" />
+              <DefaultInput
+                placeholder="+7 995 455 55 55"
+                label="Номер телефона"
+              />
+              <DefaultInput placeholder="podarki@mail.ru" label="E-mail" />
+            </div>
+          </div>
+
+          <div class="order-type">
+            <div class="order-type__head">
+              <h3 class="order-type__title">Способ получения</h3>
+              <div class="order-type__btns"></div>
+            </div>
+
+            <div class="swiper order-type__swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" data-type="Доставка">
+                  <div class="order-type__item">
+                    <div class="order-type__inputs">
+                      <DefaultInput
+                        placeholder="Город, улица, дом"
+                        label="Адрес доставки"
+                      />
+                      <DefaultInput placeholder="3" label="Подъезд" />
+                      <DefaultInput placeholder="33" label="Квартира" />
+                    </div>
+                    <div class="order-type__map">
+                      <iframe
+                        src="https://yandex.ru/map-widget/v1/?um=constructor%3A14c6635aa43527bfa215473e45ce2ca65d6bf0c233503ee66192a0410c4e93f4&source=constructor"
+                        width="100%"
+                        height="100%"
+                        frameborder="0"></iframe>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide" data-type="Самовывоз">
+                  <div class="order-type__item">
+                    <div class="order-type__inputs">
+                      <div class="default-input-label order-type__info-input">
+                        <span class="default-input-label__text"
+                          >Адрес магазина</span
+                        >
+                        <span class="default-input">
+                          г. Москва, ул. Ленина, д. 24
+                        </span>
+                      </div>
+                    </div>
+                    <div class="order-type__map">
+                      <iframe
+                        src="https://yandex.ru/map-widget/v1/?um=constructor%3A14c6635aa43527bfa215473e45ce2ca65d6bf0c233503ee66192a0410c4e93f4&source=constructor"
+                        width="100%"
+                        height="100%"
+                        frameborder="0"></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cart-info order-info">
+          <div class="cart-info__inner">
+            <h3 class="order-info__title">Заказ</h3>
+            <div class="cart-info-item">
+              <span class="cart-info-item__text">
+                Товары
+                <span class="gray">2 шт.</span>
+              </span>
+              <span class="cart-info-item__value">5 000 ₽</span>
+            </div>
+            <div class="cart-info-item">
+              <span class="cart-info-item__text">Скидка</span>
+              <span class="cart-info-item__value">- 1 000 ₽</span>
+            </div>
+          </div>
+          <div class="cart-info-result">
+            <span class="cart-info-result__title">Итого</span>
+            <span class="cart-info-result__value">5 000 ₽</span>
+          </div>
+          <DefaultBtn className="cart-info__btn" type="submit">
+            Оплатить
+          </DefaultBtn>
+
+          <div class="order-info-pay">
+            <h5 class="order-info-pay__title">Способ оплаты</h5>
+            <div class="order-info-pay__inner">
+              <Radio name={"order-pay-type"}>Банковская карта</Radio>
+              <Radio name={"order-pay-type"} checked>Наличные курьеру</Radio>
+            </div>
+          </div>
+        </div>
+      </form>
+      <div class="order-success">
+        <div class="order-success__container">
+          <div class="order-success__icon">
+            <Sprite name="fi_check_2" />
+          </div>
+          <div class="order-success__inner">
+            <span class="order-success__title">Заказ успешно создан</span>
+            <span class="order-success__text">Номер заказа - 2334414114</span>
+          </div>
+        </div>
+        <div class="order-success__btns">
+          <DefaultBtn as="a" href="#" className="order-success__btn">
+            Перейти к заказу
+          </DefaultBtn>
+          <DefaultBtn as="a" href="#" className="order-success__btn">
+            На главную
+          </DefaultBtn>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer min />
+</Layout>

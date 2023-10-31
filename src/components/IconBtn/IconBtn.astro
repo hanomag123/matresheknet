@@ -1,0 +1,15 @@
+---
+import { Sprite } from "astro-icon";
+interface Props {
+  icon: string;
+  as?: keyof astroHTML.JSX.IntrinsicElements;
+  className?: string;
+  size?: "sm" | "xs";
+}
+
+const { as: Wrapper = "button", icon, size, className, ...rest } = Astro.props;
+---
+
+<Wrapper {...rest} class:list={["icon-btn", size, className]}>
+  <Sprite name={icon} />
+</Wrapper>

@@ -1,0 +1,212 @@
+---
+import { Sprite } from "astro-icon";
+import SocialLink from "../../components/SocialLink/SocialLink.astro";
+import DefaultBtn from "../../components/DefaultBtn/DefaultBtn.astro";
+import DefaultInput from "../../components/DefaultInput/DefaultInput.astro";
+import type { IProducItem } from "../../assets/scripts/interfaces";
+
+interface Props {
+  min?: boolean;
+}
+
+const { min } = Astro.props;
+
+const products: IProducItem[] = [
+  {
+    images: [
+      "./img/prod/prod-2.png",
+      "./img/prod/prod-2.png",
+      "./img/prod/prod-2.png",
+    ],
+    price: "1 350 ₽",
+    lastPrice: "1 350 ₽",
+    discount: "-50%",
+    name: "Походно-туристический набор столовых приборов",
+    stars: 3,
+    rating: "3,7",
+  },
+  {
+    images: [
+      "./img/prod/prod-3.png",
+      "./img/prod/prod-3.png",
+      "./img/prod/prod-3.png",
+    ],
+    price: "385 ₽",
+    lastPrice: "400 ₽",
+    discount: "-15%",
+    name: "Спящая собака ангел / Бижу брелок для ключей",
+    stars: 3,
+    rating: "3,7",
+  },
+  {
+    images: [
+      "./img/prod/prod-4.png",
+      "./img/prod/prod-4.png",
+      "./img/prod/prod-4.png",
+    ],
+    price: "385 ₽",
+    lastPrice: "420 ₽",
+    discount: "-15%",
+    name: "Спящая собака ангел / Бижу брелок для ключей",
+    stars: 4,
+    rating: "4,1",
+  },
+  {
+    images: [
+      "./img/prod/prod-5.png",
+      "./img/prod/prod-5.png",
+      "./img/prod/prod-5.png",
+    ],
+    price: "769 ₽",
+    lastPrice: "1 000 ₽",
+    discount: "-10%",
+    name: "Бижу брелок - Garten of banban Сад Банбана",
+    stars: 3,
+    rating: "3,7",
+  },
+  {
+    images: [
+      "./img/prod/prod-6.png",
+      "./img/prod/prod-6.png",
+      "./img/prod/prod-6.png",
+    ],
+    price: "49 700 ₽",
+    lastPrice: "99 400 ₽",
+    discount: "-50%",
+    name: "Георгий Победоносец: золотая монета 50 рублей / 7.78 гр золото ",
+    stars: 5,
+    rating: "5",
+  },
+];
+---
+
+<header class:list={["header", { min: min }]}>
+  <div class="container">
+    {
+      min ? (
+        <div class="header__container">
+          <a href="#" class="header__back">
+            <Sprite name="fi_chevron-right" />
+            Назад к каталогу
+          </a>
+
+          <a href="#" class="header__logo">
+            <Sprite name="logo" />
+          </a>
+
+          <div class="header-call">
+            <a href="#" class="header-call__link">
+              +7 (999) 854 22 55
+            </a>
+          </div>
+          <div class="header-search">
+            <DefaultInput className="header-search__input" />
+            <button type="button" class="header-search__btn">
+              <Sprite name="fi_zoom-out" />
+            </button>
+          </div>
+        </div>
+      ) : (
+        <>
+          <div class="header-contacts">
+            <button type="button" class="header__sity">
+              <Sprite name="fi_map-pin" />
+              Санкт-Петербург
+            </button>
+            <div class="header__nav">
+              <a href="#">Доставка</a>
+              <a href="#">Оплата</a>
+              <a href="#">Контакты</a>
+            </div>
+            <div class="header__social">
+              <SocialLink icon="telegram" href="#" />
+              <SocialLink icon="viber" href="#" />
+            </div>
+            <div class="header-call">
+              <a href="#" class="header-call__link">
+                +7 (999) 854 22 55
+              </a>
+              <button type="button" class="header-call__btn" data-call-btn>
+                Заказать звонок
+              </button>
+            </div>
+          </div>
+          <div class="header__container">
+            <button type="button" class="header__menu-btn">
+              <Sprite name="heroicons-outline:menu-alt-2" />
+            </button>
+            <a href="#" class="header__logo">
+              <Sprite name="logo" />
+            </a>
+            <DefaultBtn size="sm" className="header__catalog">
+              Каталог
+            </DefaultBtn>
+            <form action="#" class="header-search" data-search>
+              <div class="header-search__inner">
+                <DefaultInput
+                  className="header-search__input"
+                  placeholder="Поиск товара"
+                />
+                <button type="submit" class="header-search__btn">
+                  <Sprite name="fi_zoom-out" />
+                </button>
+              </div>
+              <div class="header-search__container">
+                <div class="header-search__list">
+                  {[...products, ...products].map((item) => (
+                    <a href="#" class="header-search-item">
+                      <div class="header-search-item__img">
+                        <img src={item.images[0]} alt="" />
+                      </div>
+                      <div class="header-search-item__inner">
+                        <span class="header-search-item__title">
+                          {item.name}
+                        </span>
+                        <div class="header-search-item-price">
+                          <span class="header-search-item-price__current">
+                            {item.price}
+                          </span>
+                          {item.discount && (
+                            <span class="header-search-item-price__discount">
+                              {item.discount}
+                            </span>
+                          )}
+                          {item.lastPrice && (
+                            <span class="header-search-item-price__last">
+                              {item.lastPrice}
+                            </span>
+                          )}
+                        </div>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+                <DefaultBtn
+                  href="#"
+                  className="header-search__link"
+                  color="accent-light"
+                >
+                  Все результаты
+                </DefaultBtn>
+              </div>
+            </form>
+            <div class="header-control">
+              <button type="button" class="header-control__btn">
+                <Sprite name="fi_user" />
+                Войти
+              </button>
+              <button type="button" class="header-control__btn">
+                <Sprite name="fi_heart" />
+                Избранное
+              </button>
+              <button type="button" class="header-control__btn">
+                <Sprite name="fi_shopping-cart" />
+                Корзина
+              </button>
+            </div>
+          </div>
+        </>
+      )
+    }
+  </div>
+</header>

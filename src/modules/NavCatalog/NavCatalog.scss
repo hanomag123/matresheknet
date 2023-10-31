@@ -1,0 +1,313 @@
+.nav-catalog {
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  height: 100dvh;
+  overflow: visible;
+  background-color: $white;
+  width: 11rem;
+  border-right: 1px solid $light-3;
+  transition: 0.3s;
+  cursor: pointer;
+
+  @include breakpoint($sm-bp) {
+    width: 100%;
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  &._active {
+    cursor: default;
+
+    @include breakpoint($sm-bp) {
+      pointer-events: all;
+      opacity: 1;
+    }
+
+    .nav-catalog__bg {
+      opacity: 0.5;
+      pointer-events: all;
+    }
+
+    .nav-catalog__container {
+      pointer-events: all;
+      background-color: $white;
+      border-color: $light-3;
+
+      .nav-catalog-item__link {
+        color: $dark-1;
+      }
+
+      .nav-catalog-item__btn {
+        color: $dark-1;
+      }
+    }
+
+    .nav-catalog__list {
+      overflow: auto;
+    }
+
+    &._open-item {
+      .nav-catalog-info {
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+  }
+
+  &-head {
+    position: relative;
+    z-index: 2;
+    height: 6.4rem;
+    padding: 2rem 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 0.1rem solid $light-3;
+    flex: none;
+    display: none;
+
+    @include breakpoint($xs-bp) {
+      display: flex;
+    }
+
+    &__inner {
+      flex: 1;
+      position: relative;
+    }
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+  }
+
+  &-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    background-color: $white;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+
+    &__title {
+      margin: 0 auto;
+      font-size: 1.8rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &__close {
+    flex: none;
+    width: 2.4rem;
+    height: 2.4rem;
+    color: $gray-3;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__back {
+    flex: none;
+    width: 2.4rem;
+    height: 2.4rem;
+    color: $gray-3;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      transform: scaleX(-1);
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100%;
+    background-color: #111827;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+
+    @include breakpoint($xs-bp) {
+      display: none;
+    }
+  }
+
+  &__container {
+    height: 100%;
+    width: 48.8rem;
+    background-color: transparent;
+    transition: 0.3s;
+    pointer-events: none;
+    border-right: 1px solid transparent;
+    position: relative;
+
+    @include breakpoint($xs-bp) {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+  }
+
+  &__list {
+    width: 100%;
+    height: 100%;
+    padding: 2rem 1.2rem 2rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    overflow: hidden;
+    @include customScroll;
+
+    @include breakpoint($xs-bp) {
+      flex: 1;
+      padding: 0;
+      overflow: auto;
+      gap: 0rem;
+    }
+  }
+
+  &-item {
+    &._active {
+      .nav-catalog-item__btn {
+        background-color: $light-5;
+      }
+      .nav-catalog-item__container {
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+
+    @include breakpoint($xs-bp) {
+      border-bottom: 0.1rem solid $light-3;
+    }
+
+    &__btn {
+      text-align: left;
+      font-size: 1.8rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      color: transparent;
+      transition: 0.3s;
+      padding: 1.5rem 2rem;
+      border-radius: 0.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 3.3rem;
+      width: 100%;
+      min-height: 7.6rem;
+      transition: 0.5s;
+      @include hover {
+        background-color: $light-5;
+      }
+
+      @include breakpoint($xs-bp) {
+        font-size: 1.6rem;
+        min-height: 7.2rem;
+        gap: 2rem;
+        padding: 1rem 1.6rem;
+      }
+
+      svg {
+        width: 4.5rem;
+        height: 4.5rem;
+        color: $dark-1;
+        opacity: 0.75;
+        flex: none;
+
+        @include breakpoint($xs-bp) {
+          width: 4rem;
+          height: 4rem;
+        }
+      }
+    }
+
+    &__link {
+      text-align: left;
+      font-size: 1.8rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      color: transparent;
+      transition: 0.3s;
+      padding: 1.5rem 2rem;
+      border-radius: 0.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 3.3rem;
+      width: 100%;
+      min-height: 7.6rem;
+      transition: 0.5s;
+      @include hover {
+        background-color: $light-5;
+      }
+
+      @include breakpoint($xs-bp) {
+        font-size: 1.6rem;
+        min-height: 7.2rem;
+        gap: 2rem;
+        padding: 1rem 1.6rem;
+        border-bottom: 0.1rem solid $light-3;
+        justify-content: space-between;
+      }
+
+      svg {
+        width: 2.4rem;
+        height: 2.4rem;
+        color: $gray-3;
+        flex: none;
+        display: none;
+
+        @include breakpoint($xs-bp) {
+          display: block;
+        }
+      }
+    }
+
+    &__container {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 100%;
+      width: 48.8rem;
+      height: 100%;
+      border-right: 1px solid $light-3;
+      background-color: $white;
+      overflow: auto;
+      transition: 0.3s;
+      opacity: 0;
+      pointer-events: none;
+      @include customScroll;
+
+      @include breakpoint($xs-bp) {
+        width: 100%;
+        left: 0;
+        padding-top: 6.4rem;
+      }
+    }
+  }
+}

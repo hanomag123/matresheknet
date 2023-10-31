@@ -1,0 +1,43 @@
+---
+import { Sprite } from "astro-icon";
+
+const images = [
+  "./img/about/about-1.jpeg",
+  "./img/about/about-2.jpeg",
+  "./img/about/about-3.jpeg",
+  "./img/about/about-4.jpeg",
+];
+---
+
+<section class="about-slider">
+  <div class="container about-slider__container">
+    <div class="swiper-head">
+      <h3 class="swiper-head__title">Магазин подарков Matreshek Net!</h3>
+      <div class="swiper-btns">
+        <button type="button" class="swiper-btns__btn swiper-btns__btn_prev">
+          <Sprite name="fi_chevron-right" />
+        </button>
+        <button type="button" class="swiper-btns__btn swiper-btns__btn_next">
+          <Sprite name="fi_chevron-right" />
+        </button>
+      </div>
+    </div>
+
+    <div class="swiper about-slider__swiper">
+      <div class="swiper-wrapper">
+        {
+          [...images, ...images].map((i) => (
+            <div class="swiper-slide">
+              <div class="about-slider__img">
+                <img src={i} alt="" loading="lazy" />
+                <div class="swiper-preloader">
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white" />
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

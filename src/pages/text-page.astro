@@ -1,0 +1,165 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Breadcrumbs from "../modules/Breadcrumbs/Breadcrumbs.astro";
+import Footer from "../modules/Footer/Footer.astro";
+import Header from "../modules/Header/Header.astro";
+import NavCatalog from "../modules/NavCatalog/NavCatalog.astro";
+import NavBar from "../modules/NavBar/NavBar.astro";
+---
+
+<Layout title="Текстовая страница">
+  <Header />
+  <NavCatalog />
+  <NavBar />
+
+  <Breadcrumbs path={["Главная", "О компании"]} />
+
+  <section class="text-page">
+    <div class="container">
+      <h1 class="text-page__title">
+        Рады приветствовать вас на сайте компании Matreshek Net!
+      </h1>
+      <div class="text-page__container">
+        <div class="text-page__img-block">
+          <div class="text-page__content">
+            <div class="text-page__text">
+              <p>
+                <span class="dark"
+                  >Matreshek <span class="accent">Net</span></span
+                > - ведущий российский онлайн-магазин прикольных подарков,
+                дизайнерских штучек, стильных аксессуаров и множества нескучных
+                креативных вещей от модных студий и брендов со всего мира.
+                Студий и брендов со всего. икольных подарков, дизайнерских
+                штучек, стильных аксессуаров и множества нескучных креативных
+                вещей.
+              </p>
+            </div>
+            <div class="text-page__text">
+              <h3>Matreshek <span class="accent">Net</span></h3>
+              <ul>
+                <li>множества нескучных креативных подарков</li>
+                <li>множества нескучных креативных подарков</li>
+                <li>множества нескучных креативных подарков</li>
+                <li>множества нескучных креативных подарков</li>
+                <li>множества нескучных креативных подарков</li>
+              </ul>
+            </div>
+            <div class="text-page__text">
+              <h3>Matreshek <span class="accent">Net</span></h3>
+              <ol>
+                <li>множества нескучных креативных подарков</li>
+                <li>множества нескучных креативных подарков</li>
+                <li>множества нескучных креативных подарков</li>
+                <li>множества нескучных креативных подарков</li>
+                <li>множества нескучных креативных подарков</li>
+              </ol>
+            </div>
+          </div>
+          <div class="text-page__img">
+            <img src="./img/text-page.jpeg" alt="" />
+          </div>
+        </div>
+        <div class="text-page__content">
+          <div class="text-page__text">
+            <p>
+              <span class="dark">Matreshek <span class="accent">Net</span></span
+              > - ведущий российский онлайн-магазин прикольных подарков,
+              дизайнерских штучек, стильных аксессуаров и множества нескучных
+              креативных вещей от модных студий и брендов со всего мира. Студий
+              и брендов со всего. икольных подарков, дизайнерских штучек,
+              стильных аксессуаров и множества нескучных креативных вещей.
+            </p>
+          </div>
+          <div class="text-page__text">
+            <h3>Matreshek <span class="accent">Net</span></h3>
+            <ul>
+              <li>множества нескучных креативных подарков</li>
+              <li>множества нескучных креативных подарков</li>
+              <li>множества нескучных креативных подарков</li>
+              <li>множества нескучных креативных подарков</li>
+              <li>множества нескучных креативных подарков</li>
+            </ul>
+          </div>
+          <div class="text-page__text">
+            <h3>Matreshek <span class="accent">Net</span></h3>
+            <ol>
+              <li>множества нескучных креативных подарков</li>
+              <li>множества нескучных креативных подарков</li>
+              <li>множества нескучных креативных подарков</li>
+              <li>множества нескучных креативных подарков</li>
+              <li>множества нескучных креативных подарков</li>
+            </ol>
+          </div>
+        </div>
+        <div class="text-page-table">
+          <div class="text-page-table__container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Категория товара</th>
+                  <th>Скидка</th>
+                  <th>Кол-во</th>
+                  <th>Отзывы</th>
+                  <th>Цена</th>
+                  <th>Процент скидки</th>
+                  <th>Цена со скидкой</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Колокольчики коллекционные</td>
+                  <td>Нет</td>
+                  <td>12</td>
+                  <td>2</td>
+                  <td>12 000 ₽</td>
+                  <td>10 %</td>
+                  <td>10 000 ₽</td>
+                </tr>
+                <tr>
+                  <td>Туристические аксессуары</td>
+                  <td>Нет</td>
+                  <td>23</td>
+                  <td>2</td>
+                  <td>5 000 ₽</td>
+                  <td>12 %</td>
+                  <td>4 000 ₽</td>
+                </tr>
+                <tr>
+                  <td>Монеты коллекционные</td>
+                  <td>Да</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>5 000 ₽</td>
+                  <td>20%</td>
+                  <td>4 000 ₽</td>
+                </tr>
+                <tr>
+                  <td>Массажеры для рук и тела</td>
+                  <td>Да</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td>Итого</td>
+                  <td>-</td>
+                  <td>36</td>
+                  <td>6</td>
+                  <td>22 000 ₽</td>
+                  <td>42 %</td>
+                  <td>18 000 ₽</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,29 @@
+@import "scss-reset/reset";
+@import "normalize-scss";
+@import "./utils/vars";
+@import "./utils/mixins";
+@import "./utils/fonts";
+@import "swiper/scss";
+@import "@fancyapps/ui/dist/fancybox/fancybox.css";
+
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+
+  @include breakpoint($xl-bp) {
+    font-size: calc(100vw / 1920 * 10);
+  }
+
+  @include breakpoint($sm-bp) {
+    font-size: calc(100vw / 1200 * 10);
+  }
+
+  @include breakpoint($xs-bp) {
+    font-size: calc(100vw / 375 * 10);
+  }
+}
+
+@import "./general";
+@import "./components";
+@import "./modules";
+@import "./pages";

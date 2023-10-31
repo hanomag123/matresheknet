@@ -1,0 +1,340 @@
+.product-item {
+  width: 100%;
+  min-height: 0;
+  overflow: hidden;
+
+  &__wrapper {
+    height: 54.7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    border-radius: 0.8rem;
+    border: 0.2rem solid $light-3;
+    background-color: $white;
+    padding: 2.2rem;
+
+    @include breakpoint($xs-bp) {
+      position: relative;
+      padding: 0rem 0.8rem 0.8rem;
+      height: 37.8rem;
+    }
+  }
+
+  &__images-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+
+  &__images {
+    flex: 1;
+    width: 100%;
+    height: 28.6rem;
+    flex: none;
+    user-select: none;
+    margin: 0;
+
+    @include breakpoint($xs-bp) {
+      height: 17.5rem;
+    }
+
+    .swiper-wrapper {
+      align-items: stretch;
+    }
+
+    .swiper-slide {
+      height: auto;
+      position: relative;
+      padding: 3rem 1rem 5rem;
+
+      @include breakpoint($xs-bp) {
+        padding: 2rem 1rem 3rem;
+      }
+
+      img {
+        object-fit: contain;
+        object-position: center;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .swiper-pagination {
+      position: absolute;
+      bottom: 2.4rem;
+
+      @include breakpoint($xs-bp) {
+        bottom: 1.6rem;
+      }
+    }
+  }
+
+  &__pagination {
+    flex: none;
+    width: 6.4rem;
+    height: auto;
+    margin: 0;
+
+    @include breakpoint($xs-bp) {
+      display: none;
+    }
+
+    .swiper-slide {
+      background-color: $white;
+      width: 100%;
+      height: 6.4rem;
+      padding: 0.2rem;
+      border: 0.2rem solid $white;
+      border-radius: 0.8rem;
+      cursor: pointer;
+      transition: 0.3s;
+      @include hover {
+        border-color: $accent_hover;
+      }
+
+      &.swiper-slide-thumb-active {
+        border-color: $accent;
+      }
+    }
+  }
+
+  &__pagination-img {
+    width: 100%;
+    height: 100%;
+    background-color: $light-5;
+    border-radius: 0.8rem;
+
+    img {
+      object-fit: contain;
+      object-position: center;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-price {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 1.6rem;
+
+    @include breakpoint($xs-bp) {
+      margin-bottom: 0.8rem;
+    }
+
+    &__current {
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+
+      @include breakpoint($xs-bp) {
+        font-size: 1.6rem;
+      }
+    }
+
+    &__discount {
+      color: $green;
+
+      @include breakpoint($xs-bp) {
+        font-size: 1.2rem;
+      }
+    }
+
+    &__last {
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-decoration: line-through;
+      text-decoration-line: strikethrough;
+      color: $gray-2;
+
+      @include breakpoint($xs-bp) {
+        display: none;
+      }
+    }
+  }
+
+  &__name {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    color: $gray-3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -moz-box;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    @include defaultHover;
+
+    @include breakpoint($xs-bp) {
+      font-size: 1.4rem;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
+  }
+
+  &-rating {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-top: auto;
+
+    @include breakpoint($xs-bp) {
+      gap: 0.8rem;
+    }
+
+    &__value {
+      font-weight: 600;
+
+      @include breakpoint($xs-bp) {
+        font-size: 1.4rem;
+      }
+    }
+
+    &__stars {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+
+      @include breakpoint($xs-bp) {
+        gap: 0.2rem;
+      }
+    }
+
+    &__star {
+      color: $light-4;
+
+      &.active {
+        color: $accent;
+      }
+
+      svg {
+        width: 2rem;
+        height: 2rem;
+
+        @include breakpoint($xs-bp) {
+          width: 1.6rem;
+          height: 1.6rem;
+        }
+      }
+    }
+  }
+
+  &-btns {
+    display: flex;
+    gap: 1.2rem;
+    margin-top: 2.4rem;
+
+    @include breakpoint($xs-bp) {
+      margin-top: 2rem;
+    }
+
+    &__cart {
+      flex: 1;
+    }
+
+    .icon-btn {
+      @include breakpoint($xs-bp) {
+        position: absolute;
+        z-index: 10;
+        top: 1.2rem;
+        right: 1.2rem;
+        padding: 0;
+        background-color: transparent;
+        width: 1.6rem;
+        height: 1.6rem;
+      }
+    }
+  }
+
+  &.large {
+    grid-column: span 2;
+
+    @include breakpoint($xs-bp) {
+      grid-column: unset;
+    }
+  }
+
+  &.large & {
+    &__images-wrapper {
+      flex: 1;
+    }
+
+    &__images {
+      height: auto;
+      width: calc(100% - 3.2rem - 6.4rem);
+
+      @include breakpoint($xs-bp) {
+        height: 17.5rem;
+        width: 100%;
+      }
+
+      .swiper-pagination {
+        display: none;
+
+        @include breakpoint($xs-bp) {
+          display: flex;
+        }
+      }
+    }
+
+    &__container {
+      flex: none;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto 4.8rem;
+      row-gap: 1.6rem;
+      column-gap: 4.3rem;
+
+      @include breakpoint($xs-bp) {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 0rem;
+      }
+    }
+
+    &-price {
+      grid-area: 1/1/2/2;
+      margin: 0;
+
+      @include breakpoint($xs-bp) {
+        margin-bottom: 0.8rem;
+      }
+    }
+
+    &__name {
+      grid-area: 2/1/3/2;
+    }
+
+    &-rating {
+      grid-area: 1/2/2/3;
+      margin: 0;
+
+      @include breakpoint($xs-bp) {
+        margin-top: auto;
+      }
+    }
+
+    &-btns {
+      grid-area: 2/2/3/3;
+      margin: 0;
+
+      @include breakpoint($xs-bp) {
+        margin-top: 2rem;
+      }
+    }
+  }
+}

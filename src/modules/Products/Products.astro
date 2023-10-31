@@ -1,0 +1,295 @@
+---
+import type { IProducItem } from "../../assets/scripts/interfaces";
+import DefaultBtn from "../../components/DefaultBtn/DefaultBtn.astro";
+import MultipleSelect from "../../components/MultipleSelect/MultipleSelect.astro";
+import ProductItem from "../../components/ProductItem/ProductItem.astro";
+import RangeSlider from "../../components/RangeSlider/RangeSlider.astro";
+import Pagination from "../Pagination/Pagination.astro";
+
+const items: IProducItem[] = [
+  {
+    images: [
+      "./img/prod/prod-12.png",
+      "./img/prod/prod-12.png",
+      "./img/prod/prod-12.png",
+    ],
+    price: "7 350 ₽",
+    lastPrice: "1 350 ₽",
+    discount: "-50%",
+    name: "Массажер для рук Youpin PMA Graphene",
+    stars: 3,
+    rating: "3,7",
+  },
+  {
+    images: [
+      "./img/prod/prod-13.png",
+      "./img/prod/prod-13.png",
+      "./img/prod/prod-13.png",
+    ],
+    price: "2 350 ₽",
+    lastPrice: "1 350 ₽",
+    discount: "-50%",
+    name: "Вибромассажер ручной CS Medica CS-v1 белый",
+    stars: 3,
+    rating: "3,7",
+  },
+  {
+    images: [
+      "./img/prod/prod-14.png",
+      "./img/prod/prod-14.png",
+      "./img/prod/prod-14.png",
+    ],
+    price: "5 350 ₽",
+    lastPrice: "6 350 ₽",
+    discount: "-50%",
+    name: "Массажер для рук с инфракрасным прогревом",
+    stars: 3,
+    rating: "3,7",
+    slidesPreview: [
+      "./img/prod/prod-14.png",
+      "./img/prod/prod-14.png",
+      "./img/prod/prod-14.png",
+    ],
+  },
+  {
+    images: [
+      "./img/prod/prod-15.png",
+      "./img/prod/prod-15.png",
+      "./img/prod/prod-15.png",
+    ],
+    price: "450 ₽",
+    lastPrice: "1 350 ₽",
+    discount: "-50%",
+    name: 'Мягкая игрушка антистресс "Голубь сизый" Подарок',
+    stars: 3,
+    rating: "3,7",
+  },
+  {
+    images: [
+      "./img/prod/prod-2.png",
+      "./img/prod/prod-2.png",
+      "./img/prod/prod-2.png",
+    ],
+    price: "1 350 ₽",
+    lastPrice: "1 350 ₽",
+    discount: "-50%",
+    name: "Походно-туристический набор столовых приборов",
+    stars: 3,
+    rating: "3,7",
+  },
+  {
+    images: [
+      "./img/prod/prod-3.png",
+      "./img/prod/prod-3.png",
+      "./img/prod/prod-3.png",
+    ],
+    price: "385 ₽",
+    lastPrice: "400 ₽",
+    discount: "-15%",
+    name: "Спящая собака ангел / Бижу брелок для ключей",
+    stars: 3,
+    rating: "3,7",
+  },
+  {
+    images: [
+      "./img/prod/prod-4.png",
+      "./img/prod/prod-4.png",
+      "./img/prod/prod-4.png",
+    ],
+    price: "385 ₽",
+    lastPrice: "420 ₽",
+    discount: "-15%",
+    name: "Спящая собака ангел / Бижу брелок для ключей",
+    stars: 4,
+    rating: "4,1",
+  },
+  {
+    images: [
+      "./img/prod/prod-5.png",
+      "./img/prod/prod-5.png",
+      "./img/prod/prod-5.png",
+    ],
+    price: "769 ₽",
+    lastPrice: "1 000 ₽",
+    discount: "-10%",
+    name: "Бижу брелок - Garten of banban Сад Банбана",
+    stars: 3,
+    rating: "3,7",
+  },
+  {
+    images: [
+      "./img/prod/prod-6.png",
+      "./img/prod/prod-6.png",
+      "./img/prod/prod-6.png",
+    ],
+    price: "49 700 ₽",
+    lastPrice: "99 400 ₽",
+    discount: "-50%",
+    name: "Георгий Победоносец: золотая монета 50 рублей / 7.78 гр золото ",
+    stars: 5,
+    rating: "5",
+  },
+  {
+    images: [
+      "./img/prod/prod-16.png",
+      "./img/prod/prod-16.png",
+      "./img/prod/prod-16.png",
+    ],
+    price: "2 350 ₽",
+    lastPrice: "1 350 ₽",
+    discount: "-50%",
+    name: "Хохломская Роспись Цветы / Мужская",
+    stars: 3,
+    rating: "3,7",
+  },
+  {
+    images: [
+      "./img/prod/prod-2.png",
+      "./img/prod/prod-2.png",
+      "./img/prod/prod-2.png",
+    ],
+    price: "1 350 ₽",
+    lastPrice: "2 350 ₽",
+    discount: "-50%",
+    name: "Массажер для рук с инфракрасным прогревом",
+    stars: 3,
+    rating: "3,7",
+    slidesPreview: [
+      "./img/prod/prod-2.png",
+      "./img/prod/prod-2.png",
+      "./img/prod/prod-2.png",
+    ],
+  },
+  {
+    images: [
+      "./img/prod/prod-17.png",
+      "./img/prod/prod-17.png",
+      "./img/prod/prod-17.png",
+    ],
+    price: "666 ₽",
+    lastPrice: "1 350 ₽",
+    discount: "-50%",
+    name: 'Футболка СувенирShop "Жириновский"',
+    stars: 3,
+    rating: "3,7",
+  },
+  {
+    images: [
+      "./img/prod/prod-18.png",
+      "./img/prod/prod-18.png",
+      "./img/prod/prod-18.png",
+    ],
+    price: "2 350 ₽",
+    lastPrice: "1 350 ₽",
+    discount: "-50%",
+    name: "Портрет тигра в технике двойной экспозиции",
+    stars: 3,
+    rating: "3,7",
+  },
+  {
+    images: [
+      "./img/prod/prod-7.png",
+      "./img/prod/prod-7.png",
+      "./img/prod/prod-7.png",
+    ],
+    price: "1 207 ₽",
+    name: "Пепельница для курения, коллекционная ",
+    stars: 3,
+    rating: "3,7",
+  },
+  {
+    images: [
+      "./img/prod/prod-8.png",
+      "./img/prod/prod-8.png",
+      "./img/prod/prod-8.png",
+    ],
+    price: "5 120 ₽",
+    name: "WS-1105 Статуэтка Гиппократ (Veronese)",
+    stars: 3,
+    rating: "3,7",
+  },
+  {
+    images: [
+      "./img/prod/prod-9.png",
+      "./img/prod/prod-9.png",
+      "./img/prod/prod-9.png",
+    ],
+    price: "5 350 ₽",
+    name: "Статуэтка Veronese 'Фемида-богиня правосудия'",
+    stars: 4,
+    rating: "4,7",
+  },
+  {
+    images: [
+      "./img/prod/prod-10.png",
+      "./img/prod/prod-10.png",
+      "./img/prod/prod-10.png",
+    ],
+    price: "550 ₽",
+    name: "Реалистичная подушка-антистресс Ежик",
+    stars: 5,
+    rating: "5",
+  },
+  {
+    images: [
+      "./img/prod/prod-11.png",
+      "./img/prod/prod-11.png",
+      "./img/prod/prod-11.png",
+    ],
+    price: "450 ₽ ",
+    name: "Игрушка антистресс электронный поп ит",
+    stars: 3,
+    rating: "3,7",
+  },
+];
+---
+
+<section class="products">
+  <div class="container">
+    <form action="#" class="swiper filter products__filter">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <MultipleSelect
+            placeholder="Кому"
+            items={[
+              { name: "Молодому человеку", value: "1" },
+              { name: "Молодому человеку", value: "2" },
+              { name: "Молодому человеку", value: "3" },
+              { name: "Молодому человеку", value: "4" },
+              { name: "Молодому человеку", value: "5" },
+              { name: "Молодому человеку", value: "6" },
+              { name: "Молодому человеку", value: "7" },
+            ]}
+          />
+        </div>
+        <div class="swiper-slide">
+          <MultipleSelect
+            placeholder="Повод"
+            items={[
+              { name: "Молодому человеку", value: "1" },
+              { name: "Молодому человеку", value: "2" },
+              { name: "Молодому человеку", value: "3" },
+              { name: "Молодому человеку", value: "4" },
+              { name: "Молодому человеку", value: "5" },
+              { name: "Молодому человеку", value: "6" },
+              { name: "Молодому человеку", value: "7" },
+            ]}
+          />
+        </div>
+        <div class="swiper-slide">
+          <RangeSlider placeholder="Стоимость" />
+        </div>
+      </div>
+    </form>
+
+    <div class="products__list">
+      {items.map((item) => <ProductItem item={item} />)}
+    </div>
+
+    <DefaultBtn color="accent-light" as="a" href="#" className="products__btn">
+      Показать еще
+    </DefaultBtn>
+
+    <Pagination />
+  </div>
+</section>

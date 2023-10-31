@@ -1,0 +1,129 @@
+---
+import { Sprite } from "astro-icon";
+import Reviews from "../Reviews/Reviews.astro";
+---
+
+<section class="product-info">
+  <div class="container product-info__container">
+    <div class="product-info-btns">
+      <span class="product-info-btns__dash"></span>
+    </div>
+    <div class="swiper product-info__swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="dropdown product-info-item" data-dropdown>
+            <button type="button" class="dropdown-btn" data-dropdown-btn>
+              <span class="dropdown-btn__text">Описание</span>
+              <Sprite name="fi_chevron-down" />
+            </button>
+            <div class="dropdown__container">
+              <div class="dropdown__inner">
+                <div class="product-info-item__container">
+                  <div class="product-info__text">
+                    <p>
+                      Сделайте сюрприз своим близким или друзьям прямо сейчас,
+                      оформив заказ с доставкой, или приходите к нам. Мы поможем
+                      превратить скучные серые дни, в яркие и праздничные!
+                    </p>
+                    <p>
+                      Сделайте сюрприз своим близким или друзьям прямо сейчас,
+                      оформив заказ с доставкой, или приходите к нам. <br />
+                       Мы поможем превратить скучные серые дни, в яркие и
+                      праздничные!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="dropdown product-info-item" data-dropdown>
+            <button type="button" class="dropdown-btn" data-dropdown-btn>
+              <span class="dropdown-btn__text">Характиристики</span>
+              <Sprite name="fi_chevron-down" />
+            </button>
+            <div class="dropdown__container">
+              <div class="dropdown__inner">
+                <div class="product-info-item__container">
+                  <table class="product-info-spec">
+                    <tbody>
+                      <tr>
+                        <td class="gray">Тип</td>
+                        <td>набор</td>
+                      </tr>
+                      <tr>
+                        <td class="gray">Состав набора</td>
+                        <td>вилка; ложка; нож; открывашка</td>
+                      </tr>
+                      <tr>
+                        <td class="gray">Количество предметов</td>
+                        <td>4</td>
+                      </tr>
+                      <tr>
+                        <td class="gray">Складные</td>
+                        <td>Нет</td>
+                      </tr>
+                      <tr>
+                        <td class="gray">Чехол в комплекте</td>
+                        <td>Да</td>
+                      </tr>
+                      <tr>
+                        <td class="gray">Количество предметов</td>
+                        <td>4</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="dropdown product-info-item" data-dropdown>
+            <button type="button" class="dropdown-btn" data-dropdown-btn>
+              <span class="dropdown-btn__text">
+                Отзывы <span class="gray">9</span>
+              </span>
+              <Sprite name="fi_chevron-down" />
+            </button>
+            <div class="dropdown__container">
+              <div class="dropdown__inner">
+                <div class="product-info-item__container">
+                  <Reviews />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="dropdown product-info-item" data-dropdown>
+            <button type="button" class="dropdown-btn" data-dropdown-btn>
+              <span class="dropdown-btn__text">Доставка</span>
+              <Sprite name="fi_chevron-down" />
+            </button>
+            <div class="dropdown__container">
+              <div class="dropdown__inner">
+                <div class="product-info-item__container">
+                  <div class="product-info__text">
+                    <p>
+                      Сделайте сюрприз своим близким или друзьям прямо сейчас,
+                      оформив заказ с доставкой, или приходите к нам. Мы поможем
+                      превратить скучные серые дни, в яркие и праздничные!
+                    </p>
+                    <p>
+                      Сделайте сюрприз своим близким или друзьям прямо сейчас,
+                      оформив заказ с доставкой, или приходите к нам. <br />
+                       Мы поможем превратить скучные серые дни, в яркие и
+                      праздничные!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

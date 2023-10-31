@@ -1,0 +1,49 @@
+.up-btn {
+  position: fixed;
+  z-index: 800;
+  right: 3.2rem;
+  bottom: 8.8rem;
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 50%;
+  background-color: rgba(249, 68, 68, 0.1);
+  transition: 0.3s;
+  color: $accent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(100%);
+  opacity: 0;
+  pointer-events: none;
+  @include hover {
+    background-color: $accent;
+    color: $white;
+  }
+
+  @include breakpoint($xs-bp) {
+    right: 1.6rem;
+    bottom: 1.6rem;
+  }
+
+  &._show {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  &__icon {
+    width: 2.8rem;
+    height: 2.8rem;
+    position: absolute;
+  }
+
+  &__dash {
+    position: absolute;
+    width: 108%;
+    height: 108%;
+    stroke: $accent;
+    stroke-dashoffset: 148;
+    stroke-dasharray: 148;
+    transform: rotate(35deg) scaleY(-1);
+  }
+}

@@ -1,0 +1,74 @@
+---
+import { Sprite } from "astro-icon";
+import type { IAdvItem } from "../../assets/scripts/interfaces";
+
+const items: IAdvItem[] = [
+  {
+    img: "./img/head-slider/head-slider-1.png",
+    name: "Наборы ножей",
+    price: "от 3 000 ₽",
+  },
+  {
+    img: "./img/head-slider/head-slider-2.png",
+    name: "Фляги",
+    price: "от 9 000 ₽",
+  },
+  {
+    img: "./img/head-slider/head-slider-3.png",
+    name: "Наборы походной посуды",
+    price: "от 2 000 ₽",
+  },
+  {
+    img: "./img/head-slider/head-slider-4.png",
+    name: "Туристические палатки",
+    price: "от 3 000 ₽",
+  },
+  {
+    img: "./img/head-slider/head-slider-5.png",
+    name: "Туристическая мебель",
+    price: "от 385 ₽",
+  },
+  {
+    img: "./img/head-slider/head-slider-6.png",
+    name: "Туристические газовые плиты",
+    price: "от 385 ₽",
+  },
+];
+---
+
+<section class="adv-slider">
+  <div class="container">
+    <h4 class="adv-slider__title">Туристические аксессуары</h4>
+    <div class="swiper adv-slider__swiper">
+      <div class="swiper-wrapper">
+        {
+          [...items, ...items].map((i) => (
+            <div class="swiper-slide">
+              <a href="#" class="adv-slider-item">
+                <div class="adv-slider-item__img">
+                  <img src={i.img} alt="" loading="lazy" />
+                </div>
+                <div class="adv-slider-item__inner">
+                  <span class="adv-slider-item__name">{i.name}</span>
+                  <span class="adv-slider-item__price">{i.price}</span>
+                </div>
+              </a>
+            </div>
+          ))
+        }
+      </div>
+      <div class="swiper-btns">
+        <div class="adv-slider__btn adv-slider__btn_prev">
+          <button type="button" class="swiper-btns__btn swiper-btns__btn_prev">
+            <Sprite name="fi_chevron-right" />
+          </button>
+        </div>
+        <div class="adv-slider__btn adv-slider__btn_next">
+          <button type="button" class="swiper-btns__btn swiper-btns__btn_next">
+            <Sprite name="fi_chevron-right" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

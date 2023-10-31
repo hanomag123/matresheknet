@@ -1,0 +1,30 @@
+---
+import { Sprite } from "astro-icon";
+
+interface Props {
+  placeholder?: string;
+}
+
+const { placeholder = "Прикрепите изображение (не более 1 мб)" } = Astro.props;
+---
+
+<div class="file-input">
+  <label class="file-input__label">
+    <input
+      type="file"
+      class="file-input__input"
+      accept="image/png, image/jpeg"
+    />
+    <div class="file-input__icon">
+      <Sprite name="ri:attachment-2" />
+      <Sprite name="lucide:check-circle" />
+      <Sprite name="ph:x-circle" />
+    </div>
+    <span class="file-input__file"></span>
+    <span class="file-input__placeholder">{placeholder}</span>
+  </label>
+  <button type="button" class="file-input__btn">
+    <Sprite name="fi_x" />
+  </button>
+  <span class="file-input__error">Неверный формат</span>
+</div>

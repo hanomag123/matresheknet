@@ -1,0 +1,147 @@
+---
+import { Sprite } from "astro-icon";
+import DefaultBtn from "../../components/DefaultBtn/DefaultBtn.astro";
+import DefaultInput from "../../components/DefaultInput/DefaultInput.astro";
+import SocialLink from "../../components/SocialLink/SocialLink.astro";
+
+interface Props {
+  min?: boolean;
+}
+
+const { min } = Astro.props;
+---
+
+<footer class="footer" class:list={["footer", { min: min }]}>
+  {
+    !min && (
+      <div class="container footer__container">
+        <div class="footer-nav">
+          <div class="dropdown footer-nav__wrapper" data-dropdown>
+            <button type="button" class="dropdown-btn" data-dropdown-btn>
+              <span class="dropdown-btn__text">Компания</span>
+              <Sprite name="fi_chevron-down" />
+            </button>
+            <div class="dropdown__container">
+              <div class="dropdown__inner">
+                <div class="footer-nav__item">
+                  <a href="#" class="footer-nav__link footer-nav__link_main">
+                    О нас
+                  </a>
+                  <a href="#" class="footer-nav__link">
+                    Наша миссия
+                  </a>
+                  <a href="#" class="footer-nav__link">
+                    Контакты
+                  </a>
+                  <a href="#" class="footer-nav__link">
+                    Реквизиты
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown footer-nav__wrapper" data-dropdown>
+            <button type="button" class="dropdown-btn" data-dropdown-btn>
+              <span class="dropdown-btn__text">Категории</span>
+              <Sprite name="fi_chevron-down" />
+            </button>
+            <div class="dropdown__container">
+              <div class="dropdown__inner">
+                <div class="footer-nav__item">
+                  <a href="#" class="footer-nav__link footer-nav__link_main">
+                    Подарки
+                  </a>
+                  <a href="#" class="footer-nav__link">
+                    Подбор подарка
+                  </a>
+                  <a href="#" class="footer-nav__link">
+                    Категория 1
+                  </a>
+                  <a href="#" class="footer-nav__link">
+                    Категория 2
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown footer-nav__wrapper" data-dropdown>
+            <button type="button" class="dropdown-btn" data-dropdown-btn>
+              <span class="dropdown-btn__text">Клиентам</span>
+              <Sprite name="fi_chevron-down" />
+            </button>
+            <div class="dropdown__container">
+              <div class="dropdown__inner">
+                <div class="footer-nav__item">
+                  <a href="#" class="footer-nav__link">
+                    Акции
+                  </a>
+                  <a href="#" class="footer-nav__link">
+                    Доставка
+                  </a>
+                  <a href="#" class="footer-nav__link">
+                    Гарантия
+                  </a>
+                  <a href="#" class="footer-nav__link">
+                    Оплата
+                  </a>
+                  <a href="#" class="footer-nav__link">
+                    Возврат
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-nav__item footer-nav__item_contacts">
+            <a href="#" class="footer-nav__link footer-nav__link_main">
+              Контакты
+            </a>
+            <div class="footer-nav__phone">
+              <a href="#" class="footer-nav__link footer-nav__link_main">
+                +7 (999) 854 22 55
+              </a>
+              <a href="#" class="footer-nav__link footer-nav__link_main">
+                +7 (999) 854 22 55
+              </a>
+            </div>
+            <a href="#" class="footer-nav__link">
+              E-mail: podarki@mail.ru
+            </a>
+            <div class="footer-nav-social">
+              {["viber", "telegram", "vk", "youtube"].map((i) => (
+                <SocialLink href={"#"} icon={i} />
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-form">
+          <span class="footer-form__title">Подписаться на наши новости</span>
+          <DefaultInput
+            clasName="footer-form__input"
+            placeholder="Ваш E-mail"
+          />
+          <DefaultBtn as="button" className="footer-form__btn">
+            Подписаться
+          </DefaultBtn>
+        </div>
+      </div>
+    )
+  }
+  <div class="footer-legal">
+    <div class="container footer-legal__container">
+      <p class="footer-legal__text">© 2008–2023 Все права защищены.</p>
+      <div class="footer-legal__cards">
+        <img src="./img/visa.png" alt="" />
+        <img src="./img/mastercard.png" alt="" />
+        <img src="./img/mir.png" alt="" />
+      </div>
+    </div>
+  </div>
+  <div class="footer-copy">
+    <div class="container">
+      <p class="footer-copy__text">
+        Сайт разработан агентством <a href="#">Вайд Арт</a>
+      </p>
+    </div>
+  </div>
+</footer>

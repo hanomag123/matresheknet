@@ -1,0 +1,79 @@
+---
+import { Sprite } from "astro-icon";
+import Layout from "../layouts/Layout.astro";
+import Footer from "../modules/Footer/Footer.astro";
+import Header from "../modules/Header/Header.astro";
+import type { ICartItem } from "../assets/scripts/interfaces";
+import CartItem from "../components/CartItem/CartItem.astro";
+import DefaultInput from "../components/DefaultInput/DefaultInput.astro";
+import DefaultBtn from "../components/DefaultBtn/DefaultBtn.astro";
+
+const itemsList: ICartItem[] = [
+  {
+    name: "Пепельница для курения, коллекционная",
+    image: "./img/prod/prod-7.png",
+    price: 1250,
+    lastPrice: "6 000",
+    discount: "10%",
+    favorite: true,
+  },
+  {
+    name: "Игрушка антистресс, электронный поп ит",
+    image: "./img/prod/prod-11.png",
+    price: 2500,
+  },
+];
+---
+
+<Layout nav={false}>
+  <Header min={true} />
+
+  <section class="cart">
+    <div class="container">
+      <form action="#" class="cart__wrapper">
+        <div class="cart__container">
+          <div class="cart__head">
+            <h1 class="cart__title">Корзина</h1>
+            <button type="button" class="cart__reset">
+              <Sprite name="fi_trash" />
+               Очистить корзину
+            </button>
+          </div>
+
+          <div class="cart__list">
+            {itemsList.map((item) => <CartItem item={item} />)}
+          </div>
+        </div>
+
+        <div class="cart-info">
+          <div class="cart-info__inner">
+            <div class="cart-info-item">
+              <span class="cart-info-item__text">
+                Товары
+                <span class="gray">2 шт.</span>
+              </span>
+              <span class="cart-info-item__value">5 000 ₽</span>
+            </div>
+            <div class="cart-info-item">
+              <span class="cart-info-item__text">Скидка</span>
+              <span class="cart-info-item__value">- 1 000 ₽</span>
+            </div>
+          </div>
+          <div class="cart-info-result">
+            <span class="cart-info-result__title">Итого</span>
+            <span class="cart-info-result__value">5 000 ₽</span>
+          </div>
+          <DefaultInput
+            className="cart-info__input"
+            placeholder="Ваш промокод"
+          />
+          <DefaultBtn className="cart-info__btn" type="submit">
+            Перейти к оформлению
+          </DefaultBtn>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <Footer min={true} />
+</Layout>

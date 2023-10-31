@@ -1,0 +1,78 @@
+.multiple-select {
+  position: relative;
+
+  &._checked {
+    .multiple-select__btns {
+      .dropdown-btn {
+        background-color: $accent;
+        border-color: $accent;
+        color: $white;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+
+        @include hover {
+          opacity: 0.9;
+        }
+      }
+    }
+    .multiple-select__clean {
+      width: 4.2rem;
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    border-radius: 0.6rem;
+    overflow: hidden;
+    background-color: $white;
+    transition: 0.3s;
+  }
+
+  &__clean {
+    width: 0rem;
+    height: 4.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    border-left: 0.2rem solid #f57373;
+    background-color: $accent;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+    @include hover {
+      opacity: 0.9;
+    }
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  &__list {
+    width: 100%;
+    max-width: 26rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0.8rem 0rem;
+  }
+
+  .checkbox {
+    padding: 1.2rem 2rem;
+
+    &__text {
+      flex: 1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .dropdown-btn {
+    background-color: transparent;
+  }
+}

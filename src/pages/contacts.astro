@@ -1,0 +1,138 @@
+---
+import { Sprite } from "astro-icon";
+import DefaultBtn from "../components/DefaultBtn/DefaultBtn.astro";
+import Layout from "../layouts/Layout.astro";
+import Breadcrumbs from "../modules/Breadcrumbs/Breadcrumbs.astro";
+import Footer from "../modules/Footer/Footer.astro";
+import Header from "../modules/Header/Header.astro";
+import NavCatalog from "../modules/NavCatalog/NavCatalog.astro";
+import ContactsSlider from "../modules/ContactsSlider/ContactsSlider.astro";
+import NavBar from "../modules/NavBar/NavBar.astro";
+---
+
+<Layout title="Контакты">
+  <Header />
+  <NavCatalog />
+  <NavBar />
+  <Breadcrumbs path={["Главная", "Контакты"]} />
+
+  <section class="contacts">
+    <div class="container">
+      <h1 class="contacts__title">Контакты</h1>
+      <div class="contacts__wrapper">
+        <div class="contacts__container">
+          <div class="contacts__map">
+            <iframe
+              src="https://yandex.ru/map-widget/v1/?um=constructor%3A14c6635aa43527bfa215473e45ce2ca65d6bf0c233503ee66192a0410c4e93f4&source=constructor"
+              width="100%"
+              height="100%"
+              frameborder="0"></iframe>
+          </div>
+
+          <ContactsSlider />
+
+          <div class="contacts-table">
+            <h3 class="contacts-table__title">Реквизиты</h3>
+            <div class="contacts-table__container">
+              <table>
+                <tbody>
+                  <tr>
+                    <td>Полное наименование</td>
+                    <td
+                      >Общество с ограниченной ответственностью “Matreshek Net”</td
+                    >
+                  </tr>
+                  <tr>
+                    <td>Юридический адрес</td>
+                    <td
+                      >623443, Московская область, г. Москва, ул. Ленина, д. 12</td
+                    >
+                  </tr>
+                  <tr>
+                    <td>Фактический адрес</td>
+                    <td
+                      >623443, Московская область, г. Москва, ул. Ленина, д. 12</td
+                    >
+                  </tr>
+                  <tr>
+                    <td>Телефон</td>
+                    <td>8 (342) 222-45-45</td>
+                  </tr>
+                  <tr>
+                    <td>Эл. почта</td>
+                    <td><span class="accent">matreshek.net@mail.com</span></td>
+                  </tr>
+                  <tr>
+                    <td>ИНН/КПП</td>
+                    <td>3466433456724523</td>
+                  </tr>
+                  <tr>
+                    <td>ОГРН</td>
+                    <td>346643345672452334234</td>
+                  </tr>
+                  <tr>
+                    <td>ОКПО</td>
+                    <td>456436664423</td>
+                  </tr>
+                  <tr>
+                    <td>ОКВЭД</td>
+                    <td>52.23.3</td>
+                  </tr>
+                  <tr>
+                    <td>Банковские реквизиты</td>
+                    <td>
+                      <div class="contacts-table__text">
+                        <span>БИК 234423411</span>
+                        <span>Р/с №4353462223423423423455 в ПАО Сбербанк</span>
+                        <span
+                          >Кор/счет №4353462223423423423455 в ПАО Сбербанк</span
+                        >
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="contacts-info">
+          <div class="contacts-info__item">
+            <span class="contacts-info__title">Центральный офис</span>
+            <div class="contacts-info__inner">
+              <p>
+                Москва, ул. Ленина 45, <br /> 8 этаж, офис 24
+              </p>
+            </div>
+          </div>
+          <div class="contacts-info__item">
+            <span class="contacts-info__title">Режим работы</span>
+            <div class="contacts-info__inner">
+              <p>Пн - Пт: с 10-00 до 20-00</p>
+              <p>Сб - Вс: с 10-00 до 19-00</p>
+            </div>
+          </div>
+          <div class="contacts-info__item">
+            <span class="contacts-info__title">Телефон</span>
+            <div class="contacts-info__inner">
+              <a href="#">8 (342) 222-45-45</a>
+              <a href="#">8 (342) 222-45-45</a>
+              <a href="#">8 (342) 222-45-45</a>
+            </div>
+          </div>
+          <div class="contacts-info__item">
+            <span class="contacts-info__title">E-mail</span>
+            <div class="contacts-info__inner">
+              <a href="#">matreshek.net@mail.com</a>
+            </div>
+          </div>
+          <DefaultBtn className="contacts-info__btn" data-question-btn>
+            Написать сообщение
+          </DefaultBtn>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

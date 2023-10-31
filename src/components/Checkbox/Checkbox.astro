@@ -1,0 +1,19 @@
+---
+import { Sprite } from "astro-icon";
+
+interface Props extends astroHTML.JSX.InputHTMLAttributes {
+  title?: string;
+}
+
+const { title, ...rest } = Astro.props;
+---
+
+<label class="checkbox" title={title}>
+  <input type="checkbox" class="checkbox__input" {...rest} />
+  <span class="checkbox__icon">
+    <Sprite name="fi_check" />
+  </span>
+  <span class="checkbox__text">
+    <slot />
+  </span>
+</label>

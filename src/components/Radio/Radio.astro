@@ -1,0 +1,15 @@
+---
+interface Props extends astroHTML.JSX.InputHTMLAttributes {
+  title?: string;
+}
+
+const { title, ...rest } = Astro.props;
+---
+
+<label class="radio" title={title}>
+  <input type="radio" class="radio__input" {...rest} />
+  <span class="radio__icon"> </span>
+  <span class="radio__text">
+    <slot />
+  </span>
+</label>

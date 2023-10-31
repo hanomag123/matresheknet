@@ -1,0 +1,94 @@
+---
+import type { IProducItem } from "../assets/scripts/interfaces";
+import Layout from "../layouts/Layout.astro";
+import Breadcrumbs from "../modules/Breadcrumbs/Breadcrumbs.astro";
+import Footer from "../modules/Footer/Footer.astro";
+import Header from "../modules/Header/Header.astro";
+import NavCatalog from "../modules/NavCatalog/NavCatalog.astro";
+import NavBar from "../modules/NavBar/NavBar.astro";
+import ProductHead from "../modules/ProductHead/ProductHead.astro";
+import ProductInfo from "../modules/ProductInfo/ProductInfo.astro";
+import ProductSlider from "../modules/ProductSlider/ProductSlider.astro";
+import Reviews from "../modules/Reviews/Reviews.astro";
+
+const products: IProducItem[] = [
+  {
+    images: [
+      "./img/prod/prod-7.png",
+      "./img/prod/prod-7.png",
+      "./img/prod/prod-7.png",
+    ],
+    price: "1 207 ₽",
+    name: "Пепельница для курения, коллекционная ",
+    stars: 3,
+    rating: "3,7",
+  },
+  {
+    images: [
+      "./img/prod/prod-8.png",
+      "./img/prod/prod-8.png",
+      "./img/prod/prod-8.png",
+    ],
+    price: "5 120 ₽",
+    name: "WS-1105 Статуэтка Гиппократ (Veronese)",
+    stars: 3,
+    rating: "3,7",
+  },
+  {
+    images: [
+      "./img/prod/prod-9.png",
+      "./img/prod/prod-9.png",
+      "./img/prod/prod-9.png",
+    ],
+    price: "5 350 ₽",
+    name: "Статуэтка Veronese 'Фемида-богиня правосудия'",
+    stars: 4,
+    rating: "4,7",
+  },
+  {
+    images: [
+      "./img/prod/prod-10.png",
+      "./img/prod/prod-10.png",
+      "./img/prod/prod-10.png",
+    ],
+    price: "550 ₽",
+    name: "Реалистичная подушка-антистресс Ежик",
+    stars: 5,
+    rating: "5",
+  },
+  {
+    images: [
+      "./img/prod/prod-11.png",
+      "./img/prod/prod-11.png",
+      "./img/prod/prod-11.png",
+    ],
+    price: "450 ₽ ",
+    name: "Игрушка антистресс электронный поп ит",
+    stars: 3,
+    rating: "3,7",
+  },
+];
+---
+
+<Layout>
+  <Header />
+  <NavCatalog />
+  <NavBar />
+
+  <Breadcrumbs
+    path={[
+      "Главная",
+      "Каталог",
+      "Туристические аксессуары",
+      "Набор походный Сплав Track",
+    ]}
+  />
+
+  <ProductHead />
+
+  <ProductInfo />
+
+  <ProductSlider title="Популярные товары" items={[...products, ...products]} />
+
+  <Footer />
+</Layout>

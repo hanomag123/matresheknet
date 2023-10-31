@@ -1,0 +1,65 @@
+.breadcrumbs {
+  margin: 0rem 0rem 4.4rem;
+
+  @include breakpoint($xs-bp) {
+    margin-bottom: 3.2rem;
+    padding: 1.9rem 0;
+    border-top: 0.1rem solid $light-4;
+    border-bottom: 0.1rem solid $light-4;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 0.5em;
+
+    @include breakpoint($xs-bp) {
+      display: none;
+    }
+  }
+
+  &__link {
+    font-size: 1.4rem;
+    color: $gray-3;
+
+    &:not(:last-child) {
+      @include defaultHover;
+
+      &::after {
+        content: " /";
+      }
+    }
+
+    &:last-child {
+      color: $gray-1;
+      pointer-events: none;
+    }
+  }
+
+  &__mob {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.6rem;
+    display: none;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    color: $gray-1;
+
+    @include breakpoint($xs-bp) {
+      display: flex;
+    }
+
+    svg {
+      width: 1.6rem;
+      height: 1.6rem;
+      flex: none;
+      transform: scaleX(-1);
+      color: $black-text;
+    }
+  }
+}

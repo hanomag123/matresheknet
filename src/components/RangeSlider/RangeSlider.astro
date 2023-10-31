@@ -1,0 +1,33 @@
+---
+import { Sprite } from "astro-icon";
+import DefaultInput from "../DefaultInput/DefaultInput.astro";
+
+interface Props {
+  placeholder: string;
+}
+
+const { placeholder } = Astro.props;
+---
+
+<div class="dropdown multiple-select range-slider" data-range-slider>
+  <div class="multiple-select__btns">
+    <button type="button" class="dropdown-btn" data-dropdown-btn>
+      <span class="dropdown-btn__text">{placeholder}</span>
+      <Sprite name="fi_chevron-down" />
+    </button>
+    <button type="button" class="multiple-select__clean">
+      <Sprite name="fi_x" />
+    </button>
+  </div>
+  <div class="dropdown__container">
+    <div class="dropdown__inner">
+      <div class="range-slider__container">
+        <div class="range-slider__inputs">
+          <DefaultInput data-min="100" data-init="200" type="number" />
+          <DefaultInput data-max="3000" data-init="1000" type="number" />
+        </div>
+        <div class="range-slider__range"></div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+---
+import { Sprite } from "astro-icon";
+interface Props {
+  path: string[];
+}
+
+const { path } = Astro.props;
+---
+
+<div class="breadcrumbs">
+  <div class="container">
+    <div class="breadcrumbs__list">
+      {
+        path.map((i) => (
+          <a href="#" class="breadcrumbs__link">
+            {i}
+          </a>
+        ))
+      }
+    </div>
+    <a href="#" class="breadcrumbs__mob">
+      <Sprite name="fi_chevron-right" />
+       Вернуться на главную
+    </a>
+  </div>
+</div>

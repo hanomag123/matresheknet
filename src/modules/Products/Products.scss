@@ -1,0 +1,30 @@
+.products {
+  margin-bottom: 6.4rem;
+  overflow: hidden;
+
+  &__list {
+    margin-top: 2rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, calc((100% - (3.2rem * 4)) / 5));
+    gap: 3.2rem;
+
+    @include breakpoint($sm-bp) {
+      grid-template-columns: repeat(3, calc((100% - (3.2rem * 2)) / 3));
+    }
+
+    @include breakpoint($xs-bp) {
+      gap: 1.2rem;
+      grid-template-columns: repeat(2, calc((100% - 1.2rem) / 2));
+    }
+  }
+
+  &__btn {
+    margin-top: 2.4rem;
+    display: none;
+
+    @include breakpoint($xs-bp) {
+      display: flex;
+    }
+  }
+}

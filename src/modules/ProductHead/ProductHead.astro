@@ -1,0 +1,173 @@
+---
+import { Sprite } from "astro-icon";
+import DefaultBtn from "../../components/DefaultBtn/DefaultBtn.astro";
+---
+
+<div class="product-head">
+  <div class="container product-head__container">
+    <div class="product-head-slider">
+      <div class="swiper product-head-slider__pagination">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./img/prod/prod-2.png" alt="" loading="lazy" />
+            <div class="swiper-preloader">
+              <div class="swiper-lazy-preloader swiper-lazy-preloader-white">
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/prod/prod-2.png" alt="" loading="lazy" />
+            <div class="swiper-preloader">
+              <div class="swiper-lazy-preloader swiper-lazy-preloader-white">
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/prod/prod-2.png" alt="" loading="lazy" />
+            <div class="swiper-preloader">
+              <div class="swiper-lazy-preloader swiper-lazy-preloader-white">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper product-head-slider__main">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./img/prod/prod-2.png" alt="" loading="lazy" />
+            <div class="swiper-preloader">
+              <div class="swiper-lazy-preloader swiper-lazy-preloader-white">
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/prod/prod-2.png" alt="" loading="lazy" />
+            <div class="swiper-preloader">
+              <div class="swiper-lazy-preloader swiper-lazy-preloader-white">
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/prod/prod-2.png" alt="" loading="lazy" />
+            <div class="swiper-preloader">
+              <div class="swiper-lazy-preloader swiper-lazy-preloader-white">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+
+    <!-- <div class="product-head__content"> -->
+    <h1 class="product-head__title">Набор походный Сплав Track</h1>
+
+    <div class="product-head-top">
+      <div class="product-head-top__inner">
+        <span class="product-head__text">
+          Артикул:
+          <span class="product-head__text_black">1234211</span>
+        </span>
+
+        <div class="product-head-rate">
+          <div class="rate product-head-rate__stars">
+            <Sprite name="star" class="active" />
+            <Sprite name="star" class="active" />
+            <Sprite name="star" class="active" />
+            <Sprite name="star" />
+            <Sprite name="star" />
+          </div>
+          <span class="product-head__text product-head__text_black"
+            >1 отзыв</span
+          >
+        </div>
+
+        <button type="button" class="product-head__share">
+          <Sprite name="fi_share" />
+           Поделиться
+        </button>
+      </div>
+    </div>
+
+    <div class="product-head-main">
+      <div class="product-head-main-price">
+        <span class="product-head-main-price__current">265 000 ₽</span>
+        <span class="product-head-main-price__discount">-50%</span>
+        <span class="product-head-main-price__last">265 000 ₽</span>
+      </div>
+
+      <div class="product-head-main__btns">
+        <DefaultBtn size="sm">В корзину</DefaultBtn>
+        <DefaultBtn
+          size="sm"
+          color="light"
+          className="product-head-main__fav-btn"
+        >
+          <Sprite name="fi_heart" />
+           Добавить в избранное
+        </DefaultBtn>
+      </div>
+      <ul class="product-head-main-info">
+        <li class="product-head-main-info__item has">В наличии - 14</li>
+        <li class="product-head-main-info__item nohas">Нет на складе</li>
+        <li class="product-head-main-info__item await">Под заказ</li>
+      </ul>
+    </div>
+
+    <div class="product-head-spec">
+      <table class="product-head-spec__table">
+        <tbody>
+          <tr>
+            <td class="product-head__text">Тип</td>
+            <td class="product-head__text product-head__text_black">набор</td>
+          </tr>
+          <tr>
+            <td class="product-head__text">Состав набора</td>
+            <td class="product-head__text product-head__text_black">
+              вилка; ложка; нож; открывашка
+            </td>
+          </tr>
+          <tr>
+            <td class="product-head__text">Количество предметов</td>
+            <td class="product-head__text product-head__text_black">4</td>
+          </tr>
+          <tr>
+            <td class="product-head__text">Складные</td>
+            <td class="product-head__text product-head__text_black">Нет</td>
+          </tr>
+          <tr>
+            <td class="product-head__text">Чехол в комплекте</td>
+            <td class="product-head__text product-head__text_black">Да</td>
+          </tr>
+          <tr>
+            <td class="product-head__text">Тип</td>
+            <td class="product-head__text product-head__text_black">набор</td>
+          </tr>
+          <tr>
+            <td class="product-head__text">Состав набора</td>
+            <td class="product-head__text product-head__text_black">
+              вилка; ложка; нож; открывашка
+            </td>
+          </tr>
+          <tr>
+            <td class="product-head__text">Количество предметов</td>
+            <td class="product-head__text product-head__text_black">4</td>
+          </tr>
+          <tr>
+            <td class="product-head__text">Складные</td>
+            <td class="product-head__text product-head__text_black">Нет</td>
+          </tr>
+          <tr>
+            <td class="product-head__text">Чехол в комплекте</td>
+            <td class="product-head__text product-head__text_black">Да</td>
+          </tr>
+        </tbody>
+      </table>
+      <button type="button" class="product-head-spec__btn">
+        <span>Все характеристики</span>
+        <span>Скрыть</span>
+      </button>
+    </div>
+    <!-- </div> -->
+  </div>
+</div>

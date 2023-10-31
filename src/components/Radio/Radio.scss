@@ -1,0 +1,37 @@
+.radio {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  width: 100%;
+  border-radius: 0.8rem;
+  border: 0.2rem solid $light-4;
+  font-size: 1.7rem;
+  height: 5.2rem;
+  padding: 0rem 1.8rem;
+  transition: 0.3s;
+  @include hover {
+    border-color: $light-6;
+  }
+  cursor: pointer;
+
+  @include breakpoint($xs-bp) {
+    font-size: 1.6rem;
+  }
+
+  &__input {
+    display: none;
+
+    &:checked + .radio__icon {
+      border: 0.3rem solid $accent;
+    }
+  }
+
+  &__icon {
+    flex: none;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+    border: 0.2rem solid $light-3;
+    transition: 0.3s;
+  }
+}

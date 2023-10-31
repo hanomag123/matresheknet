@@ -1,0 +1,46 @@
+---
+import { Sprite } from "astro-icon";
+import { menuItems } from "../../fakeData";
+---
+
+<nav class="nav-catalog">
+  <div class="nav-catalog__bg"></div>
+  <div class="nav-catalog__container">
+    <div class="nav-catalog-head">
+      <div class="nav-catalog-head__inner">
+        <span class="nav-catalog__title">Каталог</span>
+        <div class="nav-catalog-info">
+          <button type="button" class="nav-catalog__back">
+            <Sprite name="fi_chevron-right" />
+          </button>
+          <span class="nav-catalog-info__title">Символ года</span>
+        </div>
+      </div>
+      <button type="button" class="nav-catalog__close">
+        <Sprite name="fi_x" />
+      </button>
+    </div>
+    <div class="nav-catalog__list">
+      {
+        menuItems.map((item) => (
+          <div class="nav-catalog-item" data-title={item.title}>
+            <button type="button" class="nav-catalog-item__btn" data-nav-btn>
+              <Sprite name={item.icon} />
+              {item.title}
+            </button>
+            <div class="nav-catalog-item__container">
+              <div class="nav-catalog__list">
+                {item.sub.map((sub) => (
+                  <a href="#" class="nav-catalog-item__link">
+                    {sub}
+                    <Sprite name="fi_chevron-right" />
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</nav>

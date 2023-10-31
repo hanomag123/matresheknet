@@ -1,0 +1,55 @@
+---
+import { Sprite } from "astro-icon";
+import SocialLink from "../../components/SocialLink/SocialLink.astro";
+---
+
+<nav class="menu">
+  <div class="menu__head">
+    <span class="menu__title">Меню</span>
+    <button type="button" class="menu__btn">
+      <Sprite name="fi_x" />
+    </button>
+  </div>
+
+  <div class="menu__container">
+    <button type="button" class="menu__login">
+      <Sprite name="fi_user" />
+       Вход или регистрация
+    </button>
+
+    <div class="menu-nav">
+      <a href="#" class="menu-nav__link">Акции</a>
+      <a href="#" class="menu-nav__link">Доставка</a>
+      <a href="#" class="menu-nav__link">Оплата</a>
+      <a href="#" class="menu-nav__link">О компании</a>
+      <a href="#" class="menu-nav__link">Реквизиты</a>
+      <a href="#" class="menu-nav__link">Контакты</a>
+    </div>
+
+    <div class="menu-contacts">
+      <div class="menu-contacts-phone">
+        <a href="#" class="menu-contacts-phone__link">+7 (999) 854 22 55</a>
+        <a href="#" class="menu-contacts-phone__link">+7 (999) 854 22 55</a>
+      </div>
+      <div class="menu-contacts__inner">
+        <a href="#" class="menu-contacts__mail">E-mail: podarki@mail.ru</a>
+        <div class="menu-contacts__social">
+          <SocialLink icon="viber" />
+          <SocialLink icon="telegram" />
+          <SocialLink icon="vk" />
+          <SocialLink icon="youtube" />
+        </div>
+      </div>
+    </div>
+
+    <div class="dropdown menu-region" data-dropdown>
+      <button type="button" class="dropdown-btn" data-dropdown-btn>
+        <span class="dropdown-btn__text">Санкт-Петербург</span>
+        <Sprite name="fi_chevron-down" />
+      </button>
+      <div class="dropdown__container">
+        <div class="dropdown__inner"></div>
+      </div>
+    </div>
+  </div>
+</nav>

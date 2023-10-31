@@ -1,0 +1,60 @@
+---
+import { Sprite } from "astro-icon";
+import type { IProducItem } from "../../assets/scripts/interfaces";
+import ProductItem from "../../components/ProductItem/ProductItem.astro";
+import DefaultBtn from "../../components/DefaultBtn/DefaultBtn.astro";
+
+interface Props {
+  title: string;
+  items: IProducItem[];
+  className?: string;
+  hasFilter?: boolean;
+}
+
+const { title, items, className } = Astro.props;
+---
+
+<section class:list={["product-slider", className]}>
+  <div class="container product-slider__container">
+    <div class="swiper-head product-slider__head">
+      <div class="product-slider__head-inner">
+        <a href="#" class="product-slider__link">
+          {title}
+          <span class="product-slider__link-icon">
+            <Sprite name="fi_chevron-right" />
+          </span>
+        </a>
+        <slot name="filter" />
+      </div>
+      <div class="swiper-btns">
+        <button type="button" class="swiper-btns__btn swiper-btns__btn_prev">
+          <Sprite name="fi_chevron-right" />
+        </button>
+        <button type="button" class="swiper-btns__btn swiper-btns__btn_next">
+          <Sprite name="fi_chevron-right" />
+        </button>
+      </div>
+    </div>
+
+    <div class="swiper product-slider__swiper">
+      <div class="swiper-wrapper product-slider__swiper-wrapper">
+        {
+          items.map((item) => (
+            <div class="swiper-slide product-slider__swiper-slide">
+              <ProductItem item={item} />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <DefaultBtn
+      color="accent-light"
+      as="a"
+      href="#"
+      className="product-slider__btn"
+    >
+      Все хиты со скидкой
+    </DefaultBtn>
+  </div>
+</section>

@@ -1,0 +1,70 @@
+---
+import DefaultBtn from "../../components/DefaultBtn/DefaultBtn.astro";
+---
+
+<section class="main-banner">
+  <div class="container main-banner__container">
+    <div class="swiper main-banner__swiper">
+      <div class="swiper-wrapper">
+        {
+          [1, 1, 1, 1].map(() => (
+            <div class="swiper-slide">
+              <div class="main-banner-item">
+                <div class="main-banner-item__bg">
+                  <img src="./img/main-banner.jpg" alt="" loading="lazy" />
+                  <div class="swiper-preloader">
+                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white" />
+                  </div>
+                </div>
+                <div class="main-banner-item__container">
+                  <h4 class="main-banner-item__title">
+                    Качественное снаряжение для туристических поездок
+                  </h4>
+                  <p class="main-banner-item__text">
+                    Только до конца сентября! Скидки до 25%!
+                  </p>
+                  <DefaultBtn className="main-banner-item__btn">
+                    Подобрать
+                  </DefaultBtn>
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="swiper main-banner-prod">
+      <div class="swiper-wrapper">
+        {
+          [1, 1, 1, 1].map(() => (
+            <div class="swiper-slide">
+              <div class="main-banner-prod-item">
+                <div class="main-banner-prod-item__img">
+                  <img src="./img/prod/prod-1.png" alt="" loading="lazy" />
+                  <div class="swiper-preloader">
+                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white" />
+                  </div>
+                </div>
+                <div class="main-banner-prod-item__container">
+                  <span class="main-banner-prod-item__coast">1 350 ₽</span>
+                  <span class="main-banner-prod-item__title">
+                    Рюкзак туристический
+                  </span>
+                  <DefaultBtn
+                    as="a"
+                    href="#"
+                    className="main-banner-prod-item__btn"
+                  >
+                    Подробнее
+                  </DefaultBtn>
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

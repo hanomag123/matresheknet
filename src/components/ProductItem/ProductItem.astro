@@ -1,0 +1,84 @@
+---
+import { Sprite } from "astro-icon";
+import type { IProducItem } from "../../assets/scripts/interfaces";
+import DefaultBtn from "../DefaultBtn/DefaultBtn.astro";
+import IconBtn from "../IconBtn/IconBtn.astro";
+
+interface Props {
+  item: IProducItem;
+  className?: string;
+}
+
+const { item, className } = Astro.props;
+---
+
+<div class:list={["product-item", className, { large: item.slidesPreview }]}>
+  <div class="product-item__wrapper">
+    <div class="product-item__images-wrapper">
+      <div class="swiper product-item__images">
+        <div class="swiper-wrapper">
+          {
+            item.images.map((img) => (
+              <div class="swiper-slide">
+                <img src={img} alt="" loading="lazy" />
+                <div class="swiper-preloader">
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white" />
+                </div>
+              </div>
+            ))
+          }
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      {
+        item.slidesPreview && (
+          <div class="swiper product-item__pagination">
+            <div class="swiper-wrapper">
+              {item.slidesPreview.map((j) => (
+                <div class="swiper-slide">
+                  <div class="product-item__pagination-img">
+                    <img src={j} alt="" loading="lazy" />
+                    <div class="swiper-preloader">
+                      <div class="swiper-lazy-preloader swiper-lazy-preloader-white" />
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )
+      }
+    </div>
+    <div class="product-item__container">
+      <div class="product-item-price">
+        <span class="product-item-price__current">{item.price}</span>
+        <span class="product-item-price__discount">{item.discount}</span>
+        <span class="product-item-price__last">{item.lastPrice}</span>
+      </div>
+      <a href="#" class="product-item__name" title={item.name}>{item.name}</a>
+      <div class="product-item-rating">
+        <div class="product-item-rating__stars">
+          {
+            [...new Array(5)].map((s, i) => (
+              <span
+                class:list={[
+                  "product-item-rating__star",
+                  i < item.stars ? "active" : "",
+                ]}
+              >
+                <Sprite name="star" />
+              </span>
+            ))
+          }
+        </div>
+        <span class="product-item-rating__value">{item.rating}</span>
+      </div>
+      <div class="product-item-btns">
+        <DefaultBtn className="product-item-btns__cart" size="sm">
+          В корзину
+        </DefaultBtn>
+        <IconBtn size="sm" icon="fi_heart" />
+      </div>
+    </div>
+  </div>
+</div>

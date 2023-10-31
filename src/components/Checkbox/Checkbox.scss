@@ -1,0 +1,49 @@
+.checkbox {
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.6rem;
+  font-size: 1.6rem;
+  color: $gray-3;
+  cursor: pointer;
+  transition: 0.3s;
+  @include hover {
+    color: $accent;
+  }
+
+  &__input {
+    display: none;
+
+    &:checked + {
+      .checkbox__icon {
+        background-color: $accent;
+        border-color: $accent;
+
+        svg {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+
+  &__icon {
+    width: 1.6rem;
+    height: 1.6rem;
+    flex: none;
+    border-radius: 0.2rem;
+    border: 0.2rem solid $light-3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    transition: 0.3s;
+
+    svg {
+      width: 1rem;
+      height: 1rem;
+      transform: scale(0);
+      transition: 0.3s;
+    }
+  }
+}

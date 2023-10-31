@@ -1,0 +1,54 @@
+.range-slider {
+  .dropdown__container {
+    padding: 0;
+    width: 30.6rem;
+
+    @include breakpoint($xs-bp) {
+      transform: translateX(-50%);
+    }
+  }
+  &__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1.8rem;
+    gap: 2.4rem;
+  }
+
+  &__inputs {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.6rem;
+
+    .default-input {
+      width: 100%;
+      height: 4rem;
+      padding: 0rem 1.4rem;
+    }
+  }
+
+  &__range {
+    width: 100%;
+    height: 1.6rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &:is(.drbar-container) {
+      --bg-thick: 0.2rem;
+      --bg-color: #{$light-3};
+      --slider-wh: 1.6rem;
+      --range-thick: 0.2rem;
+      --slider-color: #{$accent};
+      --range-color: #{$accent};
+      --slider-active: #{$accent};
+      --range-active: #{$accent};
+
+      .drbar-bg {
+        height: 0.2rem;
+        background-color: transparent;
+      }
+    }
+  }
+}

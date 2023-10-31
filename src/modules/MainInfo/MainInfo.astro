@@ -1,0 +1,39 @@
+---
+import DefaultBtn from "../../components/DefaultBtn/DefaultBtn.astro";
+
+interface Props {
+  className?: string;
+}
+
+const { className } = Astro.props;
+---
+
+<section class:list={["main-info", className]}>
+  <div class="container">
+    <div class="main-info__container">
+      <div class="main-info__inner">
+        <h3 class="main-info__title">Подарки на все случаи</h3>
+        <p class="main-info__text">
+          Каждый человек должен знать достойный интернет магазин интересных
+          вещей и подарков, ведь поводов для покупки презентов – огромное
+          количество! Начиная со всевозможных серьезных годовщин и юбилеев,
+          заканчивая просто хорошим настроением – по-настоящему оригинальные
+          подарки пригодятся всегда.
+          <br /><br />
+           Для девушки, для мужчины средних лет или любимой тетушки,
+          благополучно «разменявшей» девятый десяток у нас найдется прикольный
+          подарок любому человеку, которого вы решите порадовать. <br />
+           Чтобы многообразие вариантов не усложняло ваш выбор, мы заботливо
+          разложили прикольные подарочки на тематических витринах нашего
+          интернет-магазина.
+        </p>
+        <DefaultBtn as="a" href="#" className="main-info__btn">
+          Узнать подробнее
+        </DefaultBtn>
+      </div>
+      <div class="main-info__img">
+        <img src="./img/main-info.jpg" alt="" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>

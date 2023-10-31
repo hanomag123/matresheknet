@@ -1,0 +1,60 @@
+---
+import { Sprite } from "astro-icon";
+import type { ICartItem } from "../../assets/scripts/interfaces";
+
+interface Props {
+  item: ICartItem;
+}
+
+const { item } = Astro.props;
+---
+
+<div class="cart-item">
+  <div class="cart-item__img">
+    <img src={item.image} alt="" />
+  </div>
+
+  <div class="cart-item__inner">
+    <span class="cart-item__title">{item.name}</span>
+    <div class="cart-item__btns">
+      <button
+        type="button"
+        class:list={["cart-item__btn", { active: item.favorite }]}
+      >
+        <Sprite name="fi_heart" />
+      </button>
+      <button type="button" class="cart-item__btn">
+        <Sprite name="fi_trash" />
+      </button>
+    </div>
+  </div>
+
+  <div class="cart-item-counter">
+    <input type="text" class="cart-item-counter__input" />
+    <div class="cart-item-counter__inner">
+      <button type="button" class="cart-item-counter__btn" data-minus>
+        <Sprite name="fi_minus" />
+      </button>
+      <span class="cart-item-counter__count"></span>
+      <button type="button" class="cart-item-counter__btn" data-plus>
+        <Sprite name="fi_plus" />
+      </button>
+    </div>
+    <span class="cart-item-counter__price" data-prefix="₽/шт">{item.price}</span
+    >
+  </div>
+
+  <div class="cart-item-price">
+    <span class="cart-item-price__current" data-prefix="₽">{item.price}</span>
+    {
+      item.discount && (
+        <>
+          <span class="cart-item-price__discount">{item.discount}</span>
+          <span class="cart-item-price__last" data-prefix="₽">
+            {item.lastPrice}
+          </span>
+        </>
+      )
+    }
+  </div>
+</div>

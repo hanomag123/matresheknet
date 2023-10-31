@@ -1,0 +1,193 @@
+.contacts {
+  margin-bottom: 6.4rem;
+
+  @include breakpoint($xs-bp) {
+    margin-bottom: 2.4rem;
+  }
+
+  &__title {
+    font-size: 3.4rem;
+    font-weight: 500;
+    margin-bottom: 3.2rem;
+
+    @include breakpoint($xs-bp) {
+      font-size: 2.8rem;
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 3.2rem;
+    position: relative;
+
+    @include breakpoint($sm-bp) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__container {
+    width: 127rem;
+    display: flex;
+    flex-direction: column;
+    gap: 6.4rem;
+
+    @include breakpoint($sm-bp) {
+      width: 100%;
+    }
+
+    @include breakpoint($xs-bp) {
+      gap: 3.2rem;
+    }
+  }
+
+  &-info {
+    position: sticky;
+    top: 2rem;
+    right: 0;
+    flex: 1;
+    padding: 3rem;
+    border: 0.2rem solid $light-3;
+    border-radius: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3.2rem;
+
+    @include breakpoint($sm-bp) {
+      width: 100%;
+      position: static;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include breakpoint($xs-bp) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 3rem 1.4rem 2.2rem;
+    }
+
+    a {
+      transition: 0.3s;
+      @include hover {
+        color: $accent;
+      }
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.8rem;
+      color: $dark-2;
+      font-size: 1.8rem;
+      font-weight: 400;
+      line-height: 140%;
+    }
+
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.2rem;
+    }
+
+    &__title {
+      font-size: 1.4rem;
+      color: $gray-1;
+    }
+
+    &__btn {
+      width: 100%;
+    }
+  }
+
+  &__map {
+    width: 100%;
+    height: 62.7rem;
+    border-radius: 1.2rem;
+    overflow: hidden;
+
+    @include breakpoint($sm-bp) {
+      height: 44.5rem;
+    }
+  }
+
+  &-table {
+    width: 100%;
+    overflow: auto;
+
+    &__title {
+      font-size: 3.4rem;
+      font-weight: 500;
+      margin-bottom: 3.2rem;
+
+      @include breakpoint($xs-bp) {
+        font-size: 2.8rem;
+      }
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.2rem;
+    }
+
+    &__container {
+      width: 100%;
+      min-width: 80rem;
+
+      @include breakpoint($xs-bp) {
+        min-width: unset;
+        width: 100%;
+      }
+
+      table {
+        width: 100%;
+        color: $gray-3;
+        font-size: 1.8rem;
+
+        @include breakpoint($xs-bp) {
+          font-size: 1.4rem;
+        }
+
+        tr {
+          border-bottom: 0.1rem solid $light-3;
+
+          @include breakpoint($xs-bp) {
+            padding: 1.5rem 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.4rem;
+
+            &:first-child {
+              border-top: 0.1rem solid $light-3;
+            }
+          }
+        }
+
+        td {
+          padding: 1.9rem 2.4rem;
+
+          @include breakpoint($xs-bp) {
+            padding: 0;
+          }
+
+          &:first-child {
+            width: 58.1rem;
+
+            @include breakpoint($xs-bp) {
+              width: unset;
+              color: $gray-1;
+            }
+          }
+        }
+      }
+    }
+  }
+}

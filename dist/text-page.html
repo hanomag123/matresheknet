@@ -1,0 +1,1576 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Astro description">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+    <meta name="generator" content="Astro v3.0.13">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <title>Текстовая страница</title>
+  <link rel="stylesheet" href="./assets/style.css" /><script type="module" src="./assets/hoisted.js"></script></head>
+  <body>
+    
+      <main class="page">
+        
+  <header class="header">
+  <div class="container">
+    
+          <div class="header-contacts">
+            <button type="button" class="header__sity">
+              <svg astro-icon="fi_map-pin">
+    
+    <use xlink:href="#astroicon:fi_map-pin"></use>
+</svg>
+              Санкт-Петербург
+            </button>
+            <div class="header__nav">
+              <a href="#">Доставка</a>
+              <a href="#">Оплата</a>
+              <a href="#">Контакты</a>
+            </div>
+            <div class="header__social">
+              <a href="#" class="social-link">
+  <svg astro-icon="telegram">
+    
+    <use xlink:href="#astroicon:telegram"></use>
+</svg>
+</a>
+              <a href="#" class="social-link">
+  <svg astro-icon="viber">
+    
+    <use xlink:href="#astroicon:viber"></use>
+</svg>
+</a>
+            </div>
+            <div class="header-call">
+              <a href="#" class="header-call__link">
+                +7 (999) 854 22 55
+              </a>
+              <button type="button" class="header-call__btn" data-call-btn>
+                Заказать звонок
+              </button>
+            </div>
+          </div>
+          <div class="header__container">
+            <button type="button" class="header__menu-btn">
+              <svg astro-icon="heroicons-outline:menu-alt-2">
+    
+    <use xlink:href="#astroicon:heroicons-outline:menu-alt-2"></use>
+</svg>
+            </button>
+            <a href="#" class="header__logo">
+              <svg astro-icon="logo">
+    
+    <use xlink:href="#astroicon:logo"></use>
+</svg>
+            </a>
+            <button class="default-btn sm header__catalog">
+  
+              Каталог
+            
+</button>
+            <form action="#" class="header-search" data-search>
+              <div class="header-search__inner">
+                <input type="text" placeholder="Поиск товара" class="default-input header-search__input"/>
+                <button type="submit" class="header-search__btn">
+                  <svg astro-icon="fi_zoom-out">
+    
+    <use xlink:href="#astroicon:fi_zoom-out"></use>
+</svg>
+                </button>
+              </div>
+              <div class="header-search__container">
+                <div class="header-search__list">
+                  <a href="#" class="header-search-item">
+                      <div class="header-search-item__img">
+                        <img src="./img/prod/prod-2.png" alt="">
+                      </div>
+                      <div class="header-search-item__inner">
+                        <span class="header-search-item__title">
+                          Походно-туристический набор столовых приборов
+                        </span>
+                        <div class="header-search-item-price">
+                          <span class="header-search-item-price__current">
+                            1 350 ₽
+                          </span>
+                          <span class="header-search-item-price__discount">
+                              -50%
+                            </span>
+                          <span class="header-search-item-price__last">
+                              1 350 ₽
+                            </span>
+                        </div>
+                      </div>
+                    </a><a href="#" class="header-search-item">
+                      <div class="header-search-item__img">
+                        <img src="./img/prod/prod-3.png" alt="">
+                      </div>
+                      <div class="header-search-item__inner">
+                        <span class="header-search-item__title">
+                          Спящая собака ангел / Бижу брелок для ключей
+                        </span>
+                        <div class="header-search-item-price">
+                          <span class="header-search-item-price__current">
+                            385 ₽
+                          </span>
+                          <span class="header-search-item-price__discount">
+                              -15%
+                            </span>
+                          <span class="header-search-item-price__last">
+                              400 ₽
+                            </span>
+                        </div>
+                      </div>
+                    </a><a href="#" class="header-search-item">
+                      <div class="header-search-item__img">
+                        <img src="./img/prod/prod-4.png" alt="">
+                      </div>
+                      <div class="header-search-item__inner">
+                        <span class="header-search-item__title">
+                          Спящая собака ангел / Бижу брелок для ключей
+                        </span>
+                        <div class="header-search-item-price">
+                          <span class="header-search-item-price__current">
+                            385 ₽
+                          </span>
+                          <span class="header-search-item-price__discount">
+                              -15%
+                            </span>
+                          <span class="header-search-item-price__last">
+                              420 ₽
+                            </span>
+                        </div>
+                      </div>
+                    </a><a href="#" class="header-search-item">
+                      <div class="header-search-item__img">
+                        <img src="./img/prod/prod-5.png" alt="">
+                      </div>
+                      <div class="header-search-item__inner">
+                        <span class="header-search-item__title">
+                          Бижу брелок - Garten of banban Сад Банбана
+                        </span>
+                        <div class="header-search-item-price">
+                          <span class="header-search-item-price__current">
+                            769 ₽
+                          </span>
+                          <span class="header-search-item-price__discount">
+                              -10%
+                            </span>
+                          <span class="header-search-item-price__last">
+                              1 000 ₽
+                            </span>
+                        </div>
+                      </div>
+                    </a><a href="#" class="header-search-item">
+                      <div class="header-search-item__img">
+                        <img src="./img/prod/prod-6.png" alt="">
+                      </div>
+                      <div class="header-search-item__inner">
+                        <span class="header-search-item__title">
+                          Георгий Победоносец: золотая монета 50 рублей / 7.78 гр золото 
+                        </span>
+                        <div class="header-search-item-price">
+                          <span class="header-search-item-price__current">
+                            49 700 ₽
+                          </span>
+                          <span class="header-search-item-price__discount">
+                              -50%
+                            </span>
+                          <span class="header-search-item-price__last">
+                              99 400 ₽
+                            </span>
+                        </div>
+                      </div>
+                    </a><a href="#" class="header-search-item">
+                      <div class="header-search-item__img">
+                        <img src="./img/prod/prod-2.png" alt="">
+                      </div>
+                      <div class="header-search-item__inner">
+                        <span class="header-search-item__title">
+                          Походно-туристический набор столовых приборов
+                        </span>
+                        <div class="header-search-item-price">
+                          <span class="header-search-item-price__current">
+                            1 350 ₽
+                          </span>
+                          <span class="header-search-item-price__discount">
+                              -50%
+                            </span>
+                          <span class="header-search-item-price__last">
+                              1 350 ₽
+                            </span>
+                        </div>
+                      </div>
+                    </a><a href="#" class="header-search-item">
+                      <div class="header-search-item__img">
+                        <img src="./img/prod/prod-3.png" alt="">
+                      </div>
+                      <div class="header-search-item__inner">
+                        <span class="header-search-item__title">
+                          Спящая собака ангел / Бижу брелок для ключей
+                        </span>
+                        <div class="header-search-item-price">
+                          <span class="header-search-item-price__current">
+                            385 ₽
+                          </span>
+                          <span class="header-search-item-price__discount">
+                              -15%
+                            </span>
+                          <span class="header-search-item-price__last">
+                              400 ₽
+                            </span>
+                        </div>
+                      </div>
+                    </a><a href="#" class="header-search-item">
+                      <div class="header-search-item__img">
+                        <img src="./img/prod/prod-4.png" alt="">
+                      </div>
+                      <div class="header-search-item__inner">
+                        <span class="header-search-item__title">
+                          Спящая собака ангел / Бижу брелок для ключей
+                        </span>
+                        <div class="header-search-item-price">
+                          <span class="header-search-item-price__current">
+                            385 ₽
+                          </span>
+                          <span class="header-search-item-price__discount">
+                              -15%
+                            </span>
+                          <span class="header-search-item-price__last">
+                              420 ₽
+                            </span>
+                        </div>
+                      </div>
+                    </a><a href="#" class="header-search-item">
+                      <div class="header-search-item__img">
+                        <img src="./img/prod/prod-5.png" alt="">
+                      </div>
+                      <div class="header-search-item__inner">
+                        <span class="header-search-item__title">
+                          Бижу брелок - Garten of banban Сад Банбана
+                        </span>
+                        <div class="header-search-item-price">
+                          <span class="header-search-item-price__current">
+                            769 ₽
+                          </span>
+                          <span class="header-search-item-price__discount">
+                              -10%
+                            </span>
+                          <span class="header-search-item-price__last">
+                              1 000 ₽
+                            </span>
+                        </div>
+                      </div>
+                    </a><a href="#" class="header-search-item">
+                      <div class="header-search-item__img">
+                        <img src="./img/prod/prod-6.png" alt="">
+                      </div>
+                      <div class="header-search-item__inner">
+                        <span class="header-search-item__title">
+                          Георгий Победоносец: золотая монета 50 рублей / 7.78 гр золото 
+                        </span>
+                        <div class="header-search-item-price">
+                          <span class="header-search-item-price__current">
+                            49 700 ₽
+                          </span>
+                          <span class="header-search-item-price__discount">
+                              -50%
+                            </span>
+                          <span class="header-search-item-price__last">
+                              99 400 ₽
+                            </span>
+                        </div>
+                      </div>
+                    </a>
+                </div>
+                <button href="#" class="default-btn accent-light header-search__link">
+  
+                  Все результаты
+                
+</button>
+              </div>
+            </form>
+            <div class="header-control">
+              <button type="button" class="header-control__btn">
+                <svg astro-icon="fi_user">
+    
+    <use xlink:href="#astroicon:fi_user"></use>
+</svg>
+                Войти
+              </button>
+              <button type="button" class="header-control__btn">
+                <svg astro-icon="fi_heart">
+    
+    <use xlink:href="#astroicon:fi_heart"></use>
+</svg>
+                Избранное
+              </button>
+              <button type="button" class="header-control__btn">
+                <svg astro-icon="fi_shopping-cart">
+    
+    <use xlink:href="#astroicon:fi_shopping-cart"></use>
+</svg>
+                Корзина
+              </button>
+            </div>
+          </div>
+        
+  </div>
+</header>
+  <nav class="nav-catalog">
+  <div class="nav-catalog__bg"></div>
+  <div class="nav-catalog__container">
+    <div class="nav-catalog-head">
+      <div class="nav-catalog-head__inner">
+        <span class="nav-catalog__title">Каталог</span>
+        <div class="nav-catalog-info">
+          <button type="button" class="nav-catalog__back">
+            <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+          </button>
+          <span class="nav-catalog-info__title">Символ года</span>
+        </div>
+      </div>
+      <button type="button" class="nav-catalog__close">
+        <svg astro-icon="fi_x">
+    
+    <use xlink:href="#astroicon:fi_x"></use>
+</svg>
+      </button>
+    </div>
+    <div class="nav-catalog__list">
+      <div class="nav-catalog-item" data-title="Символ года">
+            <button type="button" class="nav-catalog-item__btn" data-nav-btn>
+              <svg astro-icon="menu-1">
+    
+    <use xlink:href="#astroicon:menu-1"></use>
+</svg>
+              Символ года
+            </button>
+            <div class="nav-catalog-item__container">
+              <div class="nav-catalog__list">
+                <a href="#" class="nav-catalog-item__link">
+                    Гипс
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Фарфор
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Селенит
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Дерево
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a>
+              </div>
+            </div>
+          </div><div class="nav-catalog-item" data-title="Статуэтки, фигурки, миниатюра интерьерная">
+            <button type="button" class="nav-catalog-item__btn" data-nav-btn>
+              <svg astro-icon="menu-2">
+    
+    <use xlink:href="#astroicon:menu-2"></use>
+</svg>
+              Статуэтки, фигурки, миниатюра интерьерная
+            </button>
+            <div class="nav-catalog-item__container">
+              <div class="nav-catalog__list">
+                <a href="#" class="nav-catalog-item__link">
+                    Гипс
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Микро-крошка
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Дерево
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a>
+              </div>
+            </div>
+          </div><div class="nav-catalog-item" data-title="Статуэтки, фигурки, миниатюра интерьерная">
+            <button type="button" class="nav-catalog-item__btn" data-nav-btn>
+              <svg astro-icon="menu-3">
+    
+    <use xlink:href="#astroicon:menu-3"></use>
+</svg>
+              Статуэтки, фигурки, миниатюра интерьерная
+            </button>
+            <div class="nav-catalog-item__container">
+              <div class="nav-catalog__list">
+                <a href="#" class="nav-catalog-item__link">
+                    Гипс
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Микро-крошка
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Бронза
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Фарфор
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Селенит
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Дерево
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a>
+              </div>
+            </div>
+          </div><div class="nav-catalog-item" data-title="Аксессуары туристические">
+            <button type="button" class="nav-catalog-item__btn" data-nav-btn>
+              <svg astro-icon="menu-4">
+    
+    <use xlink:href="#astroicon:menu-4"></use>
+</svg>
+              Аксессуары туристические
+            </button>
+            <div class="nav-catalog-item__container">
+              <div class="nav-catalog__list">
+                <a href="#" class="nav-catalog-item__link">
+                    Гипс
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Бронза
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Фарфор
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Селенит
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Дерево
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a>
+              </div>
+            </div>
+          </div><div class="nav-catalog-item" data-title="Брелоки бижу, для ключей">
+            <button type="button" class="nav-catalog-item__btn" data-nav-btn>
+              <svg astro-icon="menu-5">
+    
+    <use xlink:href="#astroicon:menu-5"></use>
+</svg>
+              Брелоки бижу, для ключей
+            </button>
+            <div class="nav-catalog-item__container">
+              <div class="nav-catalog__list">
+                <a href="#" class="nav-catalog-item__link">
+                    Гипс
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Микро-крошка
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Фарфор
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Селенит
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a>
+              </div>
+            </div>
+          </div><div class="nav-catalog-item" data-title="Монеты коллекционные">
+            <button type="button" class="nav-catalog-item__btn" data-nav-btn>
+              <svg astro-icon="menu-6">
+    
+    <use xlink:href="#astroicon:menu-6"></use>
+</svg>
+              Монеты коллекционные
+            </button>
+            <div class="nav-catalog-item__container">
+              <div class="nav-catalog__list">
+                <a href="#" class="nav-catalog-item__link">
+                    Фарфор
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Селенит
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Дерево
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a>
+              </div>
+            </div>
+          </div><div class="nav-catalog-item" data-title="Благовония и аксессуары">
+            <button type="button" class="nav-catalog-item__btn" data-nav-btn>
+              <svg astro-icon="menu-7">
+    
+    <use xlink:href="#astroicon:menu-7"></use>
+</svg>
+              Благовония и аксессуары
+            </button>
+            <div class="nav-catalog-item__container">
+              <div class="nav-catalog__list">
+                <a href="#" class="nav-catalog-item__link">
+                    Микро-крошка
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Фарфор
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Селенит
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Дерево
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a>
+              </div>
+            </div>
+          </div><div class="nav-catalog-item" data-title="Массажеры для рук и тела">
+            <button type="button" class="nav-catalog-item__btn" data-nav-btn>
+              <svg astro-icon="menu-8">
+    
+    <use xlink:href="#astroicon:menu-8"></use>
+</svg>
+              Массажеры для рук и тела
+            </button>
+            <div class="nav-catalog-item__container">
+              <div class="nav-catalog__list">
+                <a href="#" class="nav-catalog-item__link">
+                    Гипс
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Микро-крошка
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Бронза
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Фарфор
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Селенит
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Дерево
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a>
+              </div>
+            </div>
+          </div><div class="nav-catalog-item" data-title="Наперстки коллекционные">
+            <button type="button" class="nav-catalog-item__btn" data-nav-btn>
+              <svg astro-icon="menu-9">
+    
+    <use xlink:href="#astroicon:menu-9"></use>
+</svg>
+              Наперстки коллекционные
+            </button>
+            <div class="nav-catalog-item__container">
+              <div class="nav-catalog__list">
+                
+              </div>
+            </div>
+          </div><div class="nav-catalog-item" data-title="Колокольчики коллекционные">
+            <button type="button" class="nav-catalog-item__btn" data-nav-btn>
+              <svg astro-icon="menu-10">
+    
+    <use xlink:href="#astroicon:menu-10"></use>
+</svg>
+              Колокольчики коллекционные
+            </button>
+            <div class="nav-catalog-item__container">
+              <div class="nav-catalog__list">
+                <a href="#" class="nav-catalog-item__link">
+                    Гипс
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Микро-крошка
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Бронза
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Дерево
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a>
+              </div>
+            </div>
+          </div><div class="nav-catalog-item" data-title="Магниты интерьерные">
+            <button type="button" class="nav-catalog-item__btn" data-nav-btn>
+              <svg astro-icon="menu-11">
+    
+    <use xlink:href="#astroicon:menu-11"></use>
+</svg>
+              Магниты интерьерные
+            </button>
+            <div class="nav-catalog-item__container">
+              <div class="nav-catalog__list">
+                <a href="#" class="nav-catalog-item__link">
+                    Гипс
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Микро-крошка
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Дерево
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a>
+              </div>
+            </div>
+          </div><div class="nav-catalog-item" data-title="Футболки сувенирные повседневные">
+            <button type="button" class="nav-catalog-item__btn" data-nav-btn>
+              <svg astro-icon="menu-12">
+    
+    <use xlink:href="#astroicon:menu-12"></use>
+</svg>
+              Футболки сувенирные повседневные
+            </button>
+            <div class="nav-catalog-item__container">
+              <div class="nav-catalog__list">
+                <a href="#" class="nav-catalog-item__link">
+                    Гипс
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Дерево
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a>
+              </div>
+            </div>
+          </div><div class="nav-catalog-item" data-title="Пепельницы">
+            <button type="button" class="nav-catalog-item__btn" data-nav-btn>
+              <svg astro-icon="menu-13">
+    
+    <use xlink:href="#astroicon:menu-13"></use>
+</svg>
+              Пепельницы
+            </button>
+            <div class="nav-catalog-item__container">
+              <div class="nav-catalog__list">
+                <a href="#" class="nav-catalog-item__link">
+                    Гипс
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Микро-крошка
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Бронза
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Фарфор
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Селенит
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Дерево
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a>
+              </div>
+            </div>
+          </div><div class="nav-catalog-item" data-title="грушки антистресс">
+            <button type="button" class="nav-catalog-item__btn" data-nav-btn>
+              <svg astro-icon="menu-14">
+    
+    <use xlink:href="#astroicon:menu-14"></use>
+</svg>
+              грушки антистресс
+            </button>
+            <div class="nav-catalog-item__container">
+              <div class="nav-catalog__list">
+                
+              </div>
+            </div>
+          </div><div class="nav-catalog-item" data-title="Символ года">
+            <button type="button" class="nav-catalog-item__btn" data-nav-btn>
+              <svg astro-icon="menu-15">
+    
+    <use xlink:href="#astroicon:menu-15"></use>
+</svg>
+              Символ года
+            </button>
+            <div class="nav-catalog-item__container">
+              <div class="nav-catalog__list">
+                <a href="#" class="nav-catalog-item__link">
+                    Бронза
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Фарфор
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a>
+              </div>
+            </div>
+          </div><div class="nav-catalog-item" data-title="Статуэтки, фигурки, миниатюра интерьерная">
+            <button type="button" class="nav-catalog-item__btn" data-nav-btn>
+              <svg astro-icon="menu-16">
+    
+    <use xlink:href="#astroicon:menu-16"></use>
+</svg>
+              Статуэтки, фигурки, миниатюра интерьерная
+            </button>
+            <div class="nav-catalog-item__container">
+              <div class="nav-catalog__list">
+                <a href="#" class="nav-catalog-item__link">
+                    Гипс
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Микро-крошка
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Бронза
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Фарфор
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Селенит
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Дерево
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a>
+              </div>
+            </div>
+          </div><div class="nav-catalog-item" data-title="Статуэтки, фигурки, миниатюра интерьерная">
+            <button type="button" class="nav-catalog-item__btn" data-nav-btn>
+              <svg astro-icon="menu-17">
+    
+    <use xlink:href="#astroicon:menu-17"></use>
+</svg>
+              Статуэтки, фигурки, миниатюра интерьерная
+            </button>
+            <div class="nav-catalog-item__container">
+              <div class="nav-catalog__list">
+                <a href="#" class="nav-catalog-item__link">
+                    Гипс
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Селенит
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Дерево
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a>
+              </div>
+            </div>
+          </div><div class="nav-catalog-item" data-title="Аксессуары туристические">
+            <button type="button" class="nav-catalog-item__btn" data-nav-btn>
+              <svg astro-icon="menu-18">
+    
+    <use xlink:href="#astroicon:menu-18"></use>
+</svg>
+              Аксессуары туристические
+            </button>
+            <div class="nav-catalog-item__container">
+              <div class="nav-catalog__list">
+                <a href="#" class="nav-catalog-item__link">
+                    Гипс
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Микро-крошка
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Бронза
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Фарфор
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Селенит
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a><a href="#" class="nav-catalog-item__link">
+                    Дерево
+                    <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+                  </a>
+              </div>
+            </div>
+          </div>
+    </div>
+  </div>
+</nav>
+  <div class="nav-bar">
+  <div class="container nav-bar__container">
+    <div class="nav-bar__list">
+      <a href="#" class="nav-bar__link">Подобрать подарок</a>
+      <a href="#" class="nav-bar__link">Монеты коллекционные</a>
+      <a href="#" class="nav-bar__link">Монеты коллекционные</a>
+      <a href="#" class="nav-bar__link">Благовония и аксессуары</a>
+      <a href="#" class="nav-bar__link">Игрушки антистресс</a>
+      <a href="#" class="nav-bar__link">Колокольчики коллекционные</a>
+      <a href="#" class="nav-bar__link">Иконки автомобильные</a>
+
+      <a href="#" class="nav-bar__link">Игрушки антистресс</a>
+      <a href="#" class="nav-bar__link">Колокольчики коллекционные</a>
+      <a href="#" class="nav-bar__link">Иконки автомобильные</a>
+    </div>
+    <div class="dropdown nav-bar-drop" data-dropdown>
+      <button type="button" class="nav-bar-drop__btn" data-dropdown-btn>
+        <svg astro-icon="fi_more-horizontal">
+    
+    <use xlink:href="#astroicon:fi_more-horizontal"></use>
+</svg>
+      </button>
+      <div class="nav-bar-drop__container"></div>
+    </div>
+  </div>
+</div>
+
+  <div class="breadcrumbs">
+  <div class="container">
+    <div class="breadcrumbs__list">
+      <a href="#" class="breadcrumbs__link">
+            Главная
+          </a><a href="#" class="breadcrumbs__link">
+            О компании
+          </a>
+    </div>
+    <a href="#" class="breadcrumbs__mob">
+      <svg astro-icon="fi_chevron-right">
+    
+    <use xlink:href="#astroicon:fi_chevron-right"></use>
+</svg>
+       Вернуться на главную
+    </a>
+  </div>
+</div>
+
+  <section class="text-page">
+    <div class="container">
+      <h1 class="text-page__title">
+        Рады приветствовать вас на сайте компании Matreshek Net!
+      </h1>
+      <div class="text-page__container">
+        <div class="text-page__img-block">
+          <div class="text-page__content">
+            <div class="text-page__text">
+              <p>
+                <span class="dark">Matreshek <span class="accent">Net</span></span> - ведущий российский онлайн-магазин прикольных подарков,
+                дизайнерских штучек, стильных аксессуаров и множества нескучных
+                креативных вещей от модных студий и брендов со всего мира.
+                Студий и брендов со всего. икольных подарков, дизайнерских
+                штучек, стильных аксессуаров и множества нескучных креативных
+                вещей.
+              </p>
+            </div>
+            <div class="text-page__text">
+              <h3>Matreshek <span class="accent">Net</span></h3>
+              <ul>
+                <li>множества нескучных креативных подарков</li>
+                <li>множества нескучных креативных подарков</li>
+                <li>множества нескучных креативных подарков</li>
+                <li>множества нескучных креативных подарков</li>
+                <li>множества нескучных креативных подарков</li>
+              </ul>
+            </div>
+            <div class="text-page__text">
+              <h3>Matreshek <span class="accent">Net</span></h3>
+              <ol>
+                <li>множества нескучных креативных подарков</li>
+                <li>множества нескучных креативных подарков</li>
+                <li>множества нескучных креативных подарков</li>
+                <li>множества нескучных креативных подарков</li>
+                <li>множества нескучных креативных подарков</li>
+              </ol>
+            </div>
+          </div>
+          <div class="text-page__img">
+            <img src="./img/text-page.jpeg" alt="">
+          </div>
+        </div>
+        <div class="text-page__content">
+          <div class="text-page__text">
+            <p>
+              <span class="dark">Matreshek <span class="accent">Net</span></span> - ведущий российский онлайн-магазин прикольных подарков,
+              дизайнерских штучек, стильных аксессуаров и множества нескучных
+              креативных вещей от модных студий и брендов со всего мира. Студий
+              и брендов со всего. икольных подарков, дизайнерских штучек,
+              стильных аксессуаров и множества нескучных креативных вещей.
+            </p>
+          </div>
+          <div class="text-page__text">
+            <h3>Matreshek <span class="accent">Net</span></h3>
+            <ul>
+              <li>множества нескучных креативных подарков</li>
+              <li>множества нескучных креативных подарков</li>
+              <li>множества нескучных креативных подарков</li>
+              <li>множества нескучных креативных подарков</li>
+              <li>множества нескучных креативных подарков</li>
+            </ul>
+          </div>
+          <div class="text-page__text">
+            <h3>Matreshek <span class="accent">Net</span></h3>
+            <ol>
+              <li>множества нескучных креативных подарков</li>
+              <li>множества нескучных креативных подарков</li>
+              <li>множества нескучных креативных подарков</li>
+              <li>множества нескучных креативных подарков</li>
+              <li>множества нескучных креативных подарков</li>
+            </ol>
+          </div>
+        </div>
+        <div class="text-page-table">
+          <div class="text-page-table__container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Категория товара</th>
+                  <th>Скидка</th>
+                  <th>Кол-во</th>
+                  <th>Отзывы</th>
+                  <th>Цена</th>
+                  <th>Процент скидки</th>
+                  <th>Цена со скидкой</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Колокольчики коллекционные</td>
+                  <td>Нет</td>
+                  <td>12</td>
+                  <td>2</td>
+                  <td>12 000 ₽</td>
+                  <td>10 %</td>
+                  <td>10 000 ₽</td>
+                </tr>
+                <tr>
+                  <td>Туристические аксессуары</td>
+                  <td>Нет</td>
+                  <td>23</td>
+                  <td>2</td>
+                  <td>5 000 ₽</td>
+                  <td>12 %</td>
+                  <td>4 000 ₽</td>
+                </tr>
+                <tr>
+                  <td>Монеты коллекционные</td>
+                  <td>Да</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>5 000 ₽</td>
+                  <td>20%</td>
+                  <td>4 000 ₽</td>
+                </tr>
+                <tr>
+                  <td>Массажеры для рук и тела</td>
+                  <td>Да</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td>Итого</td>
+                  <td>-</td>
+                  <td>36</td>
+                  <td>6</td>
+                  <td>22 000 ₽</td>
+                  <td>42 %</td>
+                  <td>18 000 ₽</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer footer">
+  <div class="container footer__container">
+        <div class="footer-nav">
+          <div class="dropdown footer-nav__wrapper" data-dropdown>
+            <button type="button" class="dropdown-btn" data-dropdown-btn>
+              <span class="dropdown-btn__text">Компания</span>
+              <svg astro-icon="fi_chevron-down">
+    
+    <use xlink:href="#astroicon:fi_chevron-down"></use>
+</svg>
+            </button>
+            <div class="dropdown__container">
+              <div class="dropdown__inner">
+                <div class="footer-nav__item">
+                  <a href="#" class="footer-nav__link footer-nav__link_main">
+                    О нас
+                  </a>
+                  <a href="#" class="footer-nav__link">
+                    Наша миссия
+                  </a>
+                  <a href="#" class="footer-nav__link">
+                    Контакты
+                  </a>
+                  <a href="#" class="footer-nav__link">
+                    Реквизиты
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown footer-nav__wrapper" data-dropdown>
+            <button type="button" class="dropdown-btn" data-dropdown-btn>
+              <span class="dropdown-btn__text">Категории</span>
+              <svg astro-icon="fi_chevron-down">
+    
+    <use xlink:href="#astroicon:fi_chevron-down"></use>
+</svg>
+            </button>
+            <div class="dropdown__container">
+              <div class="dropdown__inner">
+                <div class="footer-nav__item">
+                  <a href="#" class="footer-nav__link footer-nav__link_main">
+                    Подарки
+                  </a>
+                  <a href="#" class="footer-nav__link">
+                    Подбор подарка
+                  </a>
+                  <a href="#" class="footer-nav__link">
+                    Категория 1
+                  </a>
+                  <a href="#" class="footer-nav__link">
+                    Категория 2
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown footer-nav__wrapper" data-dropdown>
+            <button type="button" class="dropdown-btn" data-dropdown-btn>
+              <span class="dropdown-btn__text">Клиентам</span>
+              <svg astro-icon="fi_chevron-down">
+    
+    <use xlink:href="#astroicon:fi_chevron-down"></use>
+</svg>
+            </button>
+            <div class="dropdown__container">
+              <div class="dropdown__inner">
+                <div class="footer-nav__item">
+                  <a href="#" class="footer-nav__link">
+                    Акции
+                  </a>
+                  <a href="#" class="footer-nav__link">
+                    Доставка
+                  </a>
+                  <a href="#" class="footer-nav__link">
+                    Гарантия
+                  </a>
+                  <a href="#" class="footer-nav__link">
+                    Оплата
+                  </a>
+                  <a href="#" class="footer-nav__link">
+                    Возврат
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-nav__item footer-nav__item_contacts">
+            <a href="#" class="footer-nav__link footer-nav__link_main">
+              Контакты
+            </a>
+            <div class="footer-nav__phone">
+              <a href="#" class="footer-nav__link footer-nav__link_main">
+                +7 (999) 854 22 55
+              </a>
+              <a href="#" class="footer-nav__link footer-nav__link_main">
+                +7 (999) 854 22 55
+              </a>
+            </div>
+            <a href="#" class="footer-nav__link">
+              E-mail: podarki@mail.ru
+            </a>
+            <div class="footer-nav-social">
+              <a href="#" class="social-link">
+  <svg astro-icon="viber">
+    
+    <use xlink:href="#astroicon:viber"></use>
+</svg>
+</a><a href="#" class="social-link">
+  <svg astro-icon="telegram">
+    
+    <use xlink:href="#astroicon:telegram"></use>
+</svg>
+</a><a href="#" class="social-link">
+  <svg astro-icon="vk">
+    
+    <use xlink:href="#astroicon:vk"></use>
+</svg>
+</a><a href="#" class="social-link">
+  <svg astro-icon="youtube">
+    
+    <use xlink:href="#astroicon:youtube"></use>
+</svg>
+</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-form">
+          <span class="footer-form__title">Подписаться на наши новости</span>
+          <input type="text" clasName="footer-form__input" placeholder="Ваш E-mail" class="default-input"/>
+          <button class="default-btn footer-form__btn">
+  
+            Подписаться
+          
+</button>
+        </div>
+      </div>
+  <div class="footer-legal">
+    <div class="container footer-legal__container">
+      <p class="footer-legal__text">© 2008–2023 Все права защищены.</p>
+      <div class="footer-legal__cards">
+        <img src="./img/visa.png" alt="">
+        <img src="./img/mastercard.png" alt="">
+        <img src="./img/mir.png" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="footer-copy">
+    <div class="container">
+      <p class="footer-copy__text">
+        Сайт разработан агентством <a href="#">Вайд Арт</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+        <nav class="menu">
+  <div class="menu__head">
+    <span class="menu__title">Меню</span>
+    <button type="button" class="menu__btn">
+      <svg astro-icon="fi_x">
+    
+    <use xlink:href="#astroicon:fi_x"></use>
+</svg>
+    </button>
+  </div>
+
+  <div class="menu__container">
+    <button type="button" class="menu__login">
+      <svg astro-icon="fi_user">
+    
+    <use xlink:href="#astroicon:fi_user"></use>
+</svg>
+       Вход или регистрация
+    </button>
+
+    <div class="menu-nav">
+      <a href="#" class="menu-nav__link">Акции</a>
+      <a href="#" class="menu-nav__link">Доставка</a>
+      <a href="#" class="menu-nav__link">Оплата</a>
+      <a href="#" class="menu-nav__link">О компании</a>
+      <a href="#" class="menu-nav__link">Реквизиты</a>
+      <a href="#" class="menu-nav__link">Контакты</a>
+    </div>
+
+    <div class="menu-contacts">
+      <div class="menu-contacts-phone">
+        <a href="#" class="menu-contacts-phone__link">+7 (999) 854 22 55</a>
+        <a href="#" class="menu-contacts-phone__link">+7 (999) 854 22 55</a>
+      </div>
+      <div class="menu-contacts__inner">
+        <a href="#" class="menu-contacts__mail">E-mail: podarki@mail.ru</a>
+        <div class="menu-contacts__social">
+          <a class="social-link">
+  <svg astro-icon="viber">
+    
+    <use xlink:href="#astroicon:viber"></use>
+</svg>
+</a>
+          <a class="social-link">
+  <svg astro-icon="telegram">
+    
+    <use xlink:href="#astroicon:telegram"></use>
+</svg>
+</a>
+          <a class="social-link">
+  <svg astro-icon="vk">
+    
+    <use xlink:href="#astroicon:vk"></use>
+</svg>
+</a>
+          <a class="social-link">
+  <svg astro-icon="youtube">
+    
+    <use xlink:href="#astroicon:youtube"></use>
+</svg>
+</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="dropdown menu-region" data-dropdown>
+      <button type="button" class="dropdown-btn" data-dropdown-btn>
+        <span class="dropdown-btn__text">Санкт-Петербург</span>
+        <svg astro-icon="fi_chevron-down">
+    
+    <use xlink:href="#astroicon:fi_chevron-down"></use>
+</svg>
+      </button>
+      <div class="dropdown__container">
+        <div class="dropdown__inner"></div>
+      </div>
+    </div>
+  </div>
+</nav>
+      </main>
+
+      <div class="popup" data-call-popup>
+  <div class="popup__wrapper">
+    <div class="popup__bg" data-close-btn></div>
+    <div class="popup__container">
+      <div class="popup__drag-container" data-drag-container>
+        <span class="popup__close-drag" data-drag-close></span>
+        <button type="button" class="popup__close" data-close-btn>
+          <svg astro-icon="fi_x">
+    
+    <use xlink:href="#astroicon:fi_x"></use>
+</svg>
+        </button>
+        
+  <form action="#" class="popup__form" data-submit-handler>
+    <div class="popup__head">
+      <span class="popup__title">Обратный звонок</span>
+      <p class="popup__text">Представьтесь, мы вам перезвоним</p>
+    </div>
+
+    <div class="popup__inner">
+      
+        <label class="default-input-label required">
+          <span class="default-input-label__text">Имя</span>
+          <input type="text" placeholder="Иван" class="default-input"/>
+          <span class="default-input-label__error">Неверный формат</span>
+        </label>
+      
+      
+        <label class="default-input-label required">
+          <span class="default-input-label__text">Телефон</span>
+          <input type="text" placeholder="+7 995 455 34 55" class="default-input"/>
+          <span class="default-input-label__error">Неверный формат</span>
+        </label>
+      
+    </div>
+
+    <div class="popup__footer">
+      <button type="submit" class="default-btn">
+  Отправить
+</button>
+      <p class="popup__legal">
+        Продолжая, вы соглашаетесь с
+        <a href="#"> политикой конфиденциальности</a>
+      </p>
+    </div>
+  </form>
+  <div class="popup-send">
+    <div class="popup-send__icon">
+      <svg astro-icon="fi_check_2">
+    
+    <use xlink:href="#astroicon:fi_check_2"></use>
+</svg>
+    </div>
+    <span class="popup__title">Спасибо!</span>
+    <span class="popup__text">Наш менеджер перезвонит вам в ближайшее время</span>
+    <button type="button" data-close-btn class="default-btn">
+  Закрыть
+</button>
+  </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="popup" data-question-popup>
+  <div class="popup__wrapper">
+    <div class="popup__bg" data-close-btn></div>
+    <div class="popup__container">
+      <div class="popup__drag-container" data-drag-container>
+        <span class="popup__close-drag" data-drag-close></span>
+        <button type="button" class="popup__close" data-close-btn>
+          <svg astro-icon="fi_x">
+    
+    <use xlink:href="#astroicon:fi_x"></use>
+</svg>
+        </button>
+        
+  <form action="#" class="popup__form" data-submit-handler>
+    <div class="popup__head">
+      <span class="popup__title">Задать вопрос</span>
+      <p class="popup__text">
+        Менеджеры нашей компании с радостью ответят на ваши вопросы
+      </p>
+    </div>
+
+    <div class="popup__inner">
+      
+        <label class="default-input-label required">
+          <span class="default-input-label__text">Имя</span>
+          <input type="text" placeholder="Иван" class="default-input"/>
+          <span class="default-input-label__error">Неверный формат</span>
+        </label>
+      
+      
+        <label class="default-input-label required">
+          <span class="default-input-label__text">Телефон</span>
+          <input type="text" placeholder="+7 995 455 34 55" class="default-input"/>
+          <span class="default-input-label__error">Неверный формат</span>
+        </label>
+      
+      
+        <label class="default-input-label">
+          <span class="default-input-label__text">E-mail</span>
+          <input type="text" placeholder="podarki@mail.ru" class="default-input"/>
+          <span class="default-input-label__error">Неверный формат</span>
+        </label>
+      
+      
+        <label class="default-input-label">
+          <span class="default-input-label__text">Сообщение</span>
+          <textarea type="text" class="default-input"></textarea>
+          <span class="default-input-label__error">Неверный формат</span>
+        </label>
+      
+    </div>
+
+    <div class="popup__footer">
+      <button type="submit" class="default-btn">
+  Отправить
+</button>
+      <p class="popup__legal">
+        Продолжая, вы соглашаетесь с
+        <a href="#"> политикой конфиденциальности</a>
+      </p>
+    </div>
+  </form>
+  <div class="popup-send">
+    <div class="popup-send__icon">
+      <svg astro-icon="fi_check_2">
+    
+    <use xlink:href="#astroicon:fi_check_2"></use>
+</svg>
+    </div>
+    <span class="popup__title">Спасибо!</span>
+    <span class="popup__text">Наш менеджер перезвонит вам в ближайшее время</span>
+    <button type="button" data-close-btn class="default-btn">
+  Закрыть
+</button>
+  </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+      <button type="button" class="up-btn">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 49 50" fill="none" class="up-btn__dash">
+    <path d="M43.2025 38.4164L43.3694 38.1828C45.1053 35.7525 46.3339 32.9974 46.9818 30.082C47.6532 27.0606 47.6865 23.9323 47.0795 20.8974L46.8958 19.9788C46.3043 17.0216 45.1393 14.2089 43.4664 11.6996C41.8371 9.25567 39.7564 7.14503 37.336 5.48098L37.1194 5.33212C34.4062 3.46677 31.3167 2.21946 28.0689 1.67816C25.3787 1.22979 22.6294 1.27412 19.955 1.80899L18.722 2.05561C15.6116 2.67768 12.6747 3.9719 10.1168 5.8477C7.73064 7.59753 5.72625 9.81538 4.22599 12.3658L3.64489 13.3537C2.22704 15.764 1.26426 18.4144 0.804528 21.1728C0.274205 24.3548 0.424473 27.613 1.24543 30.7326L1.34707 31.1189C2.10848 34.0122 3.42306 36.7307 5.21818 39.1242C7.3764 42.0019 10.2102 44.3551 13.4275 45.9637C15.4505 46.9753 17.6313 47.6996 19.8588 48.0927L20.6779 48.2373C23.5294 48.7405 26.4536 48.658 29.2722 47.9948C32.0621 47.3383 34.6912 46.1265 37.0024 44.4316L37.9442 43.7409C39.9685 42.2564 41.7435 40.4591 43.2025 38.4164Z"></path>
+  </svg>
+  <svg class="up-btn__icon" astro-icon="fluent:chevron-up-48-regular">
+    
+    <use xlink:href="#astroicon:fluent:chevron-up-48-regular"></use>
+</svg>
+</button>
+    
+<svg style="position: absolute; width: 0; height: 0; overflow: hidden;" aria-hidden="true" astro-icon-spritesheet>
+    <symbol fill="none" viewBox="0 0 18 18" id="astroicon:fi_map-pin"><g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M15.75 7.5c0 5.25-6.75 9.75-6.75 9.75s-6.75-4.5-6.75-9.75a6.75 6.75 0 0 1 13.5 0Z"/><path d="M9 9.75a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5Z"/></g></symbol><symbol viewBox="0 0 24 24" id="astroicon:heroicons-outline:menu-alt-2"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"/></symbol><symbol fill="none" viewBox="0 0 284 46" id="astroicon:logo"><mask id="astroicon:logoa" width="35" height="20" x="1" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha"><path fill="#D9D9D9" d="M0 0h33.05v18.081H0z" transform="rotate(2.973 1.379 53.135) skewX(-.133)"/></mask><g mask="url(#astroicon:logoa)"><path fill="url(#astroicon:logob)" d="m31.148 22.36-.001-.012c-.652-2.415-1.742-4.614-3.17-6.398a10.012 10.012 0 0 0 1.292-4.39c.304-5.6-4.106-10.397-9.83-10.694C13.715.569 8.81 4.882 8.507 10.482a9.983 9.983 0 0 0 .81 4.498c-1.614 1.627-2.936 3.7-3.845 6.035l-.003.012a20.073 20.073 0 0 0-1.341 6.201c-.01.198-.007.883-.007.883-.057 4.892 1.61 9.516 4.575 12.69a.877.877 0 0 0 .594.274l15.889.825a.881.881 0 0 0 .62-.211c3.292-2.849 5.45-7.274 5.923-12.144 0 0 .078-.68.088-.88a20.027 20.027 0 0 0-.662-6.304ZM15.478 9.902l.198-.084.197-.084.597-.346s.143-.099.184-.125c1.1-.735 2.006-1.672 2.615-2.643a9.878 9.878 0 0 0 2.212 2.858l.089.08.369.303.278.203.148.096c1.019.69 2.183 1.156 3.444 1.222-.203 3.733-3.472 6.609-7.289 6.41l.04.005-.023-.002-.017-.003h-.011.011c-3.816-.198-6.755-3.396-6.553-7.13 1.257.066 3.511-.76 3.511-.76Z"/></g><mask id="astroicon:logoc" width="34" height="7" x="0" y="19" maskUnits="userSpaceOnUse" style="mask-type:alpha"><path fill="#D9D9D9" d="M0 0h33.052v5.563H0z" transform="matrix(1 -.00323 .00374 1 0 19.864)"/></mask><g mask="url(#astroicon:logoc)"><path fill="url(#astroicon:logod)" d="m29.571 22.542-.001-.013c-.79-2.375-2.006-4.51-3.535-6.213a9.993 9.993 0 0 0 1.037-4.453c-.02-5.608-4.7-10.154-10.432-10.135-5.732.02-10.38 4.597-10.36 10.205A9.997 9.997 0 0 0 7.35 16.38c-1.517 1.712-2.717 3.856-3.49 6.237-.002.004-.001.008-.002.012a20.045 20.045 0 0 0-.981 6.265c0 .199.043.883.043.883.226 4.887 2.157 9.411 5.301 12.416a.88.88 0 0 0 .609.24l15.911-.053c.227 0 .445-.09.607-.246 3.122-3.025 5.022-7.563 5.212-12.451 0 0 .038-.684.038-.883a20.05 20.05 0 0 0-1.026-6.258ZM13.207 10.968l.193-.095.192-.095.576-.378.176-.135c1.056-.795 1.907-1.78 2.458-2.783.587 1 1.4 1.962 2.374 2.73l.093.076.386.281.29.188.152.088c1.058.633 2.247 1.033 3.51 1.03.013 3.738-3.085 6.79-6.907 6.803l.04.002-.023-.001-.017-.001h-.011.011c-3.822.013-6.94-3.018-6.954-6.757 1.259-.004 3.461-.953 3.461-.953Z"/></g><mask id="astroicon:logoe" width="35" height="9" x="3" y="25" maskUnits="userSpaceOnUse" style="mask-type:alpha"><path fill="#D9D9D9" d="M0 0h33.05v5.911H0z" transform="rotate(3.386 -430.247 81.72) skewX(-.152)"/></mask><g mask="url(#astroicon:logoe)"><path fill="url(#astroicon:logof)" d="M33.755 24.524v-.012c-.634-2.42-1.708-4.627-3.123-6.421a10.016 10.016 0 0 0 1.325-4.38c.346-5.598-4.027-10.427-9.748-10.765-5.722-.339-10.659 3.94-11.005 9.537a9.978 9.978 0 0 0 .776 4.504c-1.625 1.614-2.963 3.678-3.89 6.006l-.003.012A20.076 20.076 0 0 0 6.7 29.197c-.012.198-.014.883-.014.883-.094 4.89 1.539 9.527 4.48 12.721a.877.877 0 0 0 .592.28l15.882.94a.881.881 0 0 0 .621-.208c3.314-2.824 5.506-7.234 6.015-12.1 0 0 .083-.68.095-.879a20.027 20.027 0 0 0-.615-6.31ZM18.18 11.952l.198-.082.198-.083.6-.342.184-.124c1.106-.727 2.02-1.657 2.635-2.624a9.873 9.873 0 0 0 2.19 2.874l.089.082.367.304.276.205.147.097c1.014.699 2.175 1.172 3.435 1.247-.231 3.732-3.521 6.584-7.336 6.358.01 0 .027.004.039.005l-.023-.002-.016-.003h-.012.012c-3.816-.226-6.73-3.445-6.5-7.177 1.257.075 3.517-.735 3.517-.735Z"/></g><mask id="astroicon:logog" width="34" height="8" x="1" y="33" maskUnits="userSpaceOnUse" style="mask-type:alpha"><path fill="#D9D9D9" d="M0 0h33.051v5.563H0z" transform="rotate(-2.69 742.41 -12.28) skewX(.121)"/></mask><g mask="url(#astroicon:logog)"><path fill="url(#astroicon:logoh)" d="M30.495 24.76c-.001-.004 0-.008-.002-.012-.897-2.34-2.209-4.42-3.814-6.053a9.983 9.983 0 0 0 .833-4.495C27.237 8.6 22.356 4.261 16.63 4.53c-5.726.27-10.16 5.045-9.885 10.646a10.011 10.011 0 0 0 1.27 4.396c-1.438 1.776-2.54 3.97-3.204 6.383v.012a20.03 20.03 0 0 0-.696 6.302c.01.198.084.879.084.879.448 4.872 2.583 9.308 5.86 12.173.17.148.393.225.62.215l15.892-.747a.877.877 0 0 0 .595-.272c2.982-3.159 4.673-7.774 4.641-12.666 0 0 .007-.685-.002-.883a20.07 20.07 0 0 0-1.31-6.208ZM13.622 13.91l.188-.103.188-.103.558-.403s.132-.113.17-.143c1.019-.84 1.824-1.861 2.329-2.887a9.942 9.942 0 0 0 2.495 2.625l.097.071.398.264.298.175.157.081c1.085.587 2.292.934 3.552.876.184 3.734-2.772 6.918-6.59 7.097h.04-.04l-.008.001h-.003l.011-.001c-3.818.18-7.071-2.713-7.254-6.447 1.257-.059 3.414-1.103 3.414-1.103Z"/></g><mask id="astroicon:logoi" width="34" height="7" x="2" y="40" maskUnits="userSpaceOnUse" style="mask-type:alpha"><path fill="#D9D9D9" d="M2.086 40.438h33.052v5.563H2.086z"/></mask><g mask="url(#astroicon:logoi)"><path fill="url(#astroicon:logoj)" d="M31.648 26.178c-.001-.004 0-.008-.002-.012-.782-2.378-1.99-4.518-3.512-6.225a9.996 9.996 0 0 0 1.052-4.45c0-5.608-4.663-10.17-10.396-10.17-5.732 0-10.395 4.562-10.395 10.17 0 1.538.362 3.064 1.052 4.45-1.522 1.707-2.73 3.847-3.512 6.225-.002.004 0 .008-.002.012A20.047 20.047 0 0 0 4.93 32.44c0 .2.04.883.04.883.208 4.888 2.124 9.419 5.257 12.434a.88.88 0 0 0 .608.243h15.911a.879.879 0 0 0 .608-.243c3.133-3.015 5.048-7.546 5.257-12.434 0 0 .04-.684.04-.883 0-2.126-.337-4.233-1.003-6.261ZM15.325 14.55l.193-.094.192-.094.578-.377.176-.134c1.06-.791 1.913-1.773 2.469-2.775a9.911 9.911 0 0 0 2.363 2.74l.093.075.385.283.29.188.152.088c1.055.637 2.243 1.042 3.505 1.042 0 3.738-3.108 6.78-6.93 6.78l.04.002h-.023l-.017-.002h-.012.012c-3.823 0-6.93-3.042-6.93-6.78 1.258 0 3.464-.942 3.464-.942Z"/></g><path fill="#21252D" d="M66.067 34.166h-3.422l-4.497-12.662-.521 15.394h-4.334l1.27-21.469h5.084l4.693 13.82 4.724-13.82h5.084l1.27 21.469h-4.366l-.521-15.362-4.465 12.63ZM95.507 36.898H90.88l-1.532-5.078H83.06l-1.499 5.078h-4.757l6.908-21.469h4.986l6.81 21.469Zm-7.169-8.581-2.15-8.452-2.118 8.452h4.268ZM100.081 19.125h-5.67V15.43h16.13v3.695h-5.768v17.773h-4.692V19.125ZM118.448 29.056h-.815v7.842h-4.692V15.429h6.289c1.651 0 2.965.14 3.943.418.999.279 1.879.76 2.639 1.447 1.325 1.157 1.988 2.742 1.988 4.756 0 2.464-.739 4.242-2.216 5.335-.5.386-1.086.707-1.76.964l5.572 7.488-3.519 2.121-6.452-8.934c-.195.021-.521.032-.977.032Zm3.682-4.081c.76-.515 1.14-1.372 1.14-2.572 0-1.22-.315-2.12-.945-2.7-.608-.578-1.89-.867-3.845-.867h-.847v6.814h.358c2.151 0 3.531-.226 4.139-.675ZM136.567 33.17h9.319v3.728h-14.011v-21.5h13.718v3.727h-9.026v4.853h8.505v3.6h-8.505v5.592ZM162.481 30.888c0 1.907-.674 3.46-2.021 4.66-1.325 1.178-3.117 1.768-5.376 1.768-1.086 0-2.314-.14-3.682-.418-1.347-.3-2.466-.654-3.357-1.06l1.206-3.825c1.998.9 3.888 1.35 5.67 1.35 2.02 0 3.03-.772 3.03-2.314 0-.75-.336-1.393-1.01-1.929-.673-.535-1.586-1.06-2.737-1.574-1.151-.536-1.977-.943-2.477-1.222-.478-.278-1.01-.675-1.596-1.189-1.108-.964-1.662-2.367-1.662-4.21 0-1.842.652-3.289 1.955-4.338 1.325-1.05 2.954-1.575 4.888-1.575 1.955 0 4.051.407 6.289 1.221l-1.304 3.503c-1.781-.621-3.302-.932-4.562-.932-1.803 0-2.715.707-2.737 2.121 0 .579.196 1.018.587 1.318.391.278.673.482.847.61.174.108.521.3 1.043.579.543.257 1.042.514 1.499.771.456.236.869.472 1.238.707.391.215.901.557 1.531 1.029.63.471 1.108.91 1.434 1.317.869 1.072 1.304 2.282 1.304 3.632ZM177.243 23.914v-8.485h4.659v21.469h-4.659v-9.256h-7.137v9.256h-4.659V15.429h4.659v8.485h7.137ZM190.759 33.17h9.32v3.728h-14.012v-21.5h13.719v3.727h-9.027v4.853h8.505v3.6h-8.505v5.592ZM208.947 25.939l6.321-10.51h5.54l-6.746 10.349 8.179 11.12h-5.702l-7.592-10.96Zm-.717-10.51v21.469h-4.693V15.429h4.693Z"/><path fill="#F94444" d="M248.002 36.898h-4.953l-8.57-15.009v15.009h-4.53V15.429h4.953l8.538 15.041V15.43h4.562v21.468ZM256.853 33.17h9.32v3.728h-14.012v-21.5h13.719v3.727h-9.027v4.853h8.505v3.6h-8.505v5.592ZM273.541 19.125h-5.669V15.43h16.129v3.695h-5.767v17.773h-4.693V19.125Z"/><defs><linearGradient id="astroicon:logob" x1="19.702" x2="18.93" y1=".141" y2="15.753" gradientUnits="userSpaceOnUse"><stop stop-color="#FA3E3E"/><stop offset="1" stop-color="#F95050"/></linearGradient><linearGradient id="astroicon:logod" x1="16.64" x2="16.778" y1="1.728" y2="42.407" gradientUnits="userSpaceOnUse"><stop stop-color="#F95050"/><stop offset="1" stop-color="#F16868"/></linearGradient><linearGradient id="astroicon:logof" x1="22.209" x2="19.805" y1="2.946" y2="43.557" gradientUnits="userSpaceOnUse"><stop stop-color="#F16868"/><stop offset="1" stop-color="#F07D7D"/></linearGradient><linearGradient id="astroicon:logoh" x1="16.63" x2="18.539" y1="4.53" y2="45.166" gradientUnits="userSpaceOnUse"><stop stop-color="#F07D7D"/><stop offset="1" stop-color="#FD9191"/></linearGradient><linearGradient id="astroicon:logoj" x1="18.79" x2="18.79" y1="5.321" y2="46" gradientUnits="userSpaceOnUse"><stop stop-color="#FD9191"/><stop offset="1" stop-color="#FAA"/></linearGradient></defs></symbol><symbol fill="none" viewBox="0 0 24 24" id="astroicon:fi_zoom-out"><g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16ZM21 21l-4.35-4.35"/></g></symbol><symbol fill="none" viewBox="0 0 24 25" id="astroicon:fi_user"><g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M20 21.5v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2M12 11.5a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/></g></symbol><symbol viewBox="0 0 24 25" id="astroicon:fi_heart"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.84 5.11a5.5 5.5 0 0 0-7.78 0L12 6.17l-1.06-1.06a5.501 5.501 0 1 0-7.78 7.78l1.06 1.06L12 21.73l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78v0Z"/></symbol><symbol fill="none" viewBox="0 0 24 25" id="astroicon:fi_shopping-cart"><g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" clip-path="url(#astroicon:fi_shopping-carta)"><path d="M20 22.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM9 22.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM1 1.5h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6.5H6"/></g><defs><clipPath id="astroicon:fi_shopping-carta"><path fill="#fff" d="M0 0h24v24H0z" transform="translate(0 .5)"/></clipPath></defs></symbol><symbol fill="none" viewBox="0 0 20 20" id="astroicon:fi_x"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5 5 15M5 5l10 10"/></symbol><symbol fill="none" viewBox="0 0 18 18" id="astroicon:fi_chevron-down"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4.5 6.75 4.5 4.5 4.5-4.5"/></symbol><symbol viewBox="0 0 48 48" id="astroicon:fluent:chevron-up-48-regular"><path fill="currentColor" d="M39.634 31.884a1.25 1.25 0 0 1-1.768 0L24 18.018 10.134 31.884a1.25 1.25 0 0 1-1.768-1.768l14.75-14.75a1.25 1.25 0 0 1 1.768 0l14.75 14.75a1.25 1.25 0 0 1 0 1.768z"/></symbol><symbol fill="none" viewBox="0 0 18 18" id="astroicon:fi_chevron-right"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m6.75 13.5 4.5-4.5-4.5-4.5"/></symbol><symbol fill="none" viewBox="0 0 25 24" id="astroicon:fi_more-horizontal"><g stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M19.5 13a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM12.5 13a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM5.5 13a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"/></g></symbol><symbol fill="none" viewBox="0 0 24 24" id="astroicon:telegram"><path fill="currentColor" d="M19.552 2.997a2.23 2.23 0 0 0-.7.167h-.003c-.213.085-1.23.512-2.774 1.16l-5.537 2.332C6.565 8.33 2.66 9.976 2.66 9.976l.046-.018s-.269.088-.55.28c-.174.112-.323.256-.44.426a1.246 1.246 0 0 0-.207.833c.067.541.418.866.67 1.045.255.182.498.266.498.266h.006l3.662 1.234c.165.527 1.116 3.656 1.345 4.377.135.43.266.7.43.905.08.105.173.193.285.264.058.034.12.06.184.08l-.037-.01c.011.003.02.012.028.015.03.008.05.011.089.017.58.176 1.045-.184 1.045-.184l.027-.021 2.162-1.969 3.624 2.78.083.036c.755.331 1.52.147 1.924-.179.407-.328.566-.747.566-.747l.026-.067 2.8-14.347c.08-.354.1-.686.012-1.007-.09-.326-.3-.606-.585-.786a1.404 1.404 0 0 0-.8-.202Zm-.075 1.537c-.003.048.006.042-.015.133v.008l-2.775 14.198c-.012.02-.032.064-.088.109-.058.046-.105.075-.348-.021l-4.433-3.399-2.677 2.44.562-3.592 7.242-6.75c.299-.277.199-.336.199-.336.021-.34-.45-.1-.45-.1L7.56 12.883l-.003-.015-4.377-1.474v-.003l-.011-.002a.184.184 0 0 0 .022-.01l.024-.011.024-.008 7.88-3.32c1.99-.838 3.994-1.681 5.535-2.332.914-.385 1.829-.768 2.745-1.148.062-.024.032-.025.077-.025Z"/></symbol><symbol fill="none" viewBox="0 0 24 24" id="astroicon:viber"><path fill="currentColor" d="M19.05 4.91A9.816 9.816 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01Zm-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.264 8.264 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.183 8.183 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.22 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.07-.11-.22-.16-.47-.28Z"/></symbol><symbol fill="none" viewBox="0 0 45 45" id="astroicon:menu-1"><mask id="astroicon:menu-1a" width="45" height="45" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:luminance"><path fill="#fff" d="M45 0H0v45h45V0Z"/></mask><g mask="url(#astroicon:menu-1a)"><path fill="currentColor" d="M7.915 17.838a2.052 2.052 0 0 1 2.241 2.043c0 .596-.255 1.13-.66 1.505-.087-.042-.173-.084-.257-.127a2.787 2.787 0 0 1-1.324-3.42Z"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5" d="M21.605 4.848c-.26-2.607-1.564-3.97-3.132-3.97-1.756 0-3.18 1.71-3.18 4.962 0 2.335.735 4.832 1.799 6.054M19.728 40.635a6.533 6.533 0 0 1 5.041-10.689M21.4 40.635h-2.073a3.483 3.483 0 0 0-3.483 3.483h16.617"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5" d="M33.288 37.04c1.646 0 3.097.83 3.959 2.094a4.79 4.79 0 0 1-8.743 2.893 4.79 4.79 0 0 1 4.785-4.987Z"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5" d="M15.844 44.118H13.9a1.439 1.439 0 0 1-1.274-2.106l.752-1.435a5.432 5.432 0 0 0-.487-5.808l-1.359-1.788a6.554 6.554 0 0 1 .092-8.05 3.92 3.92 0 0 0 .855-2.443.165.165 0 0 0-.136-.162 11.076 11.076 0 0 1-3.104-1.067c-1.419-.738-1.915-2.527-1.097-3.901a11.24 11.24 0 0 1 9.647-5.46 1.358 1.358 0 0 0 1.351-1.156c.203-1.362.716-2.898 1.448-4.24 1.633-2.99 3.741-3.878 5.282-3.036 1.541.842 1.933 3.095.3 6.086-1.04 1.904-2.652 3.648-4.083 4.446-.463.258-.73.757-.687 1.286.008.097.012 2.24.012 2.24 0 .954-.138 1.908-.476 2.799a1.616 1.616 0 0 0 1.505 2.188c6.786 0 12.431 5.367 12.607 12.152.023.887-.046 1.754-.2 2.592"/><path fill="currentColor" d="M14.089 16.864a1.234 1.234 0 1 0 2.468 0 1.234 1.234 0 0 0-2.468 0Z"/></g></symbol><symbol fill="none" viewBox="0 0 48 47" id="astroicon:menu-2"><g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5" clip-path="url(#astroicon:menu-2a)"><path d="M16.143 5.723a2.857 2.857 0 1 1-5.713 0c0-1.577 2.856-5.713 2.856-5.713s2.857 4.136 2.857 5.713ZM20.434 3.084l3.152 3.571M24.715 1.424v5M28.996 3.084l-3.152 3.572M29.686 16.783c-1.725 3.653-5.925 8.923-10.983 8.923"/><path d="M17.89 39.99 19 20.007l-2.886-.015a5.713 5.713 0 0 1-5.684-5.713V8.566h5.713v5.713l8.836.013a5.714 5.714 0 0 1 5.695 5.454l.26 5.699M31.285 33.173l.31 6.817"/><path d="M27.57 9.994c0 2.366-1.278 4.285-2.856 4.285-1.578 0-2.857-1.919-2.857-4.285 0-2.367 1.28-3.571 2.857-3.571 1.578 0 2.857 1.204 2.857 3.57ZM32.865 23.513l-6.06 6.06 4.04 4.04 6.06-6.06-4.04-4.04ZM16.145 45.894V39.99h17.14v5.904M11.86 45.908h25.71"/></g><defs><clipPath id="astroicon:menu-2a"><path fill="#fff" d="M0 0h47.959v47.959H0z" transform="translate(.02 -1.02)"/></clipPath></defs></symbol><symbol fill="none" viewBox="0 0 30 43" id="astroicon:menu-3"><path fill="currentColor" fill-rule="evenodd" d="M25.484 33.805a.656.656 0 0 1-.201-1.28 4.205 4.205 0 0 0 2.923-4.014v-3.289h-2.722a.656.656 0 0 1 0-1.31h3.378c.362 0 .655.293.655.655v3.945a5.494 5.494 0 0 1-1.06 3.254 5.494 5.494 0 0 1-2.772 2.007.658.658 0 0 1-.201.032Z" clip-rule="evenodd"/><path fill="currentColor" fill-rule="evenodd" d="M28.862 27.402h-3.378a.656.656 0 0 1 0-1.311h3.378a.656.656 0 1 1 0 1.31ZM4.575 33.805a.656.656 0 0 1-.201-.032A5.493 5.493 0 0 1 1.6 31.766a5.494 5.494 0 0 1-1.06-3.254v-3.945c0-.362.294-.656.656-.656h3.378a.656.656 0 0 1 0 1.311H1.852v3.29a4.205 4.205 0 0 0 2.924 4.013.656.656 0 0 1-.201 1.28Z" clip-rule="evenodd"/><path fill="currentColor" fill-rule="evenodd" d="M4.575 27.402H1.197a.656.656 0 0 1 0-1.311h3.378a.656.656 0 1 1 0 1.31ZM23.33 19.105H6.73a4.158 4.158 0 0 1-4.154-4.154V6.988a2.793 2.793 0 0 1 2.79-2.79h19.327a2.793 2.793 0 0 1 2.79 2.79v7.963a4.158 4.158 0 0 1-4.153 4.154ZM5.366 5.509a1.48 1.48 0 0 0-1.478 1.48v7.962a2.845 2.845 0 0 0 2.842 2.843h16.6a2.845 2.845 0 0 0 2.842-2.843V6.988a1.48 1.48 0 0 0-1.479-1.478H5.366Z" clip-rule="evenodd"/><path fill="currentColor" fill-rule="evenodd" d="M25.483 35.597H4.573a.656.656 0 0 1-.655-.656V17.707a.656.656 0 1 1 1.311 0v16.578h19.599V17.707a.656.656 0 1 1 1.31 0V34.94a.656.656 0 0 1-.655.656Z" clip-rule="evenodd"/><path fill="currentColor" fill-rule="evenodd" d="M24.608 42.064H5.45a3.894 3.894 0 0 1-3.89-3.89 3.894 3.894 0 0 1 3.89-3.888.656.656 0 0 1 0 1.31 2.58 2.58 0 0 0-2.578 2.579 2.58 2.58 0 0 0 2.578 2.578h19.158a2.58 2.58 0 0 0 2.578-2.578 2.58 2.58 0 0 0-2.578-2.578.656.656 0 0 1 0-1.311 3.894 3.894 0 0 1 3.889 3.889 3.893 3.893 0 0 1-3.89 3.889ZM11.412 26.532a.656.656 0 0 1-.656-.656v-7.427a.656.656 0 1 1 1.311 0v7.427a.656.656 0 0 1-.655.655ZM8.3 26.532a.656.656 0 0 1-.655-.656v-7.427a.656.656 0 0 1 1.31 0v7.427a.656.656 0 0 1-.655.655ZM9.856 32.152a.655.655 0 0 1-.465-.194L7.835 30.39a.656.656 0 0 1-.19-.462v-1.385a.656.656 0 0 1 1.31 0v1.115l.901.908.9-.908v-1.115a.656.656 0 1 1 1.312 0v1.385a.656.656 0 0 1-.19.462l-1.556 1.569a.655.655 0 0 1-.466.193Z" clip-rule="evenodd"/><path fill="currentColor" fill-rule="evenodd" d="M12.257 29.2H7.454a.656.656 0 0 1-.655-.656v-2.668c0-.362.293-.656.655-.656h4.803c.362 0 .655.294.655.656v2.668a.656.656 0 0 1-.655.655ZM8.11 27.887h3.491v-1.357H8.11v1.357ZM21.761 26.532a.656.656 0 0 1-.655-.656v-7.427a.656.656 0 1 1 1.31 0v7.427a.656.656 0 0 1-.655.655ZM18.648 26.532a.656.656 0 0 1-.656-.656v-7.427a.656.656 0 1 1 1.311 0v7.427a.656.656 0 0 1-.655.655ZM20.204 32.152a.655.655 0 0 1-.466-.194l-1.556-1.568a.656.656 0 0 1-.19-.462v-1.385a.656.656 0 1 1 1.311 0v1.115l.9.908.902-.908v-1.115a.656.656 0 0 1 1.31 0v1.385a.656.656 0 0 1-.19.462l-1.556 1.569a.655.655 0 0 1-.465.193Z" clip-rule="evenodd"/><path fill="currentColor" fill-rule="evenodd" d="M22.606 29.2h-4.802a.656.656 0 0 1-.656-.656v-2.668c0-.362.294-.656.656-.656h4.802c.362 0 .656.294.656.656v2.668a.656.656 0 0 1-.656.655Zm-4.146-1.312h3.49v-1.357h-3.49v1.357ZM7.275 42.064a.656.656 0 0 1-.656-.656v-6.467a.656.656 0 1 1 1.311 0v6.467a.656.656 0 0 1-.655.656ZM9.675 42.064a.656.656 0 0 1-.655-.656v-6.467a.656.656 0 0 1 1.31 0v6.467a.656.656 0 0 1-.655.656ZM20.382 42.064a.656.656 0 0 1-.655-.656v-6.467a.656.656 0 1 1 1.31 0v6.467a.656.656 0 0 1-.655.656ZM22.783 42.064a.656.656 0 0 1-.656-.656v-6.467a.656.656 0 1 1 1.311 0v6.467a.656.656 0 0 1-.655.656ZM18.282 11.478h-6.505a.656.656 0 0 1-.656-.656V7.893c0-.362.294-.655.656-.655h6.505c.362 0 .656.293.656.655v2.93a.656.656 0 0 1-.656.655Zm-5.85-1.312h5.195V8.55h-5.195v1.617Z" clip-rule="evenodd"/><path fill="currentColor" fill-rule="evenodd" d="M16.465 16.066h-2.874a1.89 1.89 0 0 1-1.888-1.888v-3.356c0-.362.294-.655.656-.655h5.338c.363 0 .656.293.656.655v3.356a1.89 1.89 0 0 1-1.888 1.888Zm-3.45-4.588v2.7c0 .318.258.577.576.577h2.874a.577.577 0 0 0 .577-.577v-2.7h-4.028ZM11.3 5.499a.656.656 0 0 1-.64-.52L9.9 1.417H4.927l.702 3.29a.656.656 0 0 1-1.283.274L3.476.897a.655.655 0 0 1 .64-.793h6.315c.309 0 .576.217.64.52l.871 4.082a.656.656 0 0 1-.641.793ZM25.072 5.499a.656.656 0 0 1-.642-.793l.702-3.29h-4.973l-.76 3.564a.656.656 0 0 1-1.283-.274l.87-4.083a.656.656 0 0 1 .642-.519h6.314a.655.655 0 0 1 .641.793l-.87 4.083a.655.655 0 0 1-.641.519Z" clip-rule="evenodd"/><path fill="currentColor" fill-rule="evenodd" d="M18.163 5.51a.656.656 0 0 1-.654-.614 2.447 2.447 0 0 0-.276-.95 2.482 2.482 0 0 0-2.203-1.33 2.483 2.483 0 0 0-2.482 2.303.656.656 0 1 1-1.303-.142 3.747 3.747 0 0 1 .414-1.427 3.79 3.79 0 0 1 3.371-2.045 3.79 3.79 0 0 1 3.371 2.045l.006.013c.23.442.366.918.408 1.414l.003.027a.656.656 0 0 1-.655.706Zm-5.618-.566Zm4.969-.009.001.009-.001-.009Zm-4.97.008Zm0 0Zm.005-.038Z" clip-rule="evenodd"/></symbol><symbol fill="none" viewBox="0 0 34 38" id="astroicon:menu-4"><g stroke="currentColor" stroke-miterlimit="10" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M33.103 14.984v14.953a7.247 7.247 0 0 1-14.494 0V14.984a4.522 4.522 0 0 1 4.522-4.522h5.45a4.522 4.522 0 0 1 4.522 4.522Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M28.466 17.97a2.553 2.553 0 1 0-5.068-.625 2.553 2.553 0 0 0 5.069.624Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M25.929 16.606v-13.2a2.59 2.59 0 0 0-2.59-2.59H9.991a2.085 2.085 0 0 0-2.085 2.085v1.846"/><g stroke-linecap="round" stroke-linejoin="round"><path d="M.895 11.76a7.015 7.015 0 0 0 4.556 6.57v16.255l2.44 2.588 2.473-2.588V18.33A7.015 7.015 0 0 0 7.907 4.747 7.013 7.013 0 0 0 .895 11.76ZM10.406 32.282h2.207M10.406 27.818h2.207M10.406 23.355h2.207"/></g><path d="M25.855 29.936v-5.231"/><path stroke-linecap="round" stroke-linejoin="round" d="M33.103 24.705H18.61v5.231h14.494v-5.231ZM7.969 9.453v-.032"/></g></symbol><symbol fill="none" viewBox="0 0 41 41" id="astroicon:menu-5"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5" d="M20.5 40.12c10.835 0 19.62-8.785 19.62-19.62S31.334.88 20.5.88.88 9.666.88 20.5 9.666 40.12 20.5 40.12Z"/><g stroke="currentColor" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"><path stroke-linecap="round" d="M13.168 21.525v8.19c4.197 0 8.394 4.86 8.394 4.86v-7.219"/><path stroke-linecap="round" d="m20.781 27.15 4.016 1.056c1.523.4 3.045-.65 3.211-2.216l.344-3.871h1.428a.814.814 0 0 0 .791-1.007l-1.395-5.738A8.95 8.95 0 0 0 20.1 6.426c-4.881.068-8.985 4.098-8.985 8.979 0 2.816.98 4.649 2.054 6.12"/><path d="M13.168 21.525c1.47-1.029.783-2.443 2.254-3.471 1.47-1.029 2.093-.138 3.564-1.166 1.47-1.029.848-1.92 2.318-2.948 1.47-1.029 2.094-.138 3.564-1.166 1.47-1.029.848-1.92 2.318-2.948l.039-.03"/></g><g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"><path d="M6.99 13.836A14.997 14.997 0 0 0 5.44 20.5c0 3.445 1.156 6.619 3.103 9.156M26.555 34.293c5.302-2.331 9.005-7.63 9.005-13.793 0-2.977-.864-5.752-2.355-8.088"/></g></symbol><symbol fill="none" viewBox="0 0 36 36" id="astroicon:menu-6"><g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"><path d="m35.227 28.65-10.794 2.86H11.567L.773 28.65v-2.859h34.454v2.86ZM8.707 35.227l2.86-3.717h12.866l2.859 3.717M18 25.791V18.38M11.528 25.791 8.94 18.68M24.473 25.791l2.522-6.93M18 17.928a2.144 2.144 0 0 1-2.145-2.144V2.918a2.144 2.144 0 1 1 4.29 0v12.866c0 1.184-.96 2.144-2.145 2.144ZM8.84 18.403A2.144 2.144 0 0 1 6.09 17.12l-4.4-12.09a2.144 2.144 0 1 1 4.03-1.467l4.4 12.09a2.144 2.144 0 0 1-1.282 2.749ZM27.162 18.403a2.144 2.144 0 0 0 2.748-1.282l4.4-12.09a2.144 2.144 0 1 0-4.03-1.467l-4.4 12.09a2.144 2.144 0 0 0 1.282 2.749Z"/></g></symbol><symbol fill="none" viewBox="0 0 28 44" id="astroicon:menu-7"><g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"><path d="M24.486.945c3.485 4.64 3.485 11.086 0 15.726M3.516 16.67C.03 12.03.03 5.587 3.516.946M14.001 16.67a7.863 7.863 0 1 0 0-15.725 7.863 7.863 0 0 0 0 15.726Z"/><path d="M7.707 13.521s3.15 4.329 3.673 8.392c.523 4.063-2.05 11.615-2.05 11.615a7.878 7.878 0 0 0-.57 2.974c0 3.62 2.346 6.553 5.241 6.553 2.895 0 5.242-2.934 5.242-6.553a7.877 7.877 0 0 0-.57-2.974s-2.574-7.552-2.051-11.615c.523-4.063 3.673-8.392 3.673-8.392M14 35.192v2.62M14 6.032V6M14 12.032V12M17 9.032V9M11 9.032V9"/></g></symbol><symbol fill="none" viewBox="0 0 32 32" id="astroicon:menu-8"><g stroke="currentColor" stroke-miterlimit="10" stroke-width="1.5"><path d="M3.684 21.655h24.634"/><path stroke-linecap="round" stroke-linejoin="round" d="m2.594 27.5 3.11-21.903a5.718 5.718 0 0 1 5.662-4.91h9.269a5.718 5.718 0 0 1 5.66 4.91L29.407 27.5M10.219 4.5v1.906M14.031 4.5v1.906M17.906 4.5v1.906M21.781 4.5v1.906M10.219 15.937v1.906M14.031 15.937v1.906M17.906 15.937v1.906M21.781 15.937v1.906M8.313 10.218v1.906M12.125 10.218v1.906M16 10.218v1.906M19.875 10.218v1.906M23.688 10.218v1.906M31.313 31.313H.688v-1.907c0-1.052.853-1.906 1.906-1.906h26.812c1.053 0 1.907.854 1.907 1.906v1.907Z"/></g></symbol><symbol fill="none" viewBox="0 0 30 40" id="astroicon:menu-9"><g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"><path d="M12.209 24.789v2.02a2.79 2.79 0 1 0 5.582 0v-2.02M25.674 32.956a12.375 12.375 0 0 1-10.688 6.185 12.383 12.383 0 0 1-10.662-6.138"/><path d="M21.548 30.574a7.566 7.566 0 0 1-6.556 3.796 7.566 7.566 0 0 1-6.539-3.768M26.387 22.404v-6.958c0-5.326-3.657-9.797-8.596-11.042V3.65a2.79 2.79 0 1 0-5.582 0v.754C7.27 5.65 3.613 10.12 3.613 15.446v6.958a2.384 2.384 0 0 1-2.384 2.384h27.543a2.384 2.384 0 0 1-2.385-2.384Z"/></g></symbol><symbol fill="none" viewBox="0 0 23 40" id="astroicon:menu-10"><g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"><path d="M19.529 36.203H3.534c-1.333 0-2.413-1.066-2.413-2.382V3.242c0-1.316 1.08-2.383 2.413-2.383h15.995c1.332 0 2.413 1.067 2.413 2.383v30.579c0 1.316-1.08 2.382-2.413 2.382ZM1.121 15.545h20.82M7.07 6.734V9.67M7.07 21.42v2.937M4.096 39.14v-2.937M18.967 39.14v-2.936"/></g></symbol><symbol fill="none" viewBox="0 0 39 39" id="astroicon:menu-11"><g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"><path d="m31.184 20.916 6.44-2.112L35.16 8.07c-1.127-4.917-5.487-7.03-9.87-7.236 0 3.186-2.605 5.79-5.79 5.79S13.71 4.02 13.71.834c-4.383.207-8.74 2.319-9.87 7.236L1.38 18.804l6.44 2.112m0-6.573v23.822h23.365V14.343"/><path d="M22.456 20.09a.407.407 0 0 1-.598 0L18.8 16.905c-1.979-2.056 1.013-5.177 2.994-3.116l.363.378.363-.378c1.98-2.059 4.969 1.062 2.997 3.116l-3.061 3.185ZM14.229 13.89v5.555M11.223 23.34l1.567 2.4 1.553-2.387M12.785 28.246l.007-2.506M24.371 23.34v3.374c0 .577.284.964.768 1.274.236.15.535.258.905.258.32 0 .59-.073.811-.185.564-.286.925-.716.925-1.349V23.34M21.543 25.792a2.457 2.457 0 0 0-2.454-2.452 2.456 2.456 0 0 0-2.452 2.452 2.458 2.458 0 0 0 2.452 2.454 2.459 2.459 0 0 0 2.454-2.454Z"/></g></symbol><symbol fill="none" viewBox="0 0 40 42" id="astroicon:menu-12"><g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"><path d="M34.297 31.947H4.068M7.336 22.96v-4.084M10.605 19.08v3.699M21.633 26.229a2.45 2.45 0 1 1-4.901 0H4.068v8.986a2.45 2.45 0 0 0 2.451 2.451h25.327a2.45 2.45 0 0 0 2.45-2.45v-8.988H21.634ZM28.578 37.881v3.217H9.788v-3.431M31.029 18.876H.801v4.085h30.228v-4.085ZM23.677 12.34h3.543a4.33 4.33 0 0 1 1.84-4.684 5.19 5.19 0 1 1 6.67 3.334c.005.097.01.194.01.293a4.325 4.325 0 0 1-4.326 4.325h-7.737a1.634 1.634 0 1 1 0-3.268Z"/></g></symbol><symbol fill="none" viewBox="0 0 38 42" id="astroicon:menu-13"><g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="22.926" stroke-width="1.5"><path d="M24.472 8.952a13.342 13.342 0 0 1 3.514 3.357m2.246 9.869a12.916 12.916 0 0 1-1.736 4.506c-2.729 4.4-3.32 9.345-2.988 14.414H13.793c-.288-4.392-.723-4.715-5.395-4.715-1.984 0-3.607-1.605-3.607-3.568v-4.362c-3.55 0-4.678-1.593-3-3.93.812-1.132 2.173-3.238 2.173-4.646 0-5.454 3.417-10.156 8.239-12.117M7.445 21.747h.001"/><path d="M8.06 31.72c-.74-.426-1.634-.817-2.451-.817h-.535"/><path d="M36.973 12.335h-3.268v-.817c0-.899-.735-1.634-1.634-1.634-.898 0-1.633.735-1.633 1.634v.817H27.17v3.267h-.817c-.899 0-1.634.736-1.634 1.634 0 .9.735 1.634 1.634 1.634h.817v3.268h8.17c.898 0 1.633-.735 1.633-1.634V18.87h-.817a1.639 1.639 0 0 1-1.634-1.634c0-.898.736-1.634 1.634-1.634h.817v-3.267ZM22.104 13.157V9.889h.817c.9 0 1.634-.735 1.634-1.634 0-.899-.735-1.634-1.634-1.634h-.817V3.353h-3.267v-.817c0-.898-.736-1.634-1.634-1.634-.9 0-1.634.736-1.634 1.634v.817H12.3v8.17c0 .899.735 1.634 1.634 1.634h1.634v-.817c0-.899.735-1.634 1.634-1.634.898 0 1.634.735 1.634 1.634v.817h3.267Z" clip-rule="evenodd"/></g></symbol><symbol fill="none" viewBox="0 0 36 48" id="astroicon:menu-14"><g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="22.926" stroke-width="1.5"><path d="M18 1.031c.577 0 5.623 6.36 5.623 9.466a5.623 5.623 0 1 1-11.246 0c0-3.106 5.046-9.466 5.623-9.466Z" clip-rule="evenodd"/><path d="M23.217 25.144v2.43c0 3.463-1.801 6.43-4.872 8.028l-.346.18-.345-.18c-3.071-1.598-4.873-4.565-4.873-8.027v-2.431M12.666 25.144l-.713 2.846c-.913 3.658-3.463 5.84-7.05 6.7-.945-.837-2.123-2.27-2.74-3.391M23.328 25.144l.721 2.846c.912 3.658 3.462 5.84 7.05 6.7.945-.837 2.002-2.122 2.67-3.608"/><path d="M5.423 24.861 2.984 29.36c-1.487 2.762-1.792 5.94-.145 8.612l4.58 7.431c.575.934 1.426 1.566 2.522 1.566H26.06c1.097 0 1.947-.632 2.523-1.566l4.58-7.431c1.646-2.671 1.341-5.85-.145-8.612l-2.44-4.499"/><path d="M6.658 19.425h22.683a2.868 2.868 0 0 1 2.86 2.86 2.868 2.868 0 0 1-2.86 2.859H6.658a2.868 2.868 0 0 1-2.86-2.86 2.868 2.868 0 0 1 2.86-2.859Z" clip-rule="evenodd"/><path d="M18 19.425v-5.623"/></g></symbol><symbol fill="none" viewBox="0 0 41 33" id="astroicon:menu-15"><g stroke="currentColor" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"><path stroke-linecap="round" d="M4.219 26.83h6.512v3.416c0 .943-.729 1.707-1.628 1.707H5.847c-.9 0-1.628-.764-1.628-1.707v-3.415ZM36.782 26.83H30.27v3.416c0 .943.729 1.707 1.628 1.707h3.256c.9 0 1.628-.764 1.628-1.707v-3.415Z"/><path stroke-linecap="round" d="M36.049 13c2.248 0 4.07 1.91 4.07 4.268v9.563H.881v-9.563C.88 14.911 2.703 13 4.95 13"/><path stroke-linecap="round" d="M15.616 26.831h9.769v-6.147h-9.77v6.147Z"/><path d="M31.083 13c0-2.83-2.186-5.123-4.884-5.123-2.698 0-4.885 2.294-4.885 5.123"/><path stroke-linecap="round" d="M35.05 20.657c.392-1.354-.338-2.783-1.63-3.193-1.29-.41-2.653.355-3.044 1.709s.338 2.784 1.63 3.194c1.29.41 2.654-.356 3.045-1.71ZM10.545 20.895c.516-1.306-.075-2.805-1.322-3.346-1.246-.541-2.675.08-3.19 1.386-.517 1.307.075 2.805 1.321 3.347 1.246.541 2.675-.08 3.191-1.387ZM11.358 1.047h18.281c1.818 0 3.415 1.263 3.914 3.096L35.966 13H5.03l2.413-8.857c.5-1.833 2.096-3.096 3.914-3.096Z"/></g></symbol><symbol fill="none" viewBox="0 0 31 45" id="astroicon:menu-16"><g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="22.926" stroke-width="1.5"><path d="M15.5.967c.939 0 5.898 5.231 5.898 8.488a5.897 5.897 0 0 1-11.794 0c0-3.257 4.958-8.488 5.897-8.488ZM1.188 24.645h28.627v2.449c0 1.612-.842 2.994-2.275 3.733l-2.925 1.507-2.204 9.617a2.656 2.656 0 0 1-2.612 2.082h-8.595c-1.265 0-2.33-.849-2.613-2.082l-2.203-9.617-2.925-1.507c-1.433-.739-2.276-2.121-2.276-3.733v-2.45Z" clip-rule="evenodd"/><path d="M21.89 15.352H9.113v9.292H21.89v-9.292ZM15.5 15.352v-4.646"/></g></symbol><symbol fill="none" viewBox="0 0 42 42" id="astroicon:menu-17"><g stroke="currentColor" stroke-miterlimit="10" stroke-width="1.5"><path d="M9.302 41.995V25.494a4.283 4.283 0 0 1-2.726-3.99v-4.003a4.283 4.283 0 1 1 8.566 0v4.003a4.283 4.283 0 0 1-2.726 3.99v16.501"/><path stroke-linecap="round" d="M10.859 15.555a1.949 1.949 0 0 0-1.947 1.947v4.002"/></g><path stroke="currentColor" stroke-miterlimit="10" stroke-width="1.5" d="M33.537 41.995V13.21a4.922 4.922 0 0 0-4.922 4.922v14.862l1.807 1.558v7.443"/><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5" d="M20.345 41.995V25.494a4.284 4.284 0 0 1-2.726-3.99v-8.753"/><path fill="#28313D" d="M26.934 12.752a.75.75 0 0 0-1.5 0h1.5ZM23.46 25.494l-.273-.699-.477.187v.512h.75Zm1.976-12.742v8.752h1.5v-8.753h-1.5Zm0 8.752a3.533 3.533 0 0 1-2.249 3.291l.546 1.397a5.033 5.033 0 0 0 3.203-4.688h-1.5Zm-2.726 3.99v16.502h1.5V25.494h-1.5Z"/><path stroke="currentColor" stroke-miterlimit="10" stroke-width="1.5" d="M26.185 18.752h-8.566"/><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5" d="M20.475 12.752v6M23.33 12.752v6"/><path stroke="currentColor" stroke-miterlimit="10" stroke-width="1.5" d="M23.46 41.242a20.226 20.226 0 0 0 6.963-2.157M9.3 37.7C4.049 34.012.616 27.91.616 21.005.615 9.747 9.742.62 21 .62c11.258 0 20.385 9.127 20.385 20.385 0 6.53-3.07 12.343-7.847 16.074M12.414 39.498a20.274 20.274 0 0 0 7.93 1.88"/><path stroke="currentColor" stroke-miterlimit="10" stroke-width="1.5" d="M23.46 38.762a17.726 17.726 0 0 0 6.963-2.502"/><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5" d="M33.674 8.33a17.806 17.806 0 0 1 5.25 12.675M8.326 8.33A17.807 17.807 0 0 1 21 3.08M9.3 34.585c-.333-.289-.659-.592-.974-.907a17.807 17.807 0 0 1-5.25-12.673"/></symbol><symbol fill="none" viewBox="0 0 33 41" id="astroicon:menu-18"><g stroke="#28313D" stroke-miterlimit="10" stroke-width="1.5"><path stroke-linejoin="round" d="M30.124 18.974a5.703 5.703 0 0 0-5.705-5.701H12.912a5.703 5.703 0 0 0-5.705 5.7"/><path stroke-linejoin="bevel" d="M7.488 35.33V23.764l11.1 11.258 11.257-11.258V35.33"/><path stroke-linecap="round" stroke-linejoin="round" d="M32.076 35.33H5.256v4.789h26.82v-4.79ZM32.076 18.976H5.256v4.79h26.82v-4.79Z"/><path stroke-linejoin="round" d="M18.612 13.273v-1.814a2.36 2.36 0 0 0-2.361-2.36H5.849A2.36 2.36 0 0 1 3.49 6.74v-.774"/><path stroke-linecap="round" stroke-linejoin="round" d="M3.47 5.966A2.544 2.544 0 1 0 .926 3.424 2.544 2.544 0 0 0 3.47 5.966Z"/></g></symbol><symbol fill="none" viewBox="0 0 24 24" id="astroicon:vk"><g clip-path="url(#astroicon:vka)"><path fill="currentColor" d="M12.145 19.5c3.472 0 2.234-2.198 2.502-2.83-.004-.472-.008-.926.008-1.202.22.062.739.325 1.811 1.367 1.655 1.67 2.078 2.665 3.415 2.665h2.461c.78 0 1.186-.323 1.389-.594.196-.262.388-.722.178-1.438-.549-1.724-3.751-4.701-3.95-5.015a2.84 2.84 0 0 1 .103-.175h-.002c.632-.835 3.044-4.449 3.399-5.895a.019.019 0 0 0 .002-.008c.192-.66.016-1.088-.166-1.33-.274-.362-.71-.545-1.299-.545h-2.461c-.824 0-1.449.415-1.765 1.172-.529 1.345-2.015 4.111-3.129 5.09a64.114 64.114 0 0 1 .007-3.233c.036-1.535.152-3.029-1.441-3.029H9.339c-.998 0-1.953 1.09-.919 2.384.904 1.134.325 1.766.52 4.912-.76-.815-2.112-3.016-3.068-5.829-.268-.761-.674-1.466-1.817-1.466H1.594C.596 4.501 0 5.045 0 5.956 0 8.002 4.529 19.5 12.145 19.5ZM4.055 6.001c.217 0 .239 0 .4.457.979 2.883 3.175 7.149 4.779 7.149 1.205 0 1.205-1.235 1.205-1.7l-.001-3.702C10.372 6.98 9.926 6.37 9.633 6l3.508.004c.002.017-.02 4.095.01 5.083 0 1.403 1.114 2.207 2.853.447 1.835-2.071 3.104-5.167 3.155-5.293.075-.18.14-.241.376-.241H22.006l-.002.009c-.225 1.05-2.446 4.396-3.189 5.435l-.034.05c-.327.534-.593 1.124.045 1.954.058.07.21.234.43.462.684.706 3.03 3.12 3.238 4.08-.138.022-.288.006-2.613.011-.495 0-.882-.74-2.359-2.23-1.328-1.292-2.19-1.82-2.975-1.82-1.524 0-1.413 1.237-1.399 2.733.005 1.622-.005 1.109.006 1.211-.089.035-.344.105-1.009.105C5.8 18 1.668 7.929 1.509 6.004c.055-.005.812-.002 2.546-.003Z"/></g><defs><clipPath id="astroicon:vka"><path fill="#fff" d="M0 0h24v24H0z"/></clipPath></defs></symbol><symbol fill="none" viewBox="0 0 20 20" id="astroicon:youtube"><g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M18.784 5.35a2.316 2.316 0 0 0-1.617-1.666c-1.434-.35-7.167-.35-7.167-.35s-5.733 0-7.167.383a2.317 2.317 0 0 0-1.616 1.666 24.166 24.166 0 0 0-.384 4.409c-.009 1.489.12 2.976.384 4.441a2.317 2.317 0 0 0 1.616 1.6c1.434.384 7.167.384 7.167.384s5.733 0 7.167-.383a2.316 2.316 0 0 0 1.616-1.667c.26-1.444.39-2.908.384-4.375.01-1.49-.12-2.976-.384-4.442v0Z"/><path d="m8.125 12.517 4.792-2.725-4.792-2.725v5.45Z"/></g></symbol><symbol fill="none" viewBox="0 0 121 120" id="astroicon:fi_check_2"><path stroke="#F94444" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="m100.5 30-55 55-25-25"/></symbol>
+</svg>
+  </body></html>

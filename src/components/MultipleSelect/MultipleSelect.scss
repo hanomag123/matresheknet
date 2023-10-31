@@ -11,7 +11,8 @@
         border-bottom-right-radius: 0;
 
         @include hover {
-          opacity: 0.9;
+          background-color: #f57373;
+          border-color: #f57373;
         }
       }
     }
@@ -19,6 +20,11 @@
       width: 4.2rem;
       opacity: 1;
       pointer-events: all;
+
+      @include hover {
+        background-color: #f57373;
+        border-color: #f57373;
+      }
     }
   }
 

@@ -1,32 +1,41 @@
 ---
 import { Sprite } from "astro-icon";
+import Checkbox from "../Checkbox/Checkbox.astro";
+import Radio from "../Radio/Radio.astro";
 
 interface Props {
   placeholder: string;
-  defaultValue?: string;
   items: {
+    title: string;
     name: string;
     value: string;
   }[];
 }
 
-const { placeholder, defaultValue, items } = Astro.props;
+const { placeholder, items } = Astro.props;
 ---
 
-<div class="select" data-default-value={defaultValue}>
-  <button type="button" class="select-btn">
-    <span class="select-btn__text">{placeholder}</span>
-    <Sprite name="fi_chevron-down" />
-  </button>
-  <div class="select__container">
-    <div class="select__list">
-      {
-        items.map((i) => {
-          <button type="button" class="select__item" data-value={i.value}>
-            {i.name}
-          </button>;
-        })
-      }
+<div class="dropdown multiple-select" data-multiple-select>
+  <div class="multiple-select__btns">
+    <button type="button" class="dropdown-btn" data-dropdown-btn>
+      <span class="dropdown-btn__text">{placeholder}</span>
+      <Sprite name="fi_chevron-down" />
+    </button>
+    <button type="button" class="multiple-select__clean">
+      <Sprite name="fi_x" />
+    </button>
+  </div>
+  <div class="dropdown__container">
+    <div class="dropdown__inner">
+      <div class="multiple-select__list">
+        {
+          items.map((i) => (
+            <Radio value={i.value} title={i.name}>
+              {i.title}
+            </Radio>
+          ))
+        }
+      </div>
     </div>
   </div>
 </div>

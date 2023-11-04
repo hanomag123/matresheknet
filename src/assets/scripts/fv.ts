@@ -258,8 +258,6 @@ export const formValidateInit = (wrapperSelector: string) => {
                 });
 
                 if (!vlaidList.includes(false)) {
-                  closestForm.classList.add("_sended");
-
                   const sendHandlerContainer =
                     closestForm.closest<HTMLElement>(sendHandler);
 

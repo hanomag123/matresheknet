@@ -67,14 +67,17 @@
     background-color: $white;
     border-radius: 1.2rem;
     position: relative;
-    display: flex;
-    flex-direction: column;
 
     @include breakpoint($xs-bp) {
       margin-top: auto;
       padding: 2.4rem 1.6rem 1.6rem;
       border-radius: 2rem 2rem 0 0;
     }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
   }
 
   &__close {

@@ -17,8 +17,7 @@ import { initMultipleSelects } from "../../components/MultipleSelect/MultipleSel
 import { initRangeSliders } from "../../components/RangeSlider/RangeSlider";
 import { initAdvSlider } from "../../modules/AdvSlider/AdvSlider";
 import { initProductHead } from "../../modules/ProductHead/ProductHead";
-import { initFilterSwiper } from "./utils";
-import { Dropdown } from "./utils";
+import { Dropdown, Popup } from "./utils";
 import { initProductInfo } from "../../modules/ProductInfo/ProductInfo";
 import { Fancybox } from "@fancyapps/ui";
 import { gsap } from "gsap";
@@ -57,7 +56,30 @@ Fancybox.bind("[data-fancybox]", {});
 const dropDownBtns = document.querySelectorAll<HTMLElement>("[data-dropdown]");
 dropDownBtns.forEach((container) => new Dropdown(container));
 
+const initFilterSwiper = () => {
+  const containers = document.querySelectorAll<HTMLElement>(".swiper.filter");
+
+  containers.forEach((container) => {
+    new Swiper(container, {
+      slidesPerView: "auto",
+      freeMode: true,
+    });
+  });
+};
+initFilterSwiper();
+
 initHeader();
+
+initPopupCall();
+initPopupQuestion();
+initRegionPopup();
+
+const dropdownPopupContainer = document.querySelector<HTMLElement>(
+  "[data-dropdown-popup]",
+);
+const dropdownPopup = dropdownPopupContainer
+  ? new Popup(dropdownPopupContainer)
+  : undefined;
 
 mainBannerScript();
 
@@ -65,9 +87,7 @@ initProductSliders();
 
 initProductItems();
 
-initFilterSwiper();
-
-initMultipleSelects();
+initMultipleSelects(dropdownPopup);
 
 initRangeSliders();
 
@@ -92,10 +112,6 @@ initCartItems();
 initOrderType();
 
 const navBarController = initNavBar();
-
-initPopupCall();
-initPopupQuestion();
-initRegionPopup();
 
 initUpBtn();
 

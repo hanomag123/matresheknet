@@ -1,4 +1,3 @@
-import Inputmask from "inputmask";
 import { DualHRangeBar } from "dual-range-bar";
 import Swiper from "swiper";
 
@@ -57,12 +56,16 @@ export class Dropdown {
   isDropped: boolean;
   swiper: any;
   swiperAllowTouchMove: boolean;
+  popup: Popup | undefined;
+  dropInner: HTMLElement | null;
 
-  constructor(container: HTMLElement) {
+  constructor(container: HTMLElement, popup?: Popup) {
     this.container = container;
     this.dropBtn = this.container.querySelector<HTMLButtonElement>(
       "[data-dropdown-btn]",
     );
+    this.dropInner =
+      this.container.querySelector<HTMLElement>(".dropdown__inner");
     this.isDropped = false;
 
     this.swiper = this.container.closest(".swiper");
@@ -70,6 +73,8 @@ export class Dropdown {
       this.swiper && this.swiper.swiper && this.swiper.swiper.allowTouchMove
         ? true
         : false;
+
+    this.popup = popup;
 
     this.initDropdown();
   }
@@ -79,10 +84,23 @@ export class Dropdown {
       this.dropBtn.addEventListener("click", this.clickHandler.bind(this));
     }
 
+    if (this.popup) {
+      this.popup.container.addEventListener("close", this.close.bind(this));
+    }
+
     document.addEventListener("click", (e) => {
       const target = e.target;
-      const closest = (target as Element)?.closest(".dropdown") as HTMLElement;
-      if (closest !== this.container && this.isDropped) {
+      const closestDropdown = (target as HTMLElement)?.closest<HTMLElement>(
+        ".dropdown",
+      );
+      const closestPopup = (target as HTMLElement)?.closest<HTMLElement>(
+        ".popup",
+      );
+      if (
+        closestDropdown !== this.container &&
+        this.isDropped &&
+        closestPopup !== this.popup?.container
+      ) {
         this.close();
       }
     });
@@ -101,6 +119,21 @@ export class Dropdown {
       this.isDropped = true;
       this.container.classList.add("_dropped");
 
+      if (
+        this.popup &&
+        this.popup.content &&
+        this.dropInner &&
+        window.matchMedia("(max-width: 600px)").matches
+      ) {
+        const fragment = document.createDocumentFragment();
+        [...this.dropInner.children].forEach((i) => {
+          fragment.appendChild(i);
+        });
+        this.popup.content.append(fragment);
+
+        !this.popup.isOpen && this.popup.open();
+      }
+
       if (this.swiper && this.swiper.swiper && this.swiperAllowTouchMove) {
         (this.swiper.swiper as Swiper).allowTouchMove = false;
       }
@@ -110,6 +143,16 @@ export class Dropdown {
   close() {
     this.isDropped = false;
     this.container.classList.remove("_dropped");
+
+    if (this.popup && this.popup.content && this.dropInner) {
+      const fragment = document.createDocumentFragment();
+      [...this.popup.content.children].forEach((i) => {
+        fragment.appendChild(i);
+      });
+      this.dropInner.append(fragment);
+
+      this.popup.isOpen && this.popup.close();
+    }
 
     if (this.swiper && this.swiper.swiper && this.swiperAllowTouchMove) {
       (this.swiper.swiper as Swiper).allowTouchMove = true;
@@ -124,8 +167,8 @@ export class MultipleSelect extends Dropdown {
   btnText: HTMLElement | null;
   cleanBtn: HTMLButtonElement | null;
 
-  constructor(container: HTMLElement) {
-    super(container);
+  constructor(container: HTMLElement, popup?: Popup) {
+    super(container, popup);
     this.inputList =
       this.container.querySelectorAll<HTMLInputElement>(".checkbox__input");
     this.btnText = this.container.querySelector<HTMLElement>(
@@ -490,43 +533,40 @@ export class Menu {
   }
 }
 
-export const initFilterSwiper = () => {
-  const containers = document.querySelectorAll<HTMLElement>(".swiper.filter");
-
-  containers.forEach((container) => {
-    new Swiper(container, {
-      slidesPerView: "auto",
-      freeMode: true,
-    });
-  });
-};
-
 export class Popup {
   container: HTMLElement;
   closeBtns: NodeListOf<HTMLElement>;
-  touchStart: number;
-  touchPos: number;
+  content: HTMLElement | null;
+  openEvent: Event;
+  closeEvent: Event;
+  isOpen: boolean;
 
   constructor(container: HTMLElement) {
     this.container = container;
     this.closeBtns =
       this.container.querySelectorAll<HTMLElement>("[data-close-btn]");
-
-    this.touchStart = 0;
-    this.touchPos = 0;
+    this.content = this.container.querySelector<HTMLElement>(".popup__content");
+    this.isOpen = false;
 
     this.closeBtns.forEach((btn) => {
       btn.addEventListener("click", this.close.bind(this));
     });
+
+    this.openEvent = new Event("open");
+    this.closeEvent = new Event("close");
   }
 
   open() {
+    this.isOpen = true;
     document.body.classList.add("_hidden");
     this.container.classList.add("_active");
+    this.container.dispatchEvent(this.openEvent);
   }
 
   close() {
+    this.isOpen = false;
     document.body.classList.remove("_hidden");
     this.container.classList.remove("_active");
+    this.container.dispatchEvent(this.closeEvent);
   }
 }

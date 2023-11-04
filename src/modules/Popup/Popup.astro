@@ -15,7 +15,9 @@ const { className, ...rest } = Astro.props;
       <button type="button" class="popup__close" data-close-btn>
         <Sprite name="fi_x" />
       </button>
-      <slot />
+      <div class="popup__content">
+        <slot />
+      </div>
     </div>
   </div>
 </div>

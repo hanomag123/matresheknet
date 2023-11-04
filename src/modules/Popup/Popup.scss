@@ -36,12 +36,6 @@
     }
   }
 
-  &._hidden {
-    .popup__drag-container {
-      transition: 0s;
-    }
-  }
-
   &__bg {
     position: absolute;
     top: 0;
@@ -69,10 +63,15 @@
   &__container {
     width: 100%;
     max-width: 57.5rem;
-    overflow: hidden;
+    padding: 4rem;
+    background-color: $white;
+    border-radius: 1.2rem;
+    position: relative;
 
     @include breakpoint($xs-bp) {
       margin-top: auto;
+      padding: 2.4rem 1.6rem 1.6rem;
+      border-radius: 2rem 2rem 0 0;
     }
   }
 
@@ -88,47 +87,22 @@
     }
 
     @include breakpoint($xs-bp) {
-      display: none;
+      width: 5.2rem;
+      height: 0.5rem;
+      border-radius: 0.5rem;
+      background-color: $white;
+      left: 50%;
+      transform: translateX(-50%);
+      top: -1rem;
     }
 
     svg {
       width: 100%;
       height: 100%;
-    }
-  }
 
-  &__drag-container {
-    padding: 4rem;
-    background-color: $white;
-    border-radius: 1.2rem;
-    position: relative;
-    transition: 0.5s;
-
-    @include breakpoint($xs-bp) {
-      margin-top: 1rem;
-      padding: 2.4rem 1.6rem 1.6rem;
-      border-radius: 2rem 2rem 0 0;
-    }
-  }
-
-  &__close-drag {
-    position: absolute;
-    width: 5.2rem;
-    height: 0.5rem;
-    border-radius: 0.5rem;
-    background-color: $white;
-    left: 50%;
-    transform: translateX(-50%);
-    top: -1rem;
-    transition: 0.3s;
-    display: none;
-
-    @include breakpoint($xs-bp) {
-      display: block;
-    }
-
-    &._active {
-      background-color: $accent;
+      @include breakpoint($xs-bp) {
+        display: none;
+      }
     }
   }
 
@@ -190,6 +164,7 @@
   }
 
   &__text {
+    text-align: center;
     color: $gray-2;
     font-size: 1.8rem;
 

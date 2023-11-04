@@ -503,8 +503,6 @@ export const initFilterSwiper = () => {
 export class Popup {
   container: HTMLElement;
   closeBtns: NodeListOf<HTMLElement>;
-  dragClose: HTMLElement | null;
-  dragContainer: HTMLElement | null;
   touchStart: number;
   touchPos: number;
 
@@ -513,51 +511,12 @@ export class Popup {
     this.closeBtns =
       this.container.querySelectorAll<HTMLElement>("[data-close-btn]");
 
-    this.dragClose =
-      this.container.querySelector<HTMLElement>("[data-drag-close]");
-    this.dragContainer = this.container.querySelector<HTMLElement>(
-      "[data-drag-container]",
-    );
-
     this.touchStart = 0;
     this.touchPos = 0;
 
     this.closeBtns.forEach((btn) => {
       btn.addEventListener("click", this.close.bind(this));
     });
-
-    if (this.dragClose) {
-      this.dragClose.addEventListener("touchstart", (e) => {
-        this.container.classList.add("_hidden");
-        this.dragClose?.classList.add("_active");
-        this.touchStart = e.touches[0].clientY;
-      });
-
-      this.dragClose.addEventListener("touchend", () => {
-        this.touchPos = 0;
-        this.container.classList.remove("_hidden");
-        this.dragClose?.classList.remove("_active");
-
-        if (this.dragContainer) {
-          this.dragContainer.style.opacity = "1";
-          this.dragContainer.style.transform = "translateY(0px)";
-        }
-      });
-
-      this.dragClose.addEventListener("touchmove", (e) => {
-        const diff = this.touchPos - this.touchStart;
-
-        if (diff > 0 && this.dragContainer) {
-          this.dragContainer.style.transform = `translateY(${diff}px)`;
-          this.dragContainer.style.opacity = (1 - diff / 2 / 100).toString();
-        }
-        this.touchPos = e.touches[0].clientY;
-
-        if (this.touchPos - this.touchStart >= 200) {
-          this.close();
-        }
-      });
-    }
   }
 
   open() {

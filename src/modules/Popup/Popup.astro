@@ -12,13 +12,10 @@ const { className, ...rest } = Astro.props;
   <div class="popup__wrapper">
     <div class="popup__bg" data-close-btn></div>
     <div class="popup__container">
-      <div class="popup__drag-container" data-drag-container>
-        <span class="popup__close-drag" data-drag-close></span>
-        <button type="button" class="popup__close" data-close-btn>
-          <Sprite name="fi_x" />
-        </button>
-        <slot />
-      </div>
+      <button type="button" class="popup__close" data-close-btn>
+        <Sprite name="fi_x" />
+      </button>
+      <slot />
     </div>
   </div>
 </div>

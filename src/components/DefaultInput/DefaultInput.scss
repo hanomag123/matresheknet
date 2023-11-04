@@ -24,8 +24,12 @@
     height: 14.6rem;
   }
 
-  &._error {
+  &.invalid {
     border-color: $accent;
+  }
+
+  &.valid {
+    border-color: $green;
   }
 }
 
@@ -47,10 +51,23 @@
     }
   }
 
-  &._error {
+  &.invalid {
+    .default-input {
+      border-color: $accent;
+    }
     .default-input-label__error {
       opacity: 1;
       pointer-events: all;
+    }
+  }
+
+  &.valid {
+    .default-input {
+      border-color: $green;
+    }
+    .default-input-label__error {
+      opacity: 0;
+      pointer-events: none;
     }
   }
 

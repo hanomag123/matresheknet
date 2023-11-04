@@ -164,11 +164,11 @@
   }
 
   &__text {
-    text-align: center;
     color: $gray-2;
     font-size: 1.8rem;
 
     @include breakpoint($xs-bp) {
+      text-align: center;
       font-size: 1.4rem;
     }
   }

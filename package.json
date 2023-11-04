@@ -15,9 +15,11 @@
     "astro": "^3.0.13",
     "dual-range-bar": "^1.0.3",
     "gsap": "^3.12.2",
+    "inputmask": "^5.0.8",
     "swiper": "^10.3.1"
   },
   "devDependencies": {
+    "@types/inputmask": "^5.0.5",
     "astro-icon": "^0.8.1",
     "autoprefixer": "^10.4.15",
     "cssnano": "^6.0.1",

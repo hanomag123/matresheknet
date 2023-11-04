@@ -4,13 +4,16 @@ interface Props {
   className?: string;
   label?: string;
   error?: boolean;
+  isRequired?: boolean;
+  validate?: boolean;
 }
 
 const {
   as: Wrapper = "input",
   className,
   label,
-  required,
+  isRequired,
+  validate,
   error,
   ...rest
 } = Astro.props;
@@ -23,8 +26,9 @@ const {
         <label
           class:list={[
             "default-input-label",
-            { required: required },
+            { required: isRequired },
             { _error: error },
+            { validate: validate },
             className,
           ]}
         >
@@ -41,7 +45,12 @@ const {
       <Wrapper
         type="text"
         {...rest}
-        class:list={["default-input", { _error: error }, className]}
+        class:list={[
+          "default-input",
+          { _error: error },
+          { validate: validate },
+          className,
+        ]}
       />
     )
   }

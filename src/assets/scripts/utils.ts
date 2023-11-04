@@ -1,3 +1,4 @@
+import Inputmask from "inputmask";
 import { DualHRangeBar } from "dual-range-bar";
 import Swiper from "swiper";
 

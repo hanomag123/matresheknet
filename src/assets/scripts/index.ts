@@ -35,6 +35,7 @@ import { initAboutLinks } from "./pages/about";
 import { initHeader } from "../../modules/Header/Header";
 import { initPopupCall } from "../../modules/PopupCall/PopupCall";
 import { initPopupQuestion } from "../../modules/PopupQuestion/PopupQuestion";
+import { formValidateInit } from "./fv";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -95,6 +96,8 @@ initPopupCall();
 initPopupQuestion();
 
 initUpBtn();
+
+formValidateInit(".validate");
 
 const headerCatalogBtn = document.querySelector(".header__catalog");
 if (headerCatalogBtn) {

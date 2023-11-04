@@ -5,20 +5,36 @@ import DefaultInput from "../../components/DefaultInput/DefaultInput.astro";
 import Popup from "../Popup/Popup.astro";
 ---
 
-<Popup data-call-popup>
-  <form action="#" class="popup__form" data-submit-handler>
+<Popup data-call-popup data-send-handler>
+  <form action="#" class="popup__form">
     <div class="popup__head">
       <span class="popup__title">Обратный звонок</span>
       <p class="popup__text">Представьтесь, мы вам перезвоним</p>
     </div>
 
-    <div class="popup__inner">
-      <DefaultInput label="Имя" placeholder="Иван" required />
-      <DefaultInput label="Телефон" placeholder="+7 995 455 34 55" required />
+    <div class="popup__inner" data-form-item>
+      <DefaultInput
+        label="Имя"
+        placeholder="Иван"
+        data-action="required-text"
+        required
+        isRequired
+        validate
+      />
+      <DefaultInput
+        label="Телефон"
+        placeholder="+7 995 455 34 55"
+        data-action="required-text"
+        required
+        isRequired
+        data-mask-init
+        data-mask="+7 999 999 99 99"
+        validate
+      />
     </div>
 
     <div class="popup__footer">
-      <DefaultBtn type="submit">Отправить</DefaultBtn>
+      <DefaultBtn type="submit" data-action="form-submit">Отправить</DefaultBtn>
       <p class="popup__legal">
         Продолжая, вы соглашаетесь с
         <a href="#"> политикой конфиденциальности</a>

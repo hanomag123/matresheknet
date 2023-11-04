@@ -1,0 +1,113 @@
+---
+import { Sprite } from "astro-icon";
+import DefaultInput from "../../components/DefaultInput/DefaultInput.astro";
+import Popup from "../Popup/Popup.astro";
+import DefaultBtn from "../../components/DefaultBtn/DefaultBtn.astro";
+import Radio from "../../components/Radio/Radio.astro";
+---
+
+<Popup className="region-popup" data-region-popup>
+  <span class="popup__title">Выберите город</span>
+
+  <div class="region-popup-search">
+    <div class="header-search">
+      <DefaultInput className="header-search__input" />
+      <button type="button" class="header-search__btn">
+        <Sprite name="fi_zoom-out" />
+      </button>
+    </div>
+
+    <div class="region-popup-search__list">
+      <DefaultBtn color="light">Москва</DefaultBtn>
+      <DefaultBtn color="light">Санкт-Петербург</DefaultBtn>
+      <DefaultBtn color="light">Казань</DefaultBtn>
+    </div>
+  </div>
+
+  <div class="region-popup-nav">
+    <div class="region-popup-nav__inner">
+      <span class="region-popup-nav__title">Округ</span>
+      <div class="region-popup-nav__list">
+        <label class="region-popup-nav-item">
+          <input
+            type="radio"
+            class="region-popup-nav-item__input"
+            name="reg-1"
+            checked
+          />
+          <span class="region-popup-nav-item__container">Центр</span>
+        </label>
+        <label class="region-popup-nav-item">
+          <input
+            type="radio"
+            class="region-popup-nav-item__input"
+            name="reg-1"
+          />
+          <span class="region-popup-nav-item__container">Северо-Западный</span>
+        </label>
+        <label class="region-popup-nav-item">
+          <input
+            type="radio"
+            class="region-popup-nav-item__input"
+            name="reg-1"
+          />
+          <span class="region-popup-nav-item__container">Южный</span>
+        </label>
+        <label class="region-popup-nav-item">
+          <input
+            type="radio"
+            class="region-popup-nav-item__input"
+            name="reg-1"
+          />
+          <span class="region-popup-nav-item__container">Уральский</span>
+        </label>
+      </div>
+    </div>
+    <div class="region-popup-nav__inner">
+      <span class="region-popup-nav__title">Регион</span>
+      <div class="region-popup-nav__list">
+        <label class="region-popup-nav-item">
+          <input
+            type="radio"
+            class="region-popup-nav-item__input"
+            name="reg-2"
+            checked
+          />
+          <span class="region-popup-nav-item__container"
+            >Московская область</span
+          >
+        </label>
+        <label class="region-popup-nav-item">
+          <input
+            type="radio"
+            class="region-popup-nav-item__input"
+            name="reg-2"
+          />
+          <span class="region-popup-nav-item__container">Тульская область</span>
+        </label>
+        <label class="region-popup-nav-item">
+          <input
+            type="radio"
+            class="region-popup-nav-item__input"
+            name="reg-2"
+          />
+          <span class="region-popup-nav-item__container">Брянская область</span>
+        </label>
+      </div>
+    </div>
+    <div class="region-popup-nav__inner">
+      <span class="region-popup-nav__title">Город</span>
+      <div class="region-popup-nav__list">
+        <label class="region-popup-nav-item">
+          <input
+            type="radio"
+            class="region-popup-nav-item__input"
+            name="reg-3"
+            checked
+          />
+          <span class="region-popup-nav-item__container">Москва</span>
+        </label>
+      </div>
+    </div>
+  </div>
+</Popup>

@@ -36,6 +36,7 @@ import { initHeader } from "../../modules/Header/Header";
 import { initPopupCall } from "../../modules/PopupCall/PopupCall";
 import { initPopupQuestion } from "../../modules/PopupQuestion/PopupQuestion";
 import { formValidateInit } from "./fv";
+import { initRegionPopup } from "../../modules/RegionPopup/RegionPopup";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -94,6 +95,7 @@ const navBarController = initNavBar();
 
 initPopupCall();
 initPopupQuestion();
+initRegionPopup();
 
 initUpBtn();
 

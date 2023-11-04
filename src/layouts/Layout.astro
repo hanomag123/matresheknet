@@ -5,6 +5,7 @@ import UpBtn from "../components/UpBtn/UpBtn.astro";
 import Menu from "../modules/Menu/Menu.astro";
 import PopupCall from "../modules/PopupCall/PopupCall.astro";
 import PopupQuestion from "../modules/PopupQuestion/PopupQuestion.astro";
+import RegionPopup from "../modules/RegionPopup/RegionPopup.astro";
 
 interface Props {
   title?: string;
@@ -42,6 +43,7 @@ const { title = "заголовок страницы", nav = true } = Astro.prop
 
       <PopupCall />
       <PopupQuestion />
+      <RegionPopup />
 
       <UpBtn />
     </Sprite.Provider>

@@ -112,6 +112,7 @@ svg[astro-icon="fi_heart"] {
 
 ._hidden {
   overflow: hidden;
+  overscroll-behavior-y: none;
 }
 
 .gray {

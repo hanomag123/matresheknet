@@ -585,18 +585,57 @@ export class Popup {
   content: HTMLElement | null;
   openEvent: Event;
   closeEvent: Event;
+  touchStart: number;
+  touchPos: number;
   isOpen: boolean;
+  swiperBtn: HTMLElement | null;
+  wrapper: HTMLElement | null;
 
   constructor(container: HTMLElement) {
     this.container = container;
     this.closeBtns =
       this.container.querySelectorAll<HTMLElement>("[data-close-btn]");
+    this.wrapper =
+      this.container.querySelector<HTMLElement>(".popup__container");
     this.content = this.container.querySelector<HTMLElement>(".popup__content");
     this.isOpen = false;
+
+    this.swiperBtn =
+      this.container.querySelector<HTMLElement>("[data-swipe-btn]");
+
+    this.touchStart = 0;
+    this.touchPos = 0;
 
     this.closeBtns.forEach((btn) => {
       btn.addEventListener("click", this.close.bind(this));
     });
+
+    if (this.swiperBtn) {
+      this.swiperBtn.addEventListener("touchstart", (e) => {
+        this.touchStart = e.touches[0].clientY;
+        this.container.classList.add("_hidden");
+      });
+
+      this.swiperBtn.addEventListener("touchend", (e) => {
+        if ((this.touchPos - this.touchStart) / 2 / 100 > 1) {
+          this.close();
+        }
+
+        if (this.wrapper) {
+          this.wrapper.style.setProperty("transform", "translateY(0)");
+          this.wrapper.style.setProperty("opacity", "1");
+        }
+        this.touchStart = 0;
+        this.touchPos = 0;
+        this.container.classList.remove("_hidden");
+      });
+
+      this.swiperBtn.addEventListener("touchmove", (e) => {
+        if (window.matchMedia("(max-width: 600px)").matches) {
+          this.swipeHandler.call(this, e);
+        }
+      });
+    }
 
     this.openEvent = new Event("open");
     this.closeEvent = new Event("close");
@@ -614,5 +653,20 @@ export class Popup {
     document.body.classList.remove("_hidden");
     this.container.classList.remove("_active");
     this.container.dispatchEvent(this.closeEvent);
+  }
+
+  swipeHandler(e: TouchEvent) {
+    this.touchPos = e.touches[0].clientY;
+
+    if (this.wrapper && this.touchPos > this.touchStart) {
+      this.wrapper.style.setProperty(
+        "transform",
+        `translateY(${this.touchPos - this.touchStart}px)`,
+      );
+      this.wrapper.style.setProperty(
+        "opacity",
+        `${1 - (this.touchPos - this.touchStart) / 2 / 100}`,
+      );
+    }
   }
 }

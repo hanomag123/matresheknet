@@ -42,6 +42,19 @@
     }
   }
 
+  &._hidden {
+    .popup__wrapper {
+      overflow: hidden;
+    }
+    .popup__container {
+      transition: 0s;
+    }
+
+    .popup__close[data-swipe-btn] {
+      background-color: $accent;
+    }
+  }
+
   &__bg {
     position: absolute;
     top: 0;
@@ -75,6 +88,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    transition: 0.5s;
 
     @include breakpoint($xs-bp) {
       margin-top: auto;

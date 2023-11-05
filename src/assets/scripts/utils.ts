@@ -53,6 +53,7 @@ export class ReviewsFormRateController {
 export class Dropdown {
   container: HTMLElement;
   dropBtn: HTMLButtonElement | null;
+  submitBtn: HTMLButtonElement | null;
   isDropped: boolean;
   swiper: any;
   swiperAllowTouchMove: boolean;
@@ -63,6 +64,9 @@ export class Dropdown {
     this.container = container;
     this.dropBtn = this.container.querySelector<HTMLButtonElement>(
       "[data-dropdown-btn]",
+    );
+    this.submitBtn = this.container.querySelector<HTMLButtonElement>(
+      ".dropdown-submit__btn",
     );
     this.dropInner =
       this.container.querySelector<HTMLElement>(".dropdown__inner");
@@ -84,8 +88,16 @@ export class Dropdown {
       this.dropBtn.addEventListener("click", this.clickHandler.bind(this));
     }
 
+    if (this.submitBtn) {
+      this.submitBtn.addEventListener("click", this.close.bind(this));
+    }
+
     if (this.popup) {
-      this.popup.container.addEventListener("close", this.close.bind(this));
+      this.popup.container.addEventListener("close", () => {
+        if (this.isDropped) {
+          this.close();
+        }
+      });
     }
 
     document.addEventListener("click", (e) => {
@@ -231,8 +243,8 @@ export class RangeSlider extends Dropdown {
   minValue: number;
   maxValue: number;
 
-  constructor(container: HTMLElement) {
-    super(container);
+  constructor(container: HTMLElement, popup?: Popup) {
+    super(container, popup);
     this.cleanBtn = this.container.querySelector<HTMLButtonElement>(
       ".multiple-select__clean",
     );

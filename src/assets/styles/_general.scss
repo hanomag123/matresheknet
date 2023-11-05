@@ -338,6 +338,36 @@ svg[astro-icon="fi_heart"] {
     min-height: 0;
     width: 100%;
   }
+
+  &__title {
+    width: calc(100% + 3.2rem);
+    margin: 0rem -1.6rem;
+    padding: 0 1.6rem 1.6rem;
+    border-bottom: 0.1rem solid $light-3;
+    color: #525964;
+    font-size: 1.6rem;
+    display: none;
+
+    @include breakpoint($xs-bp) {
+      display: block;
+    }
+  }
+
+  &-submit {
+    width: calc(100% + 3.2rem);
+    margin: 0rem -1.6rem;
+    padding: 1.6rem 1.6rem 0rem;
+    border-top: 0.1rem solid $light-3;
+    display: none;
+
+    @include breakpoint($xs-bp) {
+      display: block;
+    }
+
+    &__btn {
+      width: 100%;
+    }
+  }
 }
 
 .rate {

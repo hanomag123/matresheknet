@@ -11,6 +11,12 @@
   opacity: 0;
   transition: 0.5s;
 
+  &[data-dropdown-popup] {
+    .popup__container {
+      max-height: 41.3rem;
+    }
+  }
+
   &._active {
     pointer-events: all;
     opacity: 1;
@@ -67,6 +73,8 @@
     background-color: $white;
     border-radius: 1.2rem;
     position: relative;
+    display: flex;
+    flex-direction: column;
 
     @include breakpoint($xs-bp) {
       margin-top: auto;
@@ -76,8 +84,16 @@
   }
 
   &__content {
+    flex: 1;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
+
+    @include breakpoint($xs-bp) {
+      width: calc(100% + 3.2rem);
+      margin: 0rem -1.6rem;
+      padding: 0rem 1.6rem;
+    }
   }
 
   &__close {
@@ -173,7 +189,6 @@
     font-size: 1.8rem;
 
     @include breakpoint($xs-bp) {
-      text-align: center;
       font-size: 1.4rem;
     }
   }
@@ -239,6 +254,7 @@
       }
 
       &__text {
+        text-align: center;
         margin-bottom: 4.2rem;
 
         @include breakpoint($xs-bp) {

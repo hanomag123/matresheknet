@@ -65,6 +65,21 @@
     display: flex;
     flex-direction: column;
     padding: 0.8rem 0rem;
+    @include customScroll;
+
+    @include breakpoint($xs-bp) {
+      flex: 1;
+      max-width: 100%;
+      padding: 2.4rem 0rem;
+      gap: 0.8rem;
+      overflow: auto;
+
+      .checkbox {
+        padding: 1.4rem 1.8rem;
+        border: 0.2rem solid $light-3;
+        border-radius: 0.8rem;
+      }
+    }
   }
 
   .checkbox {
@@ -78,7 +93,15 @@
     }
   }
 
-  .dropdown-btn {
-    background-color: transparent;
+  .dropdown {
+    &__container {
+      @include breakpoint($xs-bp) {
+        display: none;
+      }
+    }
+
+    &-btn {
+      background-color: transparent;
+    }
   }
 }

@@ -1,6 +1,7 @@
 ---
 import { Sprite } from "astro-icon";
 import DefaultInput from "../DefaultInput/DefaultInput.astro";
+import DefaultBtn from "../DefaultBtn/DefaultBtn.astro";
 
 interface Props {
   placeholder: string;
@@ -21,12 +22,16 @@ const { placeholder } = Astro.props;
   </div>
   <div class="dropdown__container">
     <div class="dropdown__inner">
+      <span class="dropdown__title">{placeholder}</span>
       <div class="range-slider__container">
         <div class="range-slider__inputs">
           <DefaultInput data-min="100" data-init="200" type="number" />
           <DefaultInput data-max="3000" data-init="1000" type="number" />
         </div>
         <div class="range-slider__range"></div>
+      </div>
+      <div class="dropdown-submit">
+        <DefaultBtn className="dropdown-submit__btn">Применить</DefaultBtn>
       </div>
     </div>
   </div>

@@ -4,6 +4,7 @@
     width: 30.6rem;
 
     @include breakpoint($xs-bp) {
+      display: none;
       transform: translateX(-50%);
     }
   }
@@ -13,6 +14,10 @@
     flex-direction: column;
     padding: 1.8rem;
     gap: 2.4rem;
+
+    @include breakpoint($xs-bp) {
+      padding: 3.2rem 0rem 1.8rem;
+    }
   }
 
   &__inputs {

@@ -1,6 +1,7 @@
 ---
 import { Sprite } from "astro-icon";
 import Checkbox from "../Checkbox/Checkbox.astro";
+import DefaultBtn from "../DefaultBtn/DefaultBtn.astro";
 
 interface Props {
   placeholder: string;
@@ -8,9 +9,10 @@ interface Props {
     name: string;
     value: string;
   }[];
+  loading?: boolean;
 }
 
-const { placeholder, items } = Astro.props;
+const { placeholder, items, loading } = Astro.props;
 ---
 
 <div class="dropdown multiple-select" data-multiple-select>
@@ -25,6 +27,7 @@ const { placeholder, items } = Astro.props;
   </div>
   <div class="dropdown__container">
     <div class="dropdown__inner">
+      <span class="dropdown__title">{placeholder}</span>
       <div class="multiple-select__list">
         {
           items.map((i) => (
@@ -32,6 +35,21 @@ const { placeholder, items } = Astro.props;
               {i.name}
             </Checkbox>
           ))
+        }
+      </div>
+      <div class="dropdown-submit">
+        {
+          loading ? (
+            <DefaultBtn
+              className="dropdown-submit__btn"
+              hasLoad={true}
+              loading={true}
+            >
+              Применить
+            </DefaultBtn>
+          ) : (
+            <DefaultBtn className="dropdown-submit__btn">Применить</DefaultBtn>
+          )
         }
       </div>
     </div>

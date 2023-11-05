@@ -89,7 +89,7 @@ initProductItems();
 
 initMultipleSelects(dropdownPopup);
 
-initRangeSliders();
+initRangeSliders(dropdownPopup);
 
 initAdvSlider();
 

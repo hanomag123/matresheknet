@@ -374,6 +374,40 @@ export class RangeSlider extends Dropdown {
   }
 }
 
+export class Select extends Dropdown {
+  radioList: NodeListOf<HTMLElement>;
+  btnText: HTMLElement | null;
+
+  constructor(container: HTMLElement, popup?: Popup) {
+    super(container, popup);
+    this.radioList = this.container.querySelectorAll<HTMLElement>(".radio");
+    this.btnText = this.container.querySelector<HTMLElement>(
+      ".dropdown-btn__text",
+    );
+
+    this.radioList.forEach((container) => {
+      const input = container.querySelector<HTMLInputElement>(".radio__input");
+      const text = container.querySelector<HTMLElement>(".radio__text");
+
+      if (input && text) {
+        if (input.checked) {
+          this.selectHandler(text.textContent || "");
+        }
+
+        input.addEventListener("change", () => {
+          this.selectHandler(text.textContent || "");
+        });
+      }
+    });
+  }
+
+  selectHandler(text: string) {
+    if (this.btnText) {
+      this.btnText.textContent = text;
+    }
+  }
+}
+
 export class FileInput {
   container: HTMLElement;
   input: HTMLInputElement;

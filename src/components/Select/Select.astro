@@ -2,6 +2,7 @@
 import { Sprite } from "astro-icon";
 import Checkbox from "../Checkbox/Checkbox.astro";
 import Radio from "../Radio/Radio.astro";
+import DefaultBtn from "../DefaultBtn/DefaultBtn.astro";
 
 interface Props {
   placeholder: string;
@@ -9,32 +10,37 @@ interface Props {
     title: string;
     name: string;
     value: string;
+    checked?: boolean;
   }[];
 }
 
 const { placeholder, items } = Astro.props;
 ---
 
-<div class="dropdown multiple-select" data-multiple-select>
-  <div class="multiple-select__btns">
-    <button type="button" class="dropdown-btn" data-dropdown-btn>
-      <span class="dropdown-btn__text">{placeholder}</span>
-      <Sprite name="fi_chevron-down" />
-    </button>
-    <button type="button" class="multiple-select__clean">
-      <Sprite name="fi_x" />
-    </button>
-  </div>
+<div class="dropdown select" data-select>
+  <button type="button" class="dropdown-btn" data-dropdown-btn>
+    <span class="dropdown-btn__text">{placeholder}</span>
+    <Sprite name="fi_chevron-down" />
+  </button>
   <div class="dropdown__container">
     <div class="dropdown__inner">
+      <span class="dropdown__title">{placeholder}</span>
       <div class="multiple-select__list">
         {
           items.map((i) => (
-            <Radio value={i.value} title={i.name}>
+            <Radio
+              value={i.value}
+              title={i.name}
+              name={i.name}
+              checked={i.checked}
+            >
               {i.title}
             </Radio>
           ))
         }
+      </div>
+      <div class="dropdown-submit">
+        <DefaultBtn className="dropdown-submit__btn">Применить</DefaultBtn>
       </div>
     </div>
   </div>

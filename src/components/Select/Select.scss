@@ -1,0 +1,10 @@
+.select {
+  .multiple-select__list {
+    .radio {
+      @media (min-width: 601px) {
+        padding: 1.2rem 2rem;
+        border: none;
+      }
+    }
+  }
+}

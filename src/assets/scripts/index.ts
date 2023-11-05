@@ -36,6 +36,7 @@ import { initPopupCall } from "../../modules/PopupCall/PopupCall";
 import { initPopupQuestion } from "../../modules/PopupQuestion/PopupQuestion";
 import { formValidateInit } from "./fv";
 import { initRegionPopup } from "../../modules/RegionPopup/RegionPopup";
+import { initSelects } from "../../components/Select/Select";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -90,6 +91,8 @@ initProductItems();
 initMultipleSelects(dropdownPopup);
 
 initRangeSliders(dropdownPopup);
+
+initSelects(dropdownPopup);
 
 initAdvSlider();
 

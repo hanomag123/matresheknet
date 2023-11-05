@@ -4,6 +4,7 @@ import DefaultBtn from "../../components/DefaultBtn/DefaultBtn.astro";
 import MultipleSelect from "../../components/MultipleSelect/MultipleSelect.astro";
 import ProductItem from "../../components/ProductItem/ProductItem.astro";
 import RangeSlider from "../../components/RangeSlider/RangeSlider.astro";
+import Select from "../../components/Select/Select.astro";
 import Pagination from "../Pagination/Pagination.astro";
 
 const items: IProducItem[] = [
@@ -248,6 +249,29 @@ const items: IProducItem[] = [
   <div class="container">
     <form action="#" class="swiper filter products__filter">
       <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <Select
+            placeholder="Сортировка"
+            items={[
+              {
+                name: "sort",
+                title: "По популярности",
+                value: "1",
+                checked: true,
+              },
+              {
+                name: "sort",
+                title: "Сначала дешевле",
+                value: "2",
+              },
+              {
+                name: "sort",
+                title: "Сначала дорогие",
+                value: "3",
+              },
+            ]}
+          />
+        </div>
         <div class="swiper-slide">
           <MultipleSelect
             placeholder="Кому"

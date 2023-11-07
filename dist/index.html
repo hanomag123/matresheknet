@@ -19,30 +19,42 @@
       <main class="page">
         
   <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 2rem; padding: 5rem 2rem;">
-    <a href="./main.html" class="default-btn">
+    <a href="./main.html" target="_blank" type="button" class="default-btn">
   Главная
-</a>
-    <a href="./products.html" class="default-btn">
-  Товары разводящая
-</a>
-    <a href="./product.html" class="default-btn">
-  Карточка товара
-</a>
-    <a href="./text-page.html" class="default-btn">
-  Текстовая страница
-</a>
-    <a href="./about.html" class="default-btn">
-  О компании
-</a>
-    <a href="./contacts.html" class="default-btn">
-  Контакты
-</a>
-    <a href="./cart.html" class="default-btn">
+  </a>
+    <a href="./products.html" target="_blank" type="button" class="default-btn">
+  
+      Товары разводящая
+    
+  </a>
+    <a href="./product.html" target="_blank" type="button" class="default-btn">
+  
+      Карточка товара
+    
+  </a>
+    <a href="./text-page.html" target="_blank" type="button" class="default-btn">
+  
+      Текстовая страница
+    
+  </a>
+    <a href="./about.html" target="_blank" type="button" class="default-btn">
+  
+      О компании
+    
+  </a>
+    <a href="./contacts.html" target="_blank" type="button" class="default-btn">
+  
+      Контакты
+    
+  </a>
+    <a href="./cart.html" target="_blank" type="button" class="default-btn">
   Корзина
-</a>
-    <a href="./order.html" class="default-btn">
-  Оформление заказа
-</a>
+  </a>
+    <a href="./order.html" target="_blank" type="button" class="default-btn">
+  
+      Оформление заказа
+    
+  </a>
   </div>
 
         <nav class="menu">
@@ -110,62 +122,58 @@
       </div>
     </div>
 
-    <div class="dropdown menu-region" data-dropdown>
-      <button type="button" class="dropdown-btn" data-dropdown-btn>
+    <div class="dropdown menu-region">
+      <button type="button" class="dropdown-btn" data-region-btn>
         <span class="dropdown-btn__text">Санкт-Петербург</span>
         <svg astro-icon="fi_chevron-down">
     
     <use xlink:href="#astroicon:fi_chevron-down"></use>
 </svg>
       </button>
-      <div class="dropdown__container">
-        <div class="dropdown__inner"></div>
-      </div>
     </div>
   </div>
 </nav>
       </main>
 
-      <div class="popup" data-call-popup>
+      <div class="popup" data-call-popup data-send-handler>
   <div class="popup__wrapper">
     <div class="popup__bg" data-close-btn></div>
     <div class="popup__container">
-      <div class="popup__drag-container" data-drag-container>
-        <span class="popup__close-drag" data-drag-close></span>
-        <button type="button" class="popup__close" data-close-btn>
-          <svg astro-icon="fi_x">
+      <button type="button" class="popup__close" data-close-btn data-swipe-btn>
+        <svg astro-icon="fi_x">
     
     <use xlink:href="#astroicon:fi_x"></use>
 </svg>
-        </button>
+      </button>
+      <div class="popup__content">
         
-  <form action="#" class="popup__form" data-submit-handler>
+  <form action="#" class="popup__form">
     <div class="popup__head">
       <span class="popup__title">Обратный звонок</span>
       <p class="popup__text">Представьтесь, мы вам перезвоним</p>
     </div>
 
-    <div class="popup__inner">
+    <div class="popup__inner" data-form-item>
       
-        <label class="default-input-label required">
+        <label class="default-input-label required validate">
           <span class="default-input-label__text">Имя</span>
-          <input type="text" placeholder="Иван" class="default-input"/>
+          <input type="text" placeholder="Иван" data-action="required-text" required class="default-input"/>
           <span class="default-input-label__error">Неверный формат</span>
         </label>
       
       
-        <label class="default-input-label required">
+        <label class="default-input-label required validate">
           <span class="default-input-label__text">Телефон</span>
-          <input type="text" placeholder="+7 995 455 34 55" class="default-input"/>
+          <input type="text" placeholder="+7 995 455 34 55" data-action="required-text" required data-mask-init data-mask="+7 999 999 99 99" class="default-input"/>
           <span class="default-input-label__error">Неверный формат</span>
         </label>
       
     </div>
 
     <div class="popup__footer">
-      <button type="submit" class="default-btn">
+      <button type="button" data-action="form-submit" class="default-btn">
   Отправить
-</button>
+  </button>
       <p class="popup__legal">
         Продолжая, вы соглашаетесь с
         <a href="#"> политикой конфиденциальности</a>
@@ -183,27 +191,26 @@
     <span class="popup__text">Наш менеджер перезвонит вам в ближайшее время</span>
     <button type="button" data-close-btn class="default-btn">
   Закрыть
-</button>
+  </button>
   </div>
 
       </div>
     </div>
   </div>
 </div>
-      <div class="popup" data-question-popup>
+      <div class="popup" data-question-popup data-send-handler>
   <div class="popup__wrapper">
     <div class="popup__bg" data-close-btn></div>
     <div class="popup__container">
-      <div class="popup__drag-container" data-drag-container>
-        <span class="popup__close-drag" data-drag-close></span>
-        <button type="button" class="popup__close" data-close-btn>
-          <svg astro-icon="fi_x">
+      <button type="button" class="popup__close" data-close-btn data-swipe-btn>
+        <svg astro-icon="fi_x">
     
     <use xlink:href="#astroicon:fi_x"></use>
 </svg>
-        </button>
+      </button>
+      <div class="popup__content">
         
-  <form action="#" class="popup__form" data-submit-handler>
+  <form action="#" class="popup__form">
     <div class="popup__head">
       <span class="popup__title">Задать вопрос</span>
       <p class="popup__text">
@@ -211,18 +218,18 @@
       </p>
     </div>
 
-    <div class="popup__inner">
+    <div class="popup__inner" data-form-item>
       
-        <label class="default-input-label required">
+        <label class="default-input-label required validate">
           <span class="default-input-label__text">Имя</span>
-          <input type="text" placeholder="Иван" class="default-input"/>
+          <input type="text" placeholder="Иван" data-action="required-text" required class="default-input"/>
           <span class="default-input-label__error">Неверный формат</span>
         </label>
       
       
-        <label class="default-input-label required">
+        <label class="default-input-label required validate">
           <span class="default-input-label__text">Телефон</span>
-          <input type="text" placeholder="+7 995 455 34 55" class="default-input"/>
+          <input type="text" placeholder="+7 995 455 34 55" data-action="required-text" data-mask-init data-mask="+7 999 999 99 99" required class="default-input"/>
           <span class="default-input-label__error">Неверный формат</span>
         </label>
       
@@ -243,9 +250,9 @@
     </div>
 
     <div class="popup__footer">
-      <button type="submit" class="default-btn">
+      <button type="button" data-action="form-submit" class="default-btn">
   Отправить
-</button>
+  </button>
       <p class="popup__legal">
         Продолжая, вы соглашаетесь с
         <a href="#"> политикой конфиденциальности</a>
@@ -263,9 +270,117 @@
     <span class="popup__text">Наш менеджер перезвонит вам в ближайшее время</span>
     <button type="button" data-close-btn class="default-btn">
   Закрыть
-</button>
+  </button>
   </div>
 
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="popup region-popup" data-region-popup>
+  <div class="popup__wrapper">
+    <div class="popup__bg" data-close-btn></div>
+    <div class="popup__container">
+      <button type="button" class="popup__close" data-close-btn data-swipe-btn>
+        <svg astro-icon="fi_x">
+    
+    <use xlink:href="#astroicon:fi_x"></use>
+</svg>
+      </button>
+      <div class="popup__content">
+        
+  <span class="popup__title">Выберите город</span>
+
+  <div class="region-popup-search">
+    <div class="header-search">
+      <input type="text" class="default-input header-search__input"/>
+      <button type="button" class="header-search__btn">
+        <svg astro-icon="fi_zoom-out">
+    
+    <use xlink:href="#astroicon:fi_zoom-out"></use>
+</svg>
+      </button>
+    </div>
+
+    <div class="region-popup-search__list">
+      <button type="button" class="default-btn light">
+  Москва
+  </button>
+      <button type="button" class="default-btn light">
+  Санкт-Петербург
+  </button>
+      <button type="button" class="default-btn light">
+  Казань
+  </button>
+    </div>
+  </div>
+
+  <div class="region-popup-nav">
+    <div class="region-popup-nav__inner">
+      <span class="region-popup-nav__title">Округ</span>
+      <div class="region-popup-nav__list">
+        <label class="region-popup-nav-item">
+          <input type="radio" class="region-popup-nav-item__input" name="reg-1" checked>
+          <span class="region-popup-nav-item__container">Центр</span>
+        </label>
+        <label class="region-popup-nav-item">
+          <input type="radio" class="region-popup-nav-item__input" name="reg-1">
+          <span class="region-popup-nav-item__container">Северо-Западный</span>
+        </label>
+        <label class="region-popup-nav-item">
+          <input type="radio" class="region-popup-nav-item__input" name="reg-1">
+          <span class="region-popup-nav-item__container">Южный</span>
+        </label>
+        <label class="region-popup-nav-item">
+          <input type="radio" class="region-popup-nav-item__input" name="reg-1">
+          <span class="region-popup-nav-item__container">Уральский</span>
+        </label>
+      </div>
+    </div>
+    <div class="region-popup-nav__inner">
+      <span class="region-popup-nav__title">Регион</span>
+      <div class="region-popup-nav__list">
+        <label class="region-popup-nav-item">
+          <input type="radio" class="region-popup-nav-item__input" name="reg-2" checked>
+          <span class="region-popup-nav-item__container">Московская область</span>
+        </label>
+        <label class="region-popup-nav-item">
+          <input type="radio" class="region-popup-nav-item__input" name="reg-2">
+          <span class="region-popup-nav-item__container">Тульская область</span>
+        </label>
+        <label class="region-popup-nav-item">
+          <input type="radio" class="region-popup-nav-item__input" name="reg-2">
+          <span class="region-popup-nav-item__container">Брянская область</span>
+        </label>
+      </div>
+    </div>
+    <div class="region-popup-nav__inner">
+      <span class="region-popup-nav__title">Город</span>
+      <div class="region-popup-nav__list">
+        <label class="region-popup-nav-item">
+          <input type="radio" class="region-popup-nav-item__input" name="reg-3" checked>
+          <span class="region-popup-nav-item__container">Москва</span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="popup" data-dropdown-popup>
+  <div class="popup__wrapper">
+    <div class="popup__bg" data-close-btn></div>
+    <div class="popup__container">
+      <button type="button" class="popup__close" data-close-btn data-swipe-btn>
+        <svg astro-icon="fi_x">
+    
+    <use xlink:href="#astroicon:fi_x"></use>
+</svg>
+      </button>
+      <div class="popup__content">
+        
       </div>
     </div>
   </div>
@@ -282,6 +397,6 @@
 </button>
     
 <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" aria-hidden="true" astro-icon-spritesheet>
-    <symbol fill="none" viewBox="0 0 20 20" id="astroicon:fi_x"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5 5 15M5 5l10 10"/></symbol><symbol fill="none" viewBox="0 0 24 25" id="astroicon:fi_user"><g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M20 21.5v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2M12 11.5a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/></g></symbol><symbol fill="none" viewBox="0 0 18 18" id="astroicon:fi_chevron-down"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4.5 6.75 4.5 4.5 4.5-4.5"/></symbol><symbol viewBox="0 0 48 48" id="astroicon:fluent:chevron-up-48-regular"><path fill="currentColor" d="M39.634 31.884a1.25 1.25 0 0 1-1.768 0L24 18.018 10.134 31.884a1.25 1.25 0 0 1-1.768-1.768l14.75-14.75a1.25 1.25 0 0 1 1.768 0l14.75 14.75a1.25 1.25 0 0 1 0 1.768z"/></symbol><symbol fill="none" viewBox="0 0 24 24" id="astroicon:viber"><path fill="currentColor" d="M19.05 4.91A9.816 9.816 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01Zm-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.264 8.264 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.183 8.183 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.22 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.07-.11-.22-.16-.47-.28Z"/></symbol><symbol fill="none" viewBox="0 0 24 24" id="astroicon:telegram"><path fill="currentColor" d="M19.552 2.997a2.23 2.23 0 0 0-.7.167h-.003c-.213.085-1.23.512-2.774 1.16l-5.537 2.332C6.565 8.33 2.66 9.976 2.66 9.976l.046-.018s-.269.088-.55.28c-.174.112-.323.256-.44.426a1.246 1.246 0 0 0-.207.833c.067.541.418.866.67 1.045.255.182.498.266.498.266h.006l3.662 1.234c.165.527 1.116 3.656 1.345 4.377.135.43.266.7.43.905.08.105.173.193.285.264.058.034.12.06.184.08l-.037-.01c.011.003.02.012.028.015.03.008.05.011.089.017.58.176 1.045-.184 1.045-.184l.027-.021 2.162-1.969 3.624 2.78.083.036c.755.331 1.52.147 1.924-.179.407-.328.566-.747.566-.747l.026-.067 2.8-14.347c.08-.354.1-.686.012-1.007-.09-.326-.3-.606-.585-.786a1.404 1.404 0 0 0-.8-.202Zm-.075 1.537c-.003.048.006.042-.015.133v.008l-2.775 14.198c-.012.02-.032.064-.088.109-.058.046-.105.075-.348-.021l-4.433-3.399-2.677 2.44.562-3.592 7.242-6.75c.299-.277.199-.336.199-.336.021-.34-.45-.1-.45-.1L7.56 12.883l-.003-.015-4.377-1.474v-.003l-.011-.002a.184.184 0 0 0 .022-.01l.024-.011.024-.008 7.88-3.32c1.99-.838 3.994-1.681 5.535-2.332.914-.385 1.829-.768 2.745-1.148.062-.024.032-.025.077-.025Z"/></symbol><symbol fill="none" viewBox="0 0 24 24" id="astroicon:vk"><g clip-path="url(#astroicon:vka)"><path fill="currentColor" d="M12.145 19.5c3.472 0 2.234-2.198 2.502-2.83-.004-.472-.008-.926.008-1.202.22.062.739.325 1.811 1.367 1.655 1.67 2.078 2.665 3.415 2.665h2.461c.78 0 1.186-.323 1.389-.594.196-.262.388-.722.178-1.438-.549-1.724-3.751-4.701-3.95-5.015a2.84 2.84 0 0 1 .103-.175h-.002c.632-.835 3.044-4.449 3.399-5.895a.019.019 0 0 0 .002-.008c.192-.66.016-1.088-.166-1.33-.274-.362-.71-.545-1.299-.545h-2.461c-.824 0-1.449.415-1.765 1.172-.529 1.345-2.015 4.111-3.129 5.09a64.114 64.114 0 0 1 .007-3.233c.036-1.535.152-3.029-1.441-3.029H9.339c-.998 0-1.953 1.09-.919 2.384.904 1.134.325 1.766.52 4.912-.76-.815-2.112-3.016-3.068-5.829-.268-.761-.674-1.466-1.817-1.466H1.594C.596 4.501 0 5.045 0 5.956 0 8.002 4.529 19.5 12.145 19.5ZM4.055 6.001c.217 0 .239 0 .4.457.979 2.883 3.175 7.149 4.779 7.149 1.205 0 1.205-1.235 1.205-1.7l-.001-3.702C10.372 6.98 9.926 6.37 9.633 6l3.508.004c.002.017-.02 4.095.01 5.083 0 1.403 1.114 2.207 2.853.447 1.835-2.071 3.104-5.167 3.155-5.293.075-.18.14-.241.376-.241H22.006l-.002.009c-.225 1.05-2.446 4.396-3.189 5.435l-.034.05c-.327.534-.593 1.124.045 1.954.058.07.21.234.43.462.684.706 3.03 3.12 3.238 4.08-.138.022-.288.006-2.613.011-.495 0-.882-.74-2.359-2.23-1.328-1.292-2.19-1.82-2.975-1.82-1.524 0-1.413 1.237-1.399 2.733.005 1.622-.005 1.109.006 1.211-.089.035-.344.105-1.009.105C5.8 18 1.668 7.929 1.509 6.004c.055-.005.812-.002 2.546-.003Z"/></g><defs><clipPath id="astroicon:vka"><path fill="#fff" d="M0 0h24v24H0z"/></clipPath></defs></symbol><symbol fill="none" viewBox="0 0 20 20" id="astroicon:youtube"><g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M18.784 5.35a2.316 2.316 0 0 0-1.617-1.666c-1.434-.35-7.167-.35-7.167-.35s-5.733 0-7.167.383a2.317 2.317 0 0 0-1.616 1.666 24.166 24.166 0 0 0-.384 4.409c-.009 1.489.12 2.976.384 4.441a2.317 2.317 0 0 0 1.616 1.6c1.434.384 7.167.384 7.167.384s5.733 0 7.167-.383a2.316 2.316 0 0 0 1.616-1.667c.26-1.444.39-2.908.384-4.375.01-1.49-.12-2.976-.384-4.442v0Z"/><path d="m8.125 12.517 4.792-2.725-4.792-2.725v5.45Z"/></g></symbol><symbol fill="none" viewBox="0 0 121 120" id="astroicon:fi_check_2"><path stroke="#F94444" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="m100.5 30-55 55-25-25"/></symbol>
+    <symbol fill="none" viewBox="0 0 20 20" id="astroicon:fi_x"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5 5 15M5 5l10 10"/></symbol><symbol fill="none" viewBox="0 0 24 25" id="astroicon:fi_user"><g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M20 21.5v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2M12 11.5a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/></g></symbol><symbol fill="none" viewBox="0 0 18 18" id="astroicon:fi_chevron-down"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4.5 6.75 4.5 4.5 4.5-4.5"/></symbol><symbol viewBox="0 0 48 48" id="astroicon:fluent:chevron-up-48-regular"><path fill="currentColor" d="M39.634 31.884a1.25 1.25 0 0 1-1.768 0L24 18.018 10.134 31.884a1.25 1.25 0 0 1-1.768-1.768l14.75-14.75a1.25 1.25 0 0 1 1.768 0l14.75 14.75a1.25 1.25 0 0 1 0 1.768z"/></symbol><symbol fill="none" viewBox="0 0 24 24" id="astroicon:viber"><path fill="currentColor" d="M19.05 4.91A9.816 9.816 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01Zm-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.264 8.264 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.183 8.183 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.22 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.07-.11-.22-.16-.47-.28Z"/></symbol><symbol fill="none" viewBox="0 0 24 24" id="astroicon:telegram"><path fill="currentColor" d="M19.552 2.997a2.23 2.23 0 0 0-.7.167h-.003c-.213.085-1.23.512-2.774 1.16l-5.537 2.332C6.565 8.33 2.66 9.976 2.66 9.976l.046-.018s-.269.088-.55.28c-.174.112-.323.256-.44.426a1.246 1.246 0 0 0-.207.833c.067.541.418.866.67 1.045.255.182.498.266.498.266h.006l3.662 1.234c.165.527 1.116 3.656 1.345 4.377.135.43.266.7.43.905.08.105.173.193.285.264.058.034.12.06.184.08l-.037-.01c.011.003.02.012.028.015.03.008.05.011.089.017.58.176 1.045-.184 1.045-.184l.027-.021 2.162-1.969 3.624 2.78.083.036c.755.331 1.52.147 1.924-.179.407-.328.566-.747.566-.747l.026-.067 2.8-14.347c.08-.354.1-.686.012-1.007-.09-.326-.3-.606-.585-.786a1.404 1.404 0 0 0-.8-.202Zm-.075 1.537c-.003.048.006.042-.015.133v.008l-2.775 14.198c-.012.02-.032.064-.088.109-.058.046-.105.075-.348-.021l-4.433-3.399-2.677 2.44.562-3.592 7.242-6.75c.299-.277.199-.336.199-.336.021-.34-.45-.1-.45-.1L7.56 12.883l-.003-.015-4.377-1.474v-.003l-.011-.002a.184.184 0 0 0 .022-.01l.024-.011.024-.008 7.88-3.32c1.99-.838 3.994-1.681 5.535-2.332.914-.385 1.829-.768 2.745-1.148.062-.024.032-.025.077-.025Z"/></symbol><symbol fill="none" viewBox="0 0 24 24" id="astroicon:vk"><g clip-path="url(#astroicon:vka)"><path fill="currentColor" d="M12.145 19.5c3.472 0 2.234-2.198 2.502-2.83-.004-.472-.008-.926.008-1.202.22.062.739.325 1.811 1.367 1.655 1.67 2.078 2.665 3.415 2.665h2.461c.78 0 1.186-.323 1.389-.594.196-.262.388-.722.178-1.438-.549-1.724-3.751-4.701-3.95-5.015a2.84 2.84 0 0 1 .103-.175h-.002c.632-.835 3.044-4.449 3.399-5.895a.019.019 0 0 0 .002-.008c.192-.66.016-1.088-.166-1.33-.274-.362-.71-.545-1.299-.545h-2.461c-.824 0-1.449.415-1.765 1.172-.529 1.345-2.015 4.111-3.129 5.09a64.114 64.114 0 0 1 .007-3.233c.036-1.535.152-3.029-1.441-3.029H9.339c-.998 0-1.953 1.09-.919 2.384.904 1.134.325 1.766.52 4.912-.76-.815-2.112-3.016-3.068-5.829-.268-.761-.674-1.466-1.817-1.466H1.594C.596 4.501 0 5.045 0 5.956 0 8.002 4.529 19.5 12.145 19.5ZM4.055 6.001c.217 0 .239 0 .4.457.979 2.883 3.175 7.149 4.779 7.149 1.205 0 1.205-1.235 1.205-1.7l-.001-3.702C10.372 6.98 9.926 6.37 9.633 6l3.508.004c.002.017-.02 4.095.01 5.083 0 1.403 1.114 2.207 2.853.447 1.835-2.071 3.104-5.167 3.155-5.293.075-.18.14-.241.376-.241H22.006l-.002.009c-.225 1.05-2.446 4.396-3.189 5.435l-.034.05c-.327.534-.593 1.124.045 1.954.058.07.21.234.43.462.684.706 3.03 3.12 3.238 4.08-.138.022-.288.006-2.613.011-.495 0-.882-.74-2.359-2.23-1.328-1.292-2.19-1.82-2.975-1.82-1.524 0-1.413 1.237-1.399 2.733.005 1.622-.005 1.109.006 1.211-.089.035-.344.105-1.009.105C5.8 18 1.668 7.929 1.509 6.004c.055-.005.812-.002 2.546-.003Z"/></g><defs><clipPath id="astroicon:vka"><path fill="#fff" d="M0 0h24v24H0z"/></clipPath></defs></symbol><symbol fill="none" viewBox="0 0 20 20" id="astroicon:youtube"><g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M18.784 5.35a2.316 2.316 0 0 0-1.617-1.666c-1.434-.35-7.167-.35-7.167-.35s-5.733 0-7.167.383a2.317 2.317 0 0 0-1.616 1.666 24.166 24.166 0 0 0-.384 4.409c-.009 1.489.12 2.976.384 4.441a2.317 2.317 0 0 0 1.616 1.6c1.434.384 7.167.384 7.167.384s5.733 0 7.167-.383a2.316 2.316 0 0 0 1.616-1.667c.26-1.444.39-2.908.384-4.375.01-1.49-.12-2.976-.384-4.442v0Z"/><path d="m8.125 12.517 4.792-2.725-4.792-2.725v5.45Z"/></g></symbol><symbol fill="none" viewBox="0 0 121 120" id="astroicon:fi_check_2"><path stroke="#F94444" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="m100.5 30-55 55-25-25"/></symbol><symbol fill="none" viewBox="0 0 24 24" id="astroicon:fi_zoom-out"><g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16ZM21 21l-4.35-4.35"/></g></symbol>
 </svg>
   </body></html>

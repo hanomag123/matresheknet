@@ -22,7 +22,7 @@
   <div class="container">
     
           <div class="header-contacts">
-            <button type="button" class="header__sity">
+            <button type="button" class="header__sity" data-region-btn>
               <svg astro-icon="fi_map-pin">
     
     <use xlink:href="#astroicon:fi_map-pin"></use>
@@ -70,11 +70,11 @@
     <use xlink:href="#astroicon:logo"></use>
 </svg>
             </a>
-            <button class="default-btn sm header__catalog">
+            <button type="button" class="default-btn sm header__catalog">
   
               Каталог
             
-</button>
+  </button>
             <form action="#" class="header-search" data-search>
               <div class="header-search__inner">
                 <input type="text" placeholder="Поиск товара" class="default-input header-search__input"/>
@@ -289,11 +289,11 @@
                       </div>
                     </a>
                 </div>
-                <button href="#" class="default-btn accent-light header-search__link">
+                <button href="#" type="button" class="default-btn accent-light header-search__link">
   
                   Все результаты
                 
-</button>
+  </button>
               </div>
             </form>
             <div class="header-control">
@@ -1308,11 +1308,11 @@
         <div class="footer-form">
           <span class="footer-form__title">Подписаться на наши новости</span>
           <input type="text" clasName="footer-form__input" placeholder="Ваш E-mail" class="default-input"/>
-          <button class="default-btn footer-form__btn">
+          <button type="button" class="default-btn footer-form__btn">
   
             Подписаться
           
-</button>
+  </button>
         </div>
       </div>
   <div class="footer-legal">
@@ -1399,62 +1399,58 @@
       </div>
     </div>
 
-    <div class="dropdown menu-region" data-dropdown>
-      <button type="button" class="dropdown-btn" data-dropdown-btn>
+    <div class="dropdown menu-region">
+      <button type="button" class="dropdown-btn" data-region-btn>
         <span class="dropdown-btn__text">Санкт-Петербург</span>
         <svg astro-icon="fi_chevron-down">
     
     <use xlink:href="#astroicon:fi_chevron-down"></use>
 </svg>
       </button>
-      <div class="dropdown__container">
-        <div class="dropdown__inner"></div>
-      </div>
     </div>
   </div>
 </nav>
       </main>
 
-      <div class="popup" data-call-popup>
+      <div class="popup" data-call-popup data-send-handler>
   <div class="popup__wrapper">
     <div class="popup__bg" data-close-btn></div>
     <div class="popup__container">
-      <div class="popup__drag-container" data-drag-container>
-        <span class="popup__close-drag" data-drag-close></span>
-        <button type="button" class="popup__close" data-close-btn>
-          <svg astro-icon="fi_x">
+      <button type="button" class="popup__close" data-close-btn data-swipe-btn>
+        <svg astro-icon="fi_x">
     
     <use xlink:href="#astroicon:fi_x"></use>
 </svg>
-        </button>
+      </button>
+      <div class="popup__content">
         
-  <form action="#" class="popup__form" data-submit-handler>
+  <form action="#" class="popup__form">
     <div class="popup__head">
       <span class="popup__title">Обратный звонок</span>
       <p class="popup__text">Представьтесь, мы вам перезвоним</p>
     </div>
 
-    <div class="popup__inner">
+    <div class="popup__inner" data-form-item>
       
-        <label class="default-input-label required">
+        <label class="default-input-label required validate">
           <span class="default-input-label__text">Имя</span>
-          <input type="text" placeholder="Иван" class="default-input"/>
+          <input type="text" placeholder="Иван" data-action="required-text" required class="default-input"/>
           <span class="default-input-label__error">Неверный формат</span>
         </label>
       
       
-        <label class="default-input-label required">
+        <label class="default-input-label required validate">
           <span class="default-input-label__text">Телефон</span>
-          <input type="text" placeholder="+7 995 455 34 55" class="default-input"/>
+          <input type="text" placeholder="+7 995 455 34 55" data-action="required-text" required data-mask-init data-mask="+7 999 999 99 99" class="default-input"/>
           <span class="default-input-label__error">Неверный формат</span>
         </label>
       
     </div>
 
     <div class="popup__footer">
-      <button type="submit" class="default-btn">
+      <button type="button" data-action="form-submit" class="default-btn">
   Отправить
-</button>
+  </button>
       <p class="popup__legal">
         Продолжая, вы соглашаетесь с
         <a href="#"> политикой конфиденциальности</a>
@@ -1472,27 +1468,26 @@
     <span class="popup__text">Наш менеджер перезвонит вам в ближайшее время</span>
     <button type="button" data-close-btn class="default-btn">
   Закрыть
-</button>
+  </button>
   </div>
 
       </div>
     </div>
   </div>
 </div>
-      <div class="popup" data-question-popup>
+      <div class="popup" data-question-popup data-send-handler>
   <div class="popup__wrapper">
     <div class="popup__bg" data-close-btn></div>
     <div class="popup__container">
-      <div class="popup__drag-container" data-drag-container>
-        <span class="popup__close-drag" data-drag-close></span>
-        <button type="button" class="popup__close" data-close-btn>
-          <svg astro-icon="fi_x">
+      <button type="button" class="popup__close" data-close-btn data-swipe-btn>
+        <svg astro-icon="fi_x">
     
     <use xlink:href="#astroicon:fi_x"></use>
 </svg>
-        </button>
+      </button>
+      <div class="popup__content">
         
-  <form action="#" class="popup__form" data-submit-handler>
+  <form action="#" class="popup__form">
     <div class="popup__head">
       <span class="popup__title">Задать вопрос</span>
       <p class="popup__text">
@@ -1500,18 +1495,18 @@
       </p>
     </div>
 
-    <div class="popup__inner">
+    <div class="popup__inner" data-form-item>
       
-        <label class="default-input-label required">
+        <label class="default-input-label required validate">
           <span class="default-input-label__text">Имя</span>
-          <input type="text" placeholder="Иван" class="default-input"/>
+          <input type="text" placeholder="Иван" data-action="required-text" required class="default-input"/>
           <span class="default-input-label__error">Неверный формат</span>
         </label>
       
       
-        <label class="default-input-label required">
+        <label class="default-input-label required validate">
           <span class="default-input-label__text">Телефон</span>
-          <input type="text" placeholder="+7 995 455 34 55" class="default-input"/>
+          <input type="text" placeholder="+7 995 455 34 55" data-action="required-text" data-mask-init data-mask="+7 999 999 99 99" required class="default-input"/>
           <span class="default-input-label__error">Неверный формат</span>
         </label>
       
@@ -1532,9 +1527,9 @@
     </div>
 
     <div class="popup__footer">
-      <button type="submit" class="default-btn">
+      <button type="button" data-action="form-submit" class="default-btn">
   Отправить
-</button>
+  </button>
       <p class="popup__legal">
         Продолжая, вы соглашаетесь с
         <a href="#"> политикой конфиденциальности</a>
@@ -1552,9 +1547,117 @@
     <span class="popup__text">Наш менеджер перезвонит вам в ближайшее время</span>
     <button type="button" data-close-btn class="default-btn">
   Закрыть
-</button>
+  </button>
   </div>
 
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="popup region-popup" data-region-popup>
+  <div class="popup__wrapper">
+    <div class="popup__bg" data-close-btn></div>
+    <div class="popup__container">
+      <button type="button" class="popup__close" data-close-btn data-swipe-btn>
+        <svg astro-icon="fi_x">
+    
+    <use xlink:href="#astroicon:fi_x"></use>
+</svg>
+      </button>
+      <div class="popup__content">
+        
+  <span class="popup__title">Выберите город</span>
+
+  <div class="region-popup-search">
+    <div class="header-search">
+      <input type="text" class="default-input header-search__input"/>
+      <button type="button" class="header-search__btn">
+        <svg astro-icon="fi_zoom-out">
+    
+    <use xlink:href="#astroicon:fi_zoom-out"></use>
+</svg>
+      </button>
+    </div>
+
+    <div class="region-popup-search__list">
+      <button type="button" class="default-btn light">
+  Москва
+  </button>
+      <button type="button" class="default-btn light">
+  Санкт-Петербург
+  </button>
+      <button type="button" class="default-btn light">
+  Казань
+  </button>
+    </div>
+  </div>
+
+  <div class="region-popup-nav">
+    <div class="region-popup-nav__inner">
+      <span class="region-popup-nav__title">Округ</span>
+      <div class="region-popup-nav__list">
+        <label class="region-popup-nav-item">
+          <input type="radio" class="region-popup-nav-item__input" name="reg-1" checked>
+          <span class="region-popup-nav-item__container">Центр</span>
+        </label>
+        <label class="region-popup-nav-item">
+          <input type="radio" class="region-popup-nav-item__input" name="reg-1">
+          <span class="region-popup-nav-item__container">Северо-Западный</span>
+        </label>
+        <label class="region-popup-nav-item">
+          <input type="radio" class="region-popup-nav-item__input" name="reg-1">
+          <span class="region-popup-nav-item__container">Южный</span>
+        </label>
+        <label class="region-popup-nav-item">
+          <input type="radio" class="region-popup-nav-item__input" name="reg-1">
+          <span class="region-popup-nav-item__container">Уральский</span>
+        </label>
+      </div>
+    </div>
+    <div class="region-popup-nav__inner">
+      <span class="region-popup-nav__title">Регион</span>
+      <div class="region-popup-nav__list">
+        <label class="region-popup-nav-item">
+          <input type="radio" class="region-popup-nav-item__input" name="reg-2" checked>
+          <span class="region-popup-nav-item__container">Московская область</span>
+        </label>
+        <label class="region-popup-nav-item">
+          <input type="radio" class="region-popup-nav-item__input" name="reg-2">
+          <span class="region-popup-nav-item__container">Тульская область</span>
+        </label>
+        <label class="region-popup-nav-item">
+          <input type="radio" class="region-popup-nav-item__input" name="reg-2">
+          <span class="region-popup-nav-item__container">Брянская область</span>
+        </label>
+      </div>
+    </div>
+    <div class="region-popup-nav__inner">
+      <span class="region-popup-nav__title">Город</span>
+      <div class="region-popup-nav__list">
+        <label class="region-popup-nav-item">
+          <input type="radio" class="region-popup-nav-item__input" name="reg-3" checked>
+          <span class="region-popup-nav-item__container">Москва</span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="popup" data-dropdown-popup>
+  <div class="popup__wrapper">
+    <div class="popup__bg" data-close-btn></div>
+    <div class="popup__container">
+      <button type="button" class="popup__close" data-close-btn data-swipe-btn>
+        <svg astro-icon="fi_x">
+    
+    <use xlink:href="#astroicon:fi_x"></use>
+</svg>
+      </button>
+      <div class="popup__content">
+        
       </div>
     </div>
   </div>

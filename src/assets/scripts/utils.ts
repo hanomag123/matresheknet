@@ -521,7 +521,7 @@ export class CartItem {
     this.plusBtn = plusBtn;
     this.countContainer = countContainer;
     this.valueInput = valueInput;
-    this.counter = 1;
+    this.counter = Number(this.valueInput.value) || 0;
 
     this.changeEvent = new Event("change");
 

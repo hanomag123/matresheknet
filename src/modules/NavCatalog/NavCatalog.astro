@@ -23,19 +23,23 @@ import { menuItems } from "../../fakeData";
     <div class="nav-catalog__list">
       {
         menuItems.map((item) => (
-          <div class="nav-catalog-item" data-title={item.title}>
-            <button type="button" class="nav-catalog-item__btn" data-nav-btn>
+          <div
+            class:list={["nav-catalog-item", { submenu: item.sub }]}
+            data-title={item.title}
+          >
+            <a href="#" class="nav-catalog-item__btn" data-nav-btn>
               <Sprite name={item.icon} />
               {item.title}
-            </button>
+            </a>
             <div class="nav-catalog-item__container">
               <div class="nav-catalog__list">
-                {item.sub.map((sub) => (
-                  <a href="#" class="nav-catalog-item__link">
-                    {sub}
-                    <Sprite name="fi_chevron-right" />
-                  </a>
-                ))}
+                {item.sub &&
+                  item.sub.map((sub) => (
+                    <a href="#" class="nav-catalog-item__link">
+                      {sub}
+                      <Sprite name="fi_chevron-right" />
+                    </a>
+                  ))}
               </div>
             </div>
           </div>

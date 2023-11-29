@@ -6,6 +6,7 @@ class NavCatalogController {
   closeBtn: HTMLElement;
   backBtn: HTMLElement;
   infoTitle: HTMLElement;
+  activeItem: null | HTMLElement;
 
   constructor(
     container: HTMLElement,
@@ -22,6 +23,7 @@ class NavCatalogController {
     this.backBtn = backBtn;
     this.infoTitle = infoTitle;
     this.isActive = false;
+    this.activeItem = null;
 
     this.container.addEventListener("click", (e) => {
       e.stopPropagation();
@@ -49,8 +51,12 @@ class NavCatalogController {
 
       if (btn) {
         btn.addEventListener("click", (e) => {
-          e.stopPropagation();
-          this.openItem(i, itemTitle);
+          if (i.classList.contains("submenu") && this.activeItem !== i) {
+            e.preventDefault();
+            e.stopPropagation();
+            this.openItem(i, itemTitle);
+            this.activeItem = i;
+          }
         });
       }
     });
@@ -86,6 +92,7 @@ class NavCatalogController {
       i.classList.remove("_active");
     });
     this.container.classList.remove("_open-item");
+    this.activeItem = null;
   }
 }
 

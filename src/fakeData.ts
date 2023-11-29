@@ -41,7 +41,6 @@ export const menuItems = [
   {
     title: "Наперстки коллекционные",
     icon: "menu-9",
-    sub: [],
   },
   {
     title: "Колокольчики коллекционные",
@@ -66,7 +65,6 @@ export const menuItems = [
   {
     title: "грушки антистресс",
     icon: "menu-14",
-    sub: [],
   },
   {
     title: "Символ года",

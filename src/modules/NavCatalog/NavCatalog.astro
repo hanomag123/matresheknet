@@ -30,6 +30,7 @@ import { menuItems } from "../../fakeData";
             <a href="#" class="nav-catalog-item__btn" data-nav-btn>
               <Sprite name={item.icon} />
               {item.title}
+              {item.sub && <Sprite name="fi_chevron-right" class="arrow" />}
             </a>
             <div class="nav-catalog-item__container">
               <div class="nav-catalog__list">

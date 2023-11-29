@@ -41,6 +41,10 @@
 
       .nav-catalog-item__btn {
         color: $dark-1;
+
+        svg.arrow {
+          opacity: 1;
+        }
       }
     }
 
@@ -241,6 +245,14 @@
         @include breakpoint($xs-bp) {
           width: 4rem;
           height: 4rem;
+        }
+
+        &.arrow {
+          width: 3rem;
+          height: 3rem;
+          color: $gray-1;
+          margin-left: auto;
+          opacity: 0;
         }
       }
     }

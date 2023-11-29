@@ -162,6 +162,12 @@ svg[astro-icon="fi_heart"] {
       gap: 0.6rem;
     }
 
+    &.swiper-pagination-clickable {
+      .swiper-pagination__bullet {
+        cursor: pointer;
+      }
+    }
+
     &__bullet {
       width: 0.6rem;
       height: 0.6rem;

@@ -10,6 +10,7 @@ import {
   FreeMode,
   EffectFade,
   Grid,
+  Manipulation,
 } from "swiper/modules";
 import { initProductItems } from "../../components/ProductItem/ProductItem";
 import { initProductSliders } from "../../modules/ProductSlider/ProductSlider";
@@ -49,6 +50,7 @@ Swiper.use([
   FreeMode,
   EffectFade,
   Grid,
+  Manipulation,
 ]);
 Swiper.defaults.lazyPreloaderClass = "swiper-preloader";
 

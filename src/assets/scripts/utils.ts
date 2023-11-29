@@ -178,6 +178,7 @@ export class MultipleSelect extends Dropdown {
   text: string;
   btnText: HTMLElement | null;
   cleanBtn: HTMLButtonElement | null;
+  clearEvent: Event;
 
   constructor(container: HTMLElement, popup?: Popup) {
     super(container, popup);
@@ -190,6 +191,7 @@ export class MultipleSelect extends Dropdown {
     this.cleanBtn = this.container.querySelector<HTMLButtonElement>(
       ".multiple-select__clean",
     );
+    this.clearEvent = new Event("clear");
 
     this.initMultipleSelect();
   }
@@ -230,6 +232,7 @@ export class MultipleSelect extends Dropdown {
     this.btnText && (this.btnText.textContent = this.text);
     this.container.classList.remove("_checked");
     this.close();
+    this.container.dispatchEvent(this.clearEvent);
   }
 }
 
@@ -242,6 +245,7 @@ export class RangeSlider extends Dropdown {
   cleanBtn: HTMLButtonElement | null;
   minValue: number;
   maxValue: number;
+  clearEvent: Event;
 
   constructor(container: HTMLElement, popup?: Popup) {
     super(container, popup);
@@ -258,6 +262,8 @@ export class RangeSlider extends Dropdown {
     this.minInit = Number(this.minInput?.dataset.init) || this.minValue;
     this.maxValue = Number(this.maxInput?.dataset.max) || 100;
     this.maxInit = Number(this.maxInput?.dataset.init) || this.maxValue;
+
+    this.clearEvent = new Event("clear");
 
     if (this.minInput && this.maxInput) {
       this.minInput.addEventListener(
@@ -308,6 +314,7 @@ export class RangeSlider extends Dropdown {
     }
     this.updateRange();
     this.close();
+    this.container.dispatchEvent(this.clearEvent);
   }
 
   updateRange() {

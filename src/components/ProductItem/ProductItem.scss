@@ -63,6 +63,7 @@
 
     .swiper-pagination {
       position: absolute;
+      z-index: 100;
       bottom: 2.4rem;
 
       @include breakpoint($xs-bp) {

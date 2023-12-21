@@ -1,8 +1,9 @@
 import Swiper from "swiper";
 
-const items = document.querySelectorAll<HTMLElement>(".product-item");
 
 export const initProductItems = () => {
+  const items = document.querySelectorAll<HTMLElement>(".product-item");
+
   items.forEach((item) => initProductItem(item));
 };
 
@@ -10,7 +11,7 @@ function initProductItem(item: HTMLElement) {
   const swiperContainer = item.querySelector<HTMLElement>(
     ".product-item__images",
   );
-
+  
   const pagination = item.querySelector<HTMLElement>(".swiper-pagination");
   const imgPaginationContainer = item.querySelector<HTMLElement>(
     ".product-item__pagination",

@@ -1,0 +1,139 @@
+.prefs {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+
+  @include breakpoint($xs-bp) {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+  }
+}
+
+.prefs-title {
+  font-size: 3.4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+
+  @include breakpoint($xs-bp) {
+    font-size: 2.8rem;
+  }
+}
+
+.prefs-list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2rem;
+  margin-top: 3.2rem;
+
+  @include breakpoint($sm-bp) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include breakpoint($xs-bp) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+    margin-top: 2.4rem;
+  }
+}
+
+.prefs-item {
+  padding: 3.2rem;
+  border: 0.2rem solid #EFF2F6;
+  border-radius: 1.2rem;
+  min-height: 15.4rem;
+
+  @include breakpoint($xs-bp) {
+    padding: 1rem;
+  }
+}
+
+.loyal-item {
+  padding: 3.2rem;
+  border-radius: 1.2rem;
+  border: 2px solid rgba(255, 255, 255, 0.20);
+  background: rgba(255, 255, 255, 0.08);
+  min-height: 15.4rem;
+
+  @include breakpoint($xs-bp) {
+    padding: 1rem;
+  }
+}
+
+.loyal-icon,
+.prefs-icon {
+  width: 6.3rem;
+  height: 6.3rem;
+
+  @include breakpoint($xs-bp) {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+.loyal-text,
+.prefs-text {
+  margin-top: 3.2rem;
+  line-height: 140%;
+
+  @include breakpoint($xs-bp) {
+    font-size: 1.4rem;
+    margin-top: 1.2rem;
+  }
+}
+
+.loyal-text {
+  color: #FFF;
+}
+
+.loyal {
+  margin-bottom: 8rem;
+
+  @include breakpoint($sm-bp) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @include breakpoint($xl-bp) {
+    margin-bottom: 6rem;
+  }
+}
+
+.loyal-inner {
+  padding: 5.2rem 4.8rem;
+  border-radius: 1.6rem;
+  background: radial-gradient(127.87% 417.12% at 31.3% 202.84%, #D63535 0%, #FF4E4E 100%);
+  box-shadow: 0px 12px 30px 0px rgba(0, 0, 0, 0.04);
+
+  @include breakpoint($sm-bp) {
+    border-radius: 0;
+    padding: 3.2rem 1.6rem;
+  }
+}
+
+.loyal-title {
+  font-size: 3.4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: #FFF;
+
+  @include breakpoint($xs-bp) {
+    font-size: 2.8rem;
+  }
+}
+
+.loyal-list {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+
+  @include breakpoint($sm-bp) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include breakpoint($xs-bp) {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 2.4rem;
+  }
+}

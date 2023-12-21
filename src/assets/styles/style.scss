@@ -27,3 +27,7 @@ html {
 @import "./components";
 @import "./modules";
 @import "./pages";
+
+.swiper-pagination-lock {
+  display: none
+}

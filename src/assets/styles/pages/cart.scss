@@ -44,6 +44,7 @@
     align-items: center;
     gap: 1rem;
     transition: 0.3s;
+
     @include hover {
       color: $accent;
     }
@@ -87,6 +88,10 @@
     flex-direction: column;
     align-items: stretch;
     gap: 3.2rem;
+
+    @include breakpoint($sm-bp) {
+      margin-left: auto;
+    }
 
     @include breakpoint($xs-bp) {
       width: 100%;
@@ -158,4 +163,14 @@
       }
     }
   }
+}
+
+.mspc_formrow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cart-info__btn {
+  height: 5.2rem;
 }

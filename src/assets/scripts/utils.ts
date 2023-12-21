@@ -219,6 +219,13 @@ export class MultipleSelect extends Dropdown {
     if (checked > 0) {
       this.btnText && (this.btnText.textContent = this.text + ": " + checked);
       this.container.classList.add("_checked");
+      if (this?.popup) {
+        const btn = this?.popup?.content?.querySelector('.dropdown-submit__btn')
+        if (btn) {
+          btn.classList.add('loading')
+        }
+      }
+
     } else {
       this.btnText && (this.btnText.textContent = this.text);
       this.container.classList.remove("_checked");
@@ -226,9 +233,20 @@ export class MultipleSelect extends Dropdown {
   }
 
   cleanSelect() {
-    this.inputList.forEach((input) => {
-      input.checked = false;
-    });
+    let isSelected = false
+    for(let i = 0; i < this.inputList.length; i++) {
+      if (this.inputList[i].checked) { 
+        this.inputList[i].checked = false;
+        isSelected = true
+      }
+    }
+    if (isSelected) {
+      const value = this.inputList[0].value;
+      this.inputList[0].value = '';
+      this.inputList[0].click()
+      this.inputList[0].value = value;
+      this.inputList[0].checked = false;
+    }
     this.btnText && (this.btnText.textContent = this.text);
     this.container.classList.remove("_checked");
     this.close();
@@ -538,8 +556,6 @@ export class CartItem {
       this.decrease();
       this.updateValue();
     });
-
-    this.updateValue();
   }
 
   increase() {

@@ -87,11 +87,9 @@
         padding: 2.4rem 2.4rem 4rem;
         justify-content: flex-start;
         gap: 1.6rem;
-        background: linear-gradient(
-          170deg,
-          rgba(0, 0, 0, 0.25) 38.52%,
-          rgba(0, 0, 0, 0) 92.66%
-        );
+        background: linear-gradient(170deg,
+            rgba(0, 0, 0, 0.25) 38.52%,
+            rgba(0, 0, 0, 0) 92.66%);
       }
     }
 
@@ -176,7 +174,7 @@
 
       &__container {
         flex: 1;
-        padding: 2rem 2.2rem;
+        padding: 2rem 1.5rem;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -204,5 +202,13 @@
         width: 100%;
       }
     }
+  }
+}
+
+.main-innerSwiper {
+  .swiper-slide {
+    width: 100%;
+    will-change: opacity, transform;
+    margin-right: 1.5rem;
   }
 }

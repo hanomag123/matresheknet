@@ -10,6 +10,7 @@ import MainInfo from "../modules/MainInfo/MainInfo.astro";
 import NavCatalog from "../modules/NavCatalog/NavCatalog.astro";
 import NavBar from "../modules/NavBar/NavBar.astro";
 import ProductSlider from "../modules/ProductSlider/ProductSlider.astro";
+import { Image } from "astro:assets";
 
 const products_1: IProducItem[] = [
   {
@@ -135,6 +136,56 @@ const products_2: IProducItem[] = [
     rating: "3,7",
   },
 ];
+
+const prefs = [
+  {
+    img: "01",
+    text: "Более 3000 довольных покупателей на Ozon",
+  },
+  {
+    img: "02",
+    text: "99% лояльности клиентов, совершивших покупку",
+  },
+  {
+    img: "03",
+    text: "Опыт более 16 лет. С 2007 года в индустрии",
+  },
+  {
+    img: "04",
+    text: "Быстрый процесс за счёт собственных складских запасов",
+  },
+  {
+    img: "05",
+    text: "Уникальные товары от лучших поставщиков",
+  },
+  {
+    img: "06",
+    text: "Высочайшее качество изготовление товаров",
+  },
+];
+
+const loyal = [
+  {
+    img: "01",
+    text: "Сезонные и тематические акции и распродажи",
+  },
+  {
+    img: "02",
+    text: "Скидки на крупные покупки",
+  },
+  {
+    img: "03",
+    text: "Накопительные скидки",
+  },
+  {
+    img: "04",
+    text: "Оптовые цены на крупные заказы",
+  },
+  {
+    img: "05",
+    text: "Промокоды и купоны на скидки",
+  },
+];
 ---
 
 <Layout title="Главная">
@@ -189,6 +240,46 @@ const products_2: IProducItem[] = [
   </ProductSlider>
 
   <MainInfo />
+
+  <section class="prefs container">
+    <h2 class="prefs-title">Наши преимущества</h2>
+
+    <ul class="prefs-list">
+      {
+        prefs.map((el) => {
+          return (
+            <li class="prefs-item">
+              <div class="prefs-icon">
+                <img src={`./img/prefs/${el.img}.svg`} />
+              </div>
+              <div class="prefs-text">{el.text}</div>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </section>
+
+  <section class="loyal container">
+    <div class="loyal-inner">
+      <h2 class="loyal-title">Программа лояльности</h2>
+
+      <ul class="loyal-list">
+        {
+          loyal.map((el) => {
+            return (
+              <li class="loyal-item">
+                <div class="loyal-icon">
+                  <img src={`./img/loyal/${el.img}.svg`} />
+                </div>
+                <div class="loyal-text">{el.text}</div>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </div>
+  </section>
 
   <Footer />
 </Layout>

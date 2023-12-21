@@ -1,5 +1,5 @@
 import { navCatalogController } from "../../modules/NavCatalog/NavCatalog";
-import { mainBannerScript } from "../../modules/MainBanner/MainBanner";
+// import { mainBannerScript } from "../../modules/MainBanner/MainBanner";
 import Swiper from "swiper";
 import {
   Navigation,
@@ -84,7 +84,58 @@ const dropdownPopup = dropdownPopupContainer
   ? new Popup(dropdownPopupContainer)
   : undefined;
 
-mainBannerScript();
+// mainBannerScript();
+
+if (window?.jQuery) {
+  $(document).on('mse2_load', function() {
+    initProductSliders();
+    initProductItems();
+    const preloaders = document.querySelectorAll('.swiper-preloader')
+    if (preloaders.length) {
+      preloaders.forEach(el => el.remove())
+    }
+  });
+
+$( ".ui-slider" ).on( 
+  "slidechange", 
+  function( event, ui ) {
+    if (event.originalEvent) {
+      const el = event.target
+      const parent = el.closest('.range-slider')
+      if (parent) {
+        parent.classList.add('_checked')
+      }
+    }
+  } 
+);
+
+const rangeSliderList = document.querySelectorAll(
+  "[data-range-slider]",
+);
+
+if (rangeSliderList.length) {
+  rangeSliderList.forEach(el => {
+    el.addEventListener('clear', function () {
+      var options = $(el).find('.ui-slider').slider( 'option' );
+      $(el).find('.ui-slider').slider('values',[ options.min, options.max ]);
+      $(el).find('.mse2_number_inputs input').each(function () {
+        const data = $(this).data('original-value')
+        $(this).val(data)
+        $(this).trigger('change')
+      })
+    })
+
+    $(el).find('.mse2_number_inputs input').each(function () {
+      const data = $(this).data('original-value')
+      if (Number(data) !== Number($(this).val())) {
+        el.classList.add('_checked')
+      }
+    })
+  })
+}
+
+
+}
 
 initProductSliders();
 

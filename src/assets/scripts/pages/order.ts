@@ -37,6 +37,17 @@ export const initOrderType = () => {
           `;
           },
         },
+        on: {
+          slideChange: function () {
+            const slide = this.slides[this.activeIndex]
+            if (slide) {
+              const checkbox = slide.querySelector('.checkbox')
+              if (checkbox) {
+                checkbox.click()
+              }
+            }
+          }
+        }
       });
     }
   }

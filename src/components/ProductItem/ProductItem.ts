@@ -1,6 +1,5 @@
 import Swiper from "swiper";
 
-
 export const initProductItems = () => {
   const items = document.querySelectorAll<HTMLElement>(".product-item");
 
@@ -11,7 +10,7 @@ function initProductItem(item: HTMLElement) {
   const swiperContainer = item.querySelector<HTMLElement>(
     ".product-item__images",
   );
-  
+
   const pagination = item.querySelector<HTMLElement>(".swiper-pagination");
   const imgPaginationContainer = item.querySelector<HTMLElement>(
     ".product-item__pagination",
@@ -32,6 +31,8 @@ function initProductItem(item: HTMLElement) {
           type: "bullets",
           bulletActiveClass: "_active",
           bulletClass: "swiper-pagination__bullet",
+          dynamicBullets: true,
+          dynamicMainBullets: 1,
         },
         spaceBetween: 30,
         thumbs: {
@@ -46,6 +47,8 @@ function initProductItem(item: HTMLElement) {
           bulletActiveClass: "_active",
           bulletClass: "swiper-pagination__bullet",
           clickable: true,
+          dynamicBullets: true,
+          dynamicMainBullets: 1,
         },
         spaceBetween: 30,
       });

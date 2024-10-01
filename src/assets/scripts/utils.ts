@@ -220,12 +220,20 @@ export class MultipleSelect extends Dropdown {
       this.btnText && (this.btnText.textContent = this.text + ": " + checked);
       this.container.classList.add("_checked");
       if (this?.popup) {
-        const btn = this?.popup?.content?.querySelector('.dropdown-submit__btn')
+        const popup1 = this?.popup;
+        const btn = this?.popup?.content?.querySelector(
+          ".dropdown-submit__btn",
+        );
         if (btn) {
-          btn.classList.add('loading')
+          if (window?.jQuery) {
+            $(document).on("mse2_load", function (e, data) {
+              btn.innerHTML = "Найдено " + data.data.total;
+            });
+          }
+
+          btn.classList.add("loading");
         }
       }
-
     } else {
       this.btnText && (this.btnText.textContent = this.text);
       this.container.classList.remove("_checked");
@@ -233,17 +241,17 @@ export class MultipleSelect extends Dropdown {
   }
 
   cleanSelect() {
-    let isSelected = false
-    for(let i = 0; i < this.inputList.length; i++) {
-      if (this.inputList[i].checked) { 
+    let isSelected = false;
+    for (let i = 0; i < this.inputList.length; i++) {
+      if (this.inputList[i].checked) {
         this.inputList[i].checked = false;
-        isSelected = true
+        isSelected = true;
       }
     }
     if (isSelected) {
       const value = this.inputList[0].value;
-      this.inputList[0].value = '';
-      this.inputList[0].click()
+      this.inputList[0].value = "";
+      this.inputList[0].click();
       this.inputList[0].value = value;
       this.inputList[0].checked = false;
     }

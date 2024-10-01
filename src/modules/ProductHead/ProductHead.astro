@@ -1,59 +1,70 @@
 ---
 import { Sprite } from "astro-icon";
 import DefaultBtn from "../../components/DefaultBtn/DefaultBtn.astro";
+const products = [
+  { img: "./img/prod/prod-2.png" },
+  { img: "./img/prod/prod-2.png" },
+  { img: "./img/prod/prod-2.png" },
+  { img: "./img/prod/prod-2.png" },
+  { img: "./img/prod/prod-3.png" },
+  { img: "./img/prod/prod-3.png" },
+  { img: "./img/prod/prod-3.png" },
+  { img: "./img/prod/prod-3.png" },
+  { img: "./img/prod/prod-1.png" },
+  { img: "./img/prod/prod-1.png" },
+  { img: "./img/prod/prod-1.png" },
+  { img: "./img/prod/prod-1.png" },
+];
 ---
 
 <div class="product-head">
   <div class="container product-head__container">
     <div class="product-head-slider">
-      <div class="swiper product-head-slider__pagination">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="./img/prod/prod-2.png" alt="" loading="lazy" />
-            <div class="swiper-preloader">
-              <div class="swiper-lazy-preloader swiper-lazy-preloader-white">
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <img src="./img/prod/prod-2.png" alt="" loading="lazy" />
-            <div class="swiper-preloader">
-              <div class="swiper-lazy-preloader swiper-lazy-preloader-white">
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <img src="./img/prod/prod-2.png" alt="" loading="lazy" />
-            <div class="swiper-preloader">
-              <div class="swiper-lazy-preloader swiper-lazy-preloader-white">
-              </div>
-            </div>
+      <div class="product-head-slider__wrapper">
+        <button
+          type="button"
+          class="swiper-btns__btn swiper-btns__btn_prev product-head-btn"
+        >
+          <Sprite name="fi_chevron-right" />
+        </button>
+        <button
+          type="button"
+          class="swiper-btns__btn swiper-btns__btn_next product-head-btn"
+        >
+          <Sprite name="fi_chevron-right" />
+        </button>
+        <div class="swiper product-head-slider__pagination">
+          <div class="swiper-wrapper">
+            {
+              products.map((slide) => (
+                <div class="swiper-slide" data-file={slide.img}>
+                  <img
+                    src={slide.img}
+                    alt=""
+                    loading="lazy"
+                    data-file={slide.img}
+                  />
+                  <div class="swiper-preloader">
+                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white" />
+                  </div>
+                </div>
+              ))
+            }
           </div>
         </div>
       </div>
       <div class="swiper product-head-slider__main">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="./img/prod/prod-2.png" alt="" loading="lazy" />
-            <div class="swiper-preloader">
-              <div class="swiper-lazy-preloader swiper-lazy-preloader-white">
+          {
+            products.map((slide) => (
+              <div class="swiper-slide">
+                <img src={slide.img} alt="" loading="lazy" />
+                <div class="swiper-preloader">
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white" />
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <img src="./img/prod/prod-2.png" alt="" loading="lazy" />
-            <div class="swiper-preloader">
-              <div class="swiper-lazy-preloader swiper-lazy-preloader-white">
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <img src="./img/prod/prod-2.png" alt="" loading="lazy" />
-            <div class="swiper-preloader">
-              <div class="swiper-lazy-preloader swiper-lazy-preloader-white">
-              </div>
-            </div>
-          </div>
+            ))
+          }
         </div>
         <div class="swiper-pagination"></div>
       </div>
@@ -112,6 +123,20 @@ import DefaultBtn from "../../components/DefaultBtn/DefaultBtn.astro";
         <li class="product-head-main-info__item nohas">Нет на складе</li>
         <li class="product-head-main-info__item await">Под заказ</li>
       </ul>
+
+      <!-- {
+        products.map((el) => (
+          <label class="product-wa__color-ithem">
+            <input
+              type="radio"
+              data-file={el.img}
+              value={el.img}
+              name="category"
+            />
+            {el.img}
+          </label>
+        ))
+      } -->
     </div>
 
     <div class="product-head-spec">

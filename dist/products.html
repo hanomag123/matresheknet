@@ -1231,10 +1231,11 @@
 
   <section class="products">
   <div class="container">
-    <form action="#" class="swiper filter products__filter">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="dropdown select" data-select>
+    <form action="#">
+      <div class="swiper filter products__filter">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="dropdown select" data-select>
   <button type="button" class="dropdown-btn" data-dropdown-btn>
     <span class="dropdown-btn__text">Сортировка</span>
     <svg astro-icon="fi_chevron-down">
@@ -1274,9 +1275,9 @@
     </div>
   </div>
 </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="dropdown multiple-select" data-multiple-select>
+          </div>
+          <div class="swiper-slide">
+            <div class="dropdown multiple-select" data-multiple-select>
   <div class="multiple-select__btns">
     <button type="button" class="dropdown-btn" data-dropdown-btn>
       <span class="dropdown-btn__text">Кому</span>
@@ -1383,9 +1384,9 @@
     </div>
   </div>
 </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="dropdown multiple-select" data-multiple-select>
+          </div>
+          <div class="swiper-slide">
+            <div class="dropdown multiple-select" data-multiple-select>
   <div class="multiple-select__btns">
     <button type="button" class="dropdown-btn" data-dropdown-btn>
       <span class="dropdown-btn__text">Повод</span>
@@ -1492,9 +1493,9 @@
     </div>
   </div>
 </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="dropdown multiple-select range-slider" data-range-slider>
+          </div>
+          <div class="swiper-slide">
+            <div class="dropdown multiple-select range-slider" data-range-slider>
   <div class="multiple-select__btns">
     <button type="button" class="dropdown-btn" data-dropdown-btn>
       <span class="dropdown-btn__text">Стоимость</span>
@@ -1528,8 +1529,25 @@
     </div>
   </div>
 </div>
+          </div>
         </div>
       </div>
+      <div class="popup" data-dropdown-popup>
+  <div class="popup__wrapper">
+    <div class="popup__bg" data-close-btn></div>
+    <div class="popup__container">
+      <button type="button" class="popup__close" data-close-btn data-swipe-btn>
+        <svg astro-icon="fi_x">
+    
+    <use xlink:href="#astroicon:fi_x"></use>
+</svg>
+      </button>
+      <div class="popup__content">
+        
+      </div>
+    </div>
+  </div>
+</div>
     </form>
 
     <div class="products__list">
@@ -3538,22 +3556,6 @@
     </div>
   </div>
 
-      </div>
-    </div>
-  </div>
-</div>
-      <div class="popup" data-dropdown-popup>
-  <div class="popup__wrapper">
-    <div class="popup__bg" data-close-btn></div>
-    <div class="popup__container">
-      <button type="button" class="popup__close" data-close-btn data-swipe-btn>
-        <svg astro-icon="fi_x">
-    
-    <use xlink:href="#astroicon:fi_x"></use>
-</svg>
-      </button>
-      <div class="popup__content">
-        
       </div>
     </div>
   </div>

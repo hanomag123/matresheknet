@@ -137,3 +137,31 @@
     margin-top: 2.4rem;
   }
 }
+
+.loyal-btn {
+  color: #F94444;
+  font-family: 'Roboto';
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding: 1.65rem 2.8rem;
+  text-align: center;
+  border-radius: 0.8rem;
+  background-color: #FFF;
+  display: inline-block;
+  max-width: 100%;
+  margin-top: 4rem;
+  transition: filter .3s;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      filter: brightness(0.9);
+    }
+  }
+
+  @include breakpoint($xs-bp) {
+    margin-top: 2.4rem;
+    width: 100%;
+  }
+}

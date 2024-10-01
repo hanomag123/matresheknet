@@ -9,22 +9,38 @@ export const initProductHead = () => {
   );
 
   if (mainSlideContainer && paginationSlideContainer) {
+    const parent = paginationSlideContainer.parentElement;
+    let next = null;
+    let prev = null;
+    if (parent) {
+      next = parent.querySelector<HTMLElement>(
+        ".swiper-btns__btn_next.product-head-btn",
+      );
+      prev = parent.querySelector<HTMLElement>(
+        ".swiper-btns__btn_prev.product-head-btn",
+      );
+    }
     const pagination =
       mainSlideContainer.querySelector<HTMLElement>(".swiper-pagination");
 
     const pagSlider = new Swiper(paginationSlideContainer, {
       direction: "vertical",
       slidesPerView: "auto",
-      spaceBetween: 10,
-      breakpoints: {
-        1201: {
-          spaceBetween: 24,
-        },
+      freeMode: true,
+      mousewheel: {
+        sensitivity: 1,
+      },
+      navigation: {
+        nextEl: next,
+        prevEl: prev,
       },
     });
 
-    new Swiper(mainSlideContainer, {
+    const slides = paginationSlideContainer.querySelectorAll(".swiper-slide");
+
+    const mainswiper = new Swiper(mainSlideContainer, {
       spaceBetween: 30,
+      speed: 700,
       thumbs: {
         swiper: pagSlider,
       },
@@ -35,7 +51,76 @@ export const initProductHead = () => {
         bulletActiveClass: "_active",
         bulletClass: "swiper-pagination__bullet",
       },
+      on: {
+        slideChange: () => {
+          const activeslide =
+            paginationSlideContainer.querySelector<HTMLElement>(
+              ".swiper-slide-thumb-active",
+            );
+          if (activeslide) {
+            const coloritem = document.querySelector<HTMLInputElement>(
+              `.product-wa__color-ithem input[data-file="${activeslide?.dataset?.file}"]`,
+            );
+            const nowchecked = document.querySelector<HTMLElement>(
+              `.product-wa__color-ithem input[data-file="${activeslide?.dataset?.file}"]:checked`,
+            );
+            if (
+              (coloritem && !nowchecked) ||
+              (coloritem &&
+                nowchecked &&
+                coloritem.dataset.file !== nowchecked.dataset.file)
+            ) {
+              coloritem.click();
+            }
+          }
+        },
+      },
     });
+
+    if (slides.length) {
+      slides.forEach((slide) => {
+        slide.addEventListener("click", function (this: HTMLElement) {
+          slides.forEach((slide, i) => {
+            slide.classList.remove("swiper-slide-thumb-active");
+            if (slide === this) {
+              pagSlider.slideTo(i, 700);
+              mainswiper.slideTo(i, 700);
+              slide.classList.add("swiper-slide-thumb-active");
+              const coloritem = document.querySelector<HTMLInputElement>(
+                `.product-wa__color-ithem input[data-file="${this?.dataset?.file}"]`,
+              );
+              const nowchecked = document.querySelector<HTMLElement>(
+                `.product-wa__color-ithem input[data-file="${this?.dataset?.file}"]:checked`,
+              );
+              if (
+                (coloritem && !nowchecked) ||
+                (coloritem &&
+                  nowchecked &&
+                  coloritem.dataset.file !== nowchecked.dataset.file)
+              ) {
+                coloritem.click();
+              }
+            }
+          });
+        });
+      });
+    }
+
+    const btns = document.querySelectorAll(".product-wa__color-ithem input");
+    if (btns.length) {
+      btns.forEach((el) => {
+        el.addEventListener("change", function (this: HTMLElement) {
+          if (this.dataset?.file) {
+            const slide = paginationSlideContainer.querySelector<HTMLElement>(
+              `[data-file="${this.dataset.file}"]`,
+            );
+            if (slide) {
+              slide.click();
+            }
+          }
+        });
+      });
+    }
   }
 
   const specContainer = document.querySelector(".product-head-spec");
